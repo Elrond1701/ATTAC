@@ -1,3 +1,4 @@
+#20230806
 nepochs=10  # Set the value of nepochs here
 num_exemplars=200
 # Generate 33 random numbers in each of the specified ranges
