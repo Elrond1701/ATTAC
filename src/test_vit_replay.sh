@@ -13,26 +13,26 @@ do
     for num_tasks in 5 10 15 20
     do
         results_path="../ViT_results/test_VIT_${dataset}_${num_tasks}"    
-        # for alpha in 0.85 0.01 0.06
-        # do
-        #     for scale_factor in 1.0
-        #     do
-        #     #自己方法无样本回放
-        #         exp_name="ViTrenyi_${alpha}_scale_${scale_factor}_dataset_${dataset}_tasks_${num_tasks}_epochs_${nepochs}"
-        #         echo "Running experiment with alpha = $alpha, scale_factor = $scale_factor"
-        #         python main_incremental.py --exp-name $exp_name --approach olwf_asym_original --distance_metric renyi --alpha $alpha --scale_factor $scale_factor --nepochs $nepochs --num-tasks $num_tasks --datasets $dataset --results-path $results_path 
-        #         echo "Running experiment with alpha = $alpha, scale_factor = $scale_factor"
+        for alpha in 0.85 0.01 0.06
+        do
+            for scale_factor in 1.0
+            do
+            #自己方法无样本回放
+                exp_name="ViTrenyi_${alpha}_scale_${scale_factor}_dataset_${dataset}_tasks_${num_tasks}_epochs_${nepochs}"
+                echo "Running experiment with alpha = $alpha, scale_factor = $scale_factor"
+                python main_incremental.py --exp-name $exp_name --approach olwf_asym_original --distance_metric renyi --alpha $alpha --scale_factor $scale_factor --nepochs $nepochs --num-tasks $num_tasks --datasets $dataset --results-path $results_path 
+                echo "Running experiment with alpha = $alpha, scale_factor = $scale_factor"
                 
-        #     #自己方法有样本回放
-        #         for exemplar_selection in clustering agglomerative distance
-        #         do
-        #             exp_name="ViT+Replay_${alpha}_scale_${scale_factor}_dataset_${dataset}_tasks_${num_tasks}_epochs_${nepochs}_${exemplar_selection}"
-        #             echo "Running experiment with alpha = $alpha, scale_factor = $scale_factor, exemplar_selection = $exemplar_selection"
-        #             python main_incremental.py --exp-name $exp_name --approach olwf_asym_original --distance_metric renyi --alpha $alpha --scale_factor $scale_factor --nepochs $nepochs --num-tasks $num_tasks --datasets $dataset --results-path $results_path --num-exemplars $num_exemplars --exemplar-selection $exemplar_selection
-        #             echo "Finished experiment with alpha = $alpha, scale_factor = $scale_factor, exemplar_selection = $exemplar_selection"
-        #         done
-        #     done
-        # done
+            #自己方法有样本回放
+                for exemplar_selection in clustering agglomerative distance
+                do
+                    exp_name="ViT+Replay_${alpha}_scale_${scale_factor}_dataset_${dataset}_tasks_${num_tasks}_epochs_${nepochs}_${exemplar_selection}"
+                    echo "Running experiment with alpha = $alpha, scale_factor = $scale_factor, exemplar_selection = $exemplar_selection"
+                    python main_incremental.py --exp-name $exp_name --approach olwf_asym_original --distance_metric renyi --alpha $alpha --scale_factor $scale_factor --nepochs $nepochs --num-tasks $num_tasks --datasets $dataset --results-path $results_path --num-exemplars $num_exemplars --exemplar-selection $exemplar_selection
+                    echo "Finished experiment with alpha = $alpha, scale_factor = $scale_factor, exemplar_selection = $exemplar_selection"
+                done
+            done
+        done
 
 #基线方法：
         python main_incremental.py --exp-name finetuning_${dataset}_tasks_${num_tasks}_epochs_${nepochs} --approach finetuning --nepochs $nepochs --num-tasks $num_tasks --datasets $dataset --results-path $results_path
