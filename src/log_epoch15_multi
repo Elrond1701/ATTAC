@@ -1,0 +1,2709 @@
+============================================================================================================
+Arguments =
+	approach: joint
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: NIH300_5epoch_0713oewc_alone
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 15
+	network: ViT_small
+	no_cudnn_deterministic: False
+	num_tasks: 1
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results_Multi
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	freeze_after: -1
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 27)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 44.5s | Train: skip eval | Valid: time=  4.4s loss=0.729, TAw acc= 74.8% | *
+| Epoch   2, time= 42.7s | Train: skip eval | Valid: time=  3.9s loss=0.586, TAw acc= 78.4% | *
+| Epoch   3, time= 44.1s | Train: skip eval | Valid: time=  4.0s loss=0.538, TAw acc= 80.5% | *
+| Epoch   4, time= 43.5s | Train: skip eval | Valid: time=  4.0s loss=0.559, TAw acc= 78.7% |
+| Epoch   5, time= 43.7s | Train: skip eval | Valid: time=  3.9s loss=0.520, TAw acc= 80.2% | *
+| Epoch   6, time= 44.0s | Train: skip eval | Valid: time=  3.9s loss=0.581, TAw acc= 79.4% |
+| Epoch   7, time= 43.0s | Train: skip eval | Valid: time=  3.9s loss=0.582, TAw acc= 81.6% |
+| Epoch   8, time= 44.2s | Train: skip eval | Valid: time=  3.9s loss=0.630, TAw acc= 80.9% |
+| Epoch   9, time= 43.1s | Train: skip eval | Valid: time=  3.9s loss=0.663, TAw acc= 81.2% |
+| Epoch  10, time= 43.1s | Train: skip eval | Valid: time=  4.1s loss=0.695, TAw acc= 80.9% | lr=1.0e-05
+| Epoch  11, time= 44.1s | Train: skip eval | Valid: time=  4.0s loss=0.536, TAw acc= 81.5% |
+| Epoch  12, time= 43.3s | Train: skip eval | Valid: time=  3.8s loss=0.558, TAw acc= 80.8% |
+| Epoch  13, time= 44.9s | Train: skip eval | Valid: time=  4.0s loss=0.575, TAw acc= 81.0% |
+| Epoch  14, time= 44.2s | Train: skip eval | Valid: time=  3.9s loss=0.595, TAw acc= 81.4% |
+| Epoch  15, time= 46.8s | Train: skip eval | Valid: time=  4.0s loss=0.622, TAw acc= 81.2% | lr=3.3e-06
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.580 | TAw acc= 79.2%, forg=  0.0%| TAg acc= 79.2%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_joint_NIH300_5epoch_0713oewc_alone
+************************************************************************************************************
+TAw Acc
+	 79.2% 	Avg.: 79.2% 
+************************************************************************************************************
+TAg Acc
+	 79.2% 	Avg.: 79.2% 
+************************************************************************************************************
+TAw Forg
+	  0.0% 
+************************************************************************************************************
+TAg Forg
+	  0.0% 
+************************************************************************************************************
+[Elapsed time = 0.2 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: oewc
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: NIH300_5epoch_0713oewc_alone
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 15
+	network: ViT_small
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results_Multi
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	alpha: 0.5
+	fi_num_samples: -1
+	fi_sampling_type: max_pred
+	lamb: 5000
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 6), (1, 6), (2, 5), (3, 5), (4, 5)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 14.7s | Train: skip eval | Valid: time=  2.6s loss=0.429, TAw acc= 83.6% | *
+| Epoch   2, time= 12.9s | Train: skip eval | Valid: time=  2.6s loss=0.287, TAw acc= 88.4% | *
+| Epoch   3, time= 13.0s | Train: skip eval | Valid: time=  2.6s loss=0.260, TAw acc= 89.3% | *
+| Epoch   4, time= 13.1s | Train: skip eval | Valid: time=  2.6s loss=0.227, TAw acc= 90.1% | *
+| Epoch   5, time= 12.9s | Train: skip eval | Valid: time=  2.6s loss=0.231, TAw acc= 90.7% |
+| Epoch   6, time= 12.9s | Train: skip eval | Valid: time=  2.5s loss=0.228, TAw acc= 91.0% |
+| Epoch   7, time= 13.3s | Train: skip eval | Valid: time=  2.5s loss=0.230, TAw acc= 90.7% |
+| Epoch   8, time= 13.4s | Train: skip eval | Valid: time=  2.7s loss=0.252, TAw acc= 89.9% |
+| Epoch   9, time= 12.8s | Train: skip eval | Valid: time=  2.6s loss=0.253, TAw acc= 90.1% | lr=1.0e-05
+| Epoch  10, time= 13.4s | Train: skip eval | Valid: time=  2.6s loss=0.216, TAw acc= 90.4% | *
+| Epoch  11, time= 14.0s | Train: skip eval | Valid: time=  2.6s loss=0.233, TAw acc= 90.4% |
+| Epoch  12, time= 13.0s | Train: skip eval | Valid: time=  2.6s loss=0.233, TAw acc= 90.4% |
+| Epoch  13, time= 12.8s | Train: skip eval | Valid: time=  2.5s loss=0.231, TAw acc= 90.4% |
+| Epoch  14, time= 13.9s | Train: skip eval | Valid: time=  2.6s loss=0.237, TAw acc= 90.7% |
+| Epoch  15, time= 12.8s | Train: skip eval | Valid: time=  2.6s loss=0.249, TAw acc= 90.4% | lr=3.3e-06
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.283 | TAw acc= 90.3%, forg=  0.0%| TAg acc= 90.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_alone
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 14.3s | Train: skip eval | Valid: time=  2.6s loss=1.311, TAw acc= 51.7% | *
+| Epoch   2, time= 13.8s | Train: skip eval | Valid: time=  2.6s loss=0.939, TAw acc= 66.2% | *
+| Epoch   3, time= 13.2s | Train: skip eval | Valid: time=  2.6s loss=0.732, TAw acc= 75.8% | *
+| Epoch   4, time= 14.1s | Train: skip eval | Valid: time=  2.6s loss=0.594, TAw acc= 85.0% | *
+| Epoch   5, time= 12.5s | Train: skip eval | Valid: time=  2.6s loss=0.496, TAw acc= 86.2% | *
+| Epoch   6, time= 13.1s | Train: skip eval | Valid: time=  2.5s loss=0.427, TAw acc= 88.8% | *
+| Epoch   7, time= 13.3s | Train: skip eval | Valid: time=  2.6s loss=0.377, TAw acc= 89.6% | *
+| Epoch   8, time= 13.0s | Train: skip eval | Valid: time=  2.6s loss=0.337, TAw acc= 91.7% | *
+| Epoch   9, time= 13.2s | Train: skip eval | Valid: time=  2.6s loss=0.304, TAw acc= 91.7% | *
+| Epoch  10, time= 13.1s | Train: skip eval | Valid: time=  2.6s loss=0.285, TAw acc= 91.7% | *
+| Epoch  11, time= 13.2s | Train: skip eval | Valid: time=  2.6s loss=0.262, TAw acc= 92.5% | *
+| Epoch  12, time= 13.3s | Train: skip eval | Valid: time=  2.7s loss=0.244, TAw acc= 94.2% | *
+| Epoch  13, time= 13.1s | Train: skip eval | Valid: time=  2.6s loss=0.231, TAw acc= 93.3% | *
+| Epoch  14, time= 13.2s | Train: skip eval | Valid: time=  2.6s loss=0.221, TAw acc= 94.2% | *
+| Epoch  15, time= 13.6s | Train: skip eval | Valid: time=  2.7s loss=0.210, TAw acc= 95.0% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.306 | TAw acc= 90.0%, forg=  0.4%| TAg acc= 85.8%, forg=  4.5% <<<
+>>> Test on task  1 : loss=0.286 | TAw acc= 90.2%, forg=  0.0%| TAg acc= 84.8%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_alone
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time=  8.4s | Train: skip eval | Valid: time=  2.4s loss=1.462, TAw acc= 33.6% | *
+| Epoch   2, time=  8.3s | Train: skip eval | Valid: time=  2.5s loss=1.375, TAw acc= 41.2% | *
+| Epoch   3, time=  8.3s | Train: skip eval | Valid: time=  2.4s loss=1.302, TAw acc= 45.0% | *
+| Epoch   4, time=  8.4s | Train: skip eval | Valid: time=  2.4s loss=1.237, TAw acc= 51.1% | *
+| Epoch   5, time=  9.2s | Train: skip eval | Valid: time=  2.4s loss=1.180, TAw acc= 54.2% | *
+| Epoch   6, time=  8.4s | Train: skip eval | Valid: time=  2.5s loss=1.126, TAw acc= 56.5% | *
+| Epoch   7, time=  8.6s | Train: skip eval | Valid: time=  2.5s loss=1.086, TAw acc= 58.0% | *
+| Epoch   8, time=  8.2s | Train: skip eval | Valid: time=  2.4s loss=1.042, TAw acc= 59.5% | *
+| Epoch   9, time=  8.2s | Train: skip eval | Valid: time=  2.5s loss=1.006, TAw acc= 61.1% | *
+| Epoch  10, time=  8.7s | Train: skip eval | Valid: time=  2.5s loss=0.974, TAw acc= 62.6% | *
+| Epoch  11, time=  8.7s | Train: skip eval | Valid: time=  2.3s loss=0.947, TAw acc= 64.1% | *
+| Epoch  12, time=  8.3s | Train: skip eval | Valid: time=  2.4s loss=0.922, TAw acc= 65.6% | *
+| Epoch  13, time=  8.2s | Train: skip eval | Valid: time=  2.4s loss=0.903, TAw acc= 64.9% | *
+| Epoch  14, time=  8.3s | Train: skip eval | Valid: time=  2.5s loss=0.885, TAw acc= 67.2% | *
+| Epoch  15, time=  8.2s | Train: skip eval | Valid: time=  2.4s loss=0.872, TAw acc= 68.7% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.336 | TAw acc= 88.4%, forg=  1.9%| TAg acc= 84.1%, forg=  6.2% <<<
+>>> Test on task  1 : loss=0.310 | TAw acc= 89.0%, forg=  1.2%| TAg acc= 83.7%, forg=  1.2% <<<
+>>> Test on task  2 : loss=0.835 | TAw acc= 67.3%, forg=  0.0%| TAg acc= 32.1%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_alone
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 16.5s | Train: skip eval | Valid: time=  2.7s loss=0.959, TAw acc= 57.2% | *
+| Epoch   2, time= 15.4s | Train: skip eval | Valid: time=  2.9s loss=0.802, TAw acc= 63.7% | *
+| Epoch   3, time= 16.7s | Train: skip eval | Valid: time=  2.7s loss=0.726, TAw acc= 69.7% | *
+| Epoch   4, time= 16.6s | Train: skip eval | Valid: time=  2.7s loss=0.657, TAw acc= 71.2% | *
+| Epoch   5, time= 16.3s | Train: skip eval | Valid: time=  2.7s loss=0.617, TAw acc= 76.2% | *
+| Epoch   6, time= 17.5s | Train: skip eval | Valid: time=  2.7s loss=0.585, TAw acc= 77.5% | *
+| Epoch   7, time= 15.5s | Train: skip eval | Valid: time=  2.8s loss=0.566, TAw acc= 77.2% | *
+| Epoch   8, time= 17.3s | Train: skip eval | Valid: time=  2.7s loss=0.534, TAw acc= 77.8% | *
+| Epoch   9, time= 17.3s | Train: skip eval | Valid: time=  2.8s loss=0.506, TAw acc= 80.3% | *
+| Epoch  10, time= 16.7s | Train: skip eval | Valid: time=  2.8s loss=0.496, TAw acc= 80.0% | *
+| Epoch  11, time= 16.5s | Train: skip eval | Valid: time=  2.7s loss=0.478, TAw acc= 80.6% | *
+| Epoch  12, time= 16.4s | Train: skip eval | Valid: time=  2.7s loss=0.464, TAw acc= 81.2% | *
+| Epoch  13, time= 16.9s | Train: skip eval | Valid: time=  3.3s loss=0.461, TAw acc= 80.3% | *
+| Epoch  14, time= 16.9s | Train: skip eval | Valid: time=  2.7s loss=0.448, TAw acc= 80.9% | *
+| Epoch  15, time= 16.8s | Train: skip eval | Valid: time=  2.7s loss=0.447, TAw acc= 81.9% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.349 | TAw acc= 87.7%, forg=  2.6%| TAg acc= 82.2%, forg=  8.1% <<<
+>>> Test on task  1 : loss=0.320 | TAw acc= 90.0%, forg=  0.2%| TAg acc= 71.0%, forg= 13.8% <<<
+>>> Test on task  2 : loss=0.990 | TAw acc= 58.9%, forg=  8.4%| TAg acc= 15.6%, forg= 16.5% <<<
+>>> Test on task  3 : loss=0.513 | TAw acc= 79.2%, forg=  0.0%| TAg acc= 72.1%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_alone
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+| Epoch   1, time= 14.8s | Train: skip eval | Valid: time=  2.6s loss=1.474, TAw acc= 35.6% | *
+| Epoch   2, time= 15.5s | Train: skip eval | Valid: time=  2.8s loss=1.332, TAw acc= 46.9% | *
+| Epoch   3, time= 15.0s | Train: skip eval | Valid: time=  2.8s loss=1.236, TAw acc= 53.1% | *
+| Epoch   4, time= 14.8s | Train: skip eval | Valid: time=  2.7s loss=1.165, TAw acc= 54.5% | *
+| Epoch   5, time= 15.1s | Train: skip eval | Valid: time=  2.6s loss=1.110, TAw acc= 57.5% | *
+| Epoch   6, time= 14.5s | Train: skip eval | Valid: time=  2.8s loss=1.070, TAw acc= 57.5% | *
+| Epoch   7, time= 15.2s | Train: skip eval | Valid: time=  2.7s loss=1.030, TAw acc= 59.6% | *
+| Epoch   8, time= 14.9s | Train: skip eval | Valid: time=  2.7s loss=0.999, TAw acc= 61.8% | *
+| Epoch   9, time= 14.9s | Train: skip eval | Valid: time=  2.7s loss=0.980, TAw acc= 62.2% | *
+| Epoch  10, time= 15.0s | Train: skip eval | Valid: time=  2.7s loss=0.959, TAw acc= 63.3% | *
+| Epoch  11, time= 15.0s | Train: skip eval | Valid: time=  2.7s loss=0.942, TAw acc= 65.1% | *
+| Epoch  12, time= 14.9s | Train: skip eval | Valid: time=  2.7s loss=0.925, TAw acc= 64.7% | *
+| Epoch  13, time= 15.3s | Train: skip eval | Valid: time=  2.6s loss=0.914, TAw acc= 66.5% | *
+| Epoch  14, time= 14.9s | Train: skip eval | Valid: time=  2.7s loss=0.901, TAw acc= 66.2% | *
+| Epoch  15, time= 14.4s | Train: skip eval | Valid: time=  2.7s loss=0.892, TAw acc= 66.2% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.407 | TAw acc= 85.0%, forg=  5.3%| TAg acc= 75.2%, forg= 15.1% <<<
+>>> Test on task  1 : loss=0.386 | TAw acc= 89.2%, forg=  1.0%| TAg acc= 73.3%, forg= 11.5% <<<
+>>> Test on task  2 : loss=1.108 | TAw acc= 54.7%, forg= 12.6%| TAg acc= 21.6%, forg= 10.5% <<<
+>>> Test on task  3 : loss=0.586 | TAw acc= 76.8%, forg=  2.5%| TAg acc= 67.6%, forg=  4.5% <<<
+>>> Test on task  4 : loss=0.922 | TAw acc= 64.0%, forg=  0.0%| TAg acc= 17.9%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_alone
+************************************************************************************************************
+TAw Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 90.0%  90.2%   0.0%   0.0%   0.0% 	Avg.: 90.1% 
+	 88.4%  89.0%  67.3%   0.0%   0.0% 	Avg.: 81.6% 
+	 87.7%  90.0%  58.9%  79.2%   0.0% 	Avg.: 78.9% 
+	 85.0%  89.2%  54.7%  76.8%  64.0% 	Avg.: 73.9% 
+************************************************************************************************************
+TAg Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 85.8%  84.8%   0.0%   0.0%   0.0% 	Avg.: 85.3% 
+	 84.1%  83.7%  32.1%   0.0%   0.0% 	Avg.: 66.6% 
+	 82.2%  71.0%  15.6%  72.1%   0.0% 	Avg.: 60.2% 
+	 75.2%  73.3%  21.6%  67.6%  17.9% 	Avg.: 51.1% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  0.4%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.4% 
+	  1.9%   1.2%   0.0%   0.0%   0.0% 	Avg.:  1.5% 
+	  2.6%   0.2%   8.4%   0.0%   0.0% 	Avg.:  3.7% 
+	  5.3%   1.0%  12.6%   2.5%   0.0% 	Avg.:  5.3% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  4.5%   0.0%   0.0%   0.0%   0.0% 	Avg.:  4.5% 
+	  6.2%   1.2%   0.0%   0.0%   0.0% 	Avg.:  3.7% 
+	  8.1%  13.8%  16.5%   0.0%   0.0% 	Avg.: 12.8% 
+	 15.1%  11.5%  10.5%   4.5%   0.0% 	Avg.: 10.4% 
+************************************************************************************************************
+[Elapsed time = 0.4 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: oewc
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: NIH300_5epoch_0713oewc_200_herding
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 15
+	network: ViT_small
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results_Multi
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	alpha: 0.5
+	fi_num_samples: -1
+	fi_sampling_type: max_pred
+	lamb: 5000
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: herding
+	num_exemplars: 200
+	num_exemplars_per_class: 0
+============================================================================================================
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 6), (1, 6), (2, 5), (3, 5), (4, 5)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 13.5s | Train: skip eval | Valid: time=  2.7s loss=0.429, TAw acc= 83.6% | *
+| Epoch   2, time= 14.1s | Train: skip eval | Valid: time=  2.7s loss=0.287, TAw acc= 88.4% | *
+| Epoch   3, time= 14.4s | Train: skip eval | Valid: time=  2.6s loss=0.260, TAw acc= 89.3% | *
+| Epoch   4, time= 13.1s | Train: skip eval | Valid: time=  2.7s loss=0.227, TAw acc= 90.1% | *
+| Epoch   5, time= 13.0s | Train: skip eval | Valid: time=  2.6s loss=0.231, TAw acc= 90.7% |
+| Epoch   6, time= 13.7s | Train: skip eval | Valid: time=  2.6s loss=0.228, TAw acc= 91.0% |
+| Epoch   7, time= 13.7s | Train: skip eval | Valid: time=  2.6s loss=0.230, TAw acc= 90.7% |
+| Epoch   8, time= 13.4s | Train: skip eval | Valid: time=  2.7s loss=0.252, TAw acc= 89.9% |
+| Epoch   9, time= 13.6s | Train: skip eval | Valid: time=  2.8s loss=0.253, TAw acc= 90.1% | lr=1.0e-05
+| Epoch  10, time= 13.4s | Train: skip eval | Valid: time=  2.7s loss=0.216, TAw acc= 90.4% | *
+| Epoch  11, time= 13.5s | Train: skip eval | Valid: time=  2.7s loss=0.233, TAw acc= 90.4% |
+| Epoch  12, time= 13.7s | Train: skip eval | Valid: time=  2.7s loss=0.233, TAw acc= 90.4% |
+| Epoch  13, time= 14.0s | Train: skip eval | Valid: time=  2.6s loss=0.231, TAw acc= 90.4% |
+| Epoch  14, time= 13.0s | Train: skip eval | Valid: time=  2.7s loss=0.237, TAw acc= 90.7% |
+| Epoch  15, time= 13.4s | Train: skip eval | Valid: time=  3.4s loss=0.249, TAw acc= 90.4% | lr=3.3e-06
+| Selected 204 train exemplars, time= 10.5s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.283 | TAw acc= 90.3%, forg=  0.0%| TAg acc= 90.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_200_herding
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 14.2s | Train: skip eval | Valid: time=  2.7s loss=1.666, TAw acc= 45.8% | *
+| Epoch   2, time= 13.5s | Train: skip eval | Valid: time=  2.7s loss=1.035, TAw acc= 67.5% | *
+| Epoch   3, time= 13.4s | Train: skip eval | Valid: time=  2.6s loss=0.767, TAw acc= 77.9% | *
+| Epoch   4, time= 14.5s | Train: skip eval | Valid: time=  2.7s loss=0.615, TAw acc= 83.3% | *
+| Epoch   5, time= 13.9s | Train: skip eval | Valid: time=  2.6s loss=0.523, TAw acc= 87.1% | *
+| Epoch   6, time= 14.2s | Train: skip eval | Valid: time=  2.7s loss=0.451, TAw acc= 89.2% | *
+| Epoch   7, time= 13.7s | Train: skip eval | Valid: time=  2.8s loss=0.400, TAw acc= 90.0% | *
+| Epoch   8, time= 14.0s | Train: skip eval | Valid: time=  2.7s loss=0.359, TAw acc= 89.6% | *
+| Epoch   9, time= 13.9s | Train: skip eval | Valid: time=  2.6s loss=0.327, TAw acc= 90.8% | *
+| Epoch  10, time= 14.3s | Train: skip eval | Valid: time=  2.6s loss=0.302, TAw acc= 91.2% | *
+| Epoch  11, time= 14.6s | Train: skip eval | Valid: time=  2.7s loss=0.291, TAw acc= 91.7% | *
+| Epoch  12, time= 14.0s | Train: skip eval | Valid: time=  2.6s loss=0.280, TAw acc= 91.7% | *
+| Epoch  13, time= 14.1s | Train: skip eval | Valid: time=  2.7s loss=0.263, TAw acc= 91.7% | *
+| Epoch  14, time= 14.6s | Train: skip eval | Valid: time=  2.7s loss=0.245, TAw acc= 92.1% | *
+| Epoch  15, time= 14.6s | Train: skip eval | Valid: time=  2.7s loss=0.241, TAw acc= 92.1% | *
+| Selected 204 train exemplars, time=  7.5s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.501 | TAw acc= 89.7%, forg=  0.6%| TAg acc= 83.4%, forg=  6.9% <<<
+>>> Test on task  1 : loss=0.297 | TAw acc= 88.7%, forg=  0.0%| TAg acc= 88.7%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_200_herding
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time=  9.2s | Train: skip eval | Valid: time=  2.6s loss=1.850, TAw acc= 27.5% | *
+| Epoch   2, time=  9.4s | Train: skip eval | Valid: time=  2.5s loss=1.512, TAw acc= 40.5% | *
+| Epoch   3, time=  9.3s | Train: skip eval | Valid: time=  3.2s loss=1.342, TAw acc= 50.4% | *
+| Epoch   4, time=  9.2s | Train: skip eval | Valid: time=  2.4s loss=1.223, TAw acc= 57.3% | *
+| Epoch   5, time= 10.2s | Train: skip eval | Valid: time=  2.6s loss=1.134, TAw acc= 56.5% | *
+| Epoch   6, time=  9.5s | Train: skip eval | Valid: time=  2.8s loss=1.062, TAw acc= 63.4% | *
+| Epoch   7, time=  9.5s | Train: skip eval | Valid: time=  2.5s loss=1.012, TAw acc= 66.4% | *
+| Epoch   8, time=  9.9s | Train: skip eval | Valid: time=  2.5s loss=0.950, TAw acc= 72.5% | *
+| Epoch   9, time=  9.6s | Train: skip eval | Valid: time=  2.4s loss=0.903, TAw acc= 74.0% | *
+| Epoch  10, time=  9.9s | Train: skip eval | Valid: time=  2.5s loss=0.863, TAw acc= 74.8% | *
+| Epoch  11, time=  9.4s | Train: skip eval | Valid: time=  2.5s loss=0.832, TAw acc= 75.6% | *
+| Epoch  12, time=  9.9s | Train: skip eval | Valid: time=  2.4s loss=0.806, TAw acc= 77.1% | *
+| Epoch  13, time=  9.5s | Train: skip eval | Valid: time=  2.6s loss=0.775, TAw acc= 76.3% | *
+| Epoch  14, time=  9.8s | Train: skip eval | Valid: time=  2.6s loss=0.754, TAw acc= 77.9% | *
+| Epoch  15, time=  9.6s | Train: skip eval | Valid: time=  2.5s loss=0.738, TAw acc= 77.9% | *
+| Selected 204 train exemplars, time=  4.9s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.505 | TAw acc= 88.6%, forg=  1.7%| TAg acc= 86.6%, forg=  3.7% <<<
+>>> Test on task  1 : loss=0.383 | TAw acc= 88.2%, forg=  0.5%| TAg acc= 88.2%, forg=  0.5% <<<
+>>> Test on task  2 : loss=0.804 | TAw acc= 68.5%, forg=  0.0%| TAg acc= 68.5%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_200_herding
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 17.6s | Train: skip eval | Valid: time=  2.8s loss=1.399, TAw acc= 51.6% | *
+| Epoch   2, time= 18.9s | Train: skip eval | Valid: time=  2.8s loss=1.011, TAw acc= 60.0% | *
+| Epoch   3, time= 18.0s | Train: skip eval | Valid: time=  2.8s loss=0.871, TAw acc= 66.2% | *
+| Epoch   4, time= 17.3s | Train: skip eval | Valid: time=  2.8s loss=0.788, TAw acc= 67.5% | *
+| Epoch   5, time= 17.7s | Train: skip eval | Valid: time=  2.8s loss=0.724, TAw acc= 72.2% | *
+| Epoch   6, time= 17.6s | Train: skip eval | Valid: time=  2.8s loss=0.675, TAw acc= 72.5% | *
+| Epoch   7, time= 18.1s | Train: skip eval | Valid: time=  2.8s loss=0.638, TAw acc= 74.4% | *
+| Epoch   8, time= 16.9s | Train: skip eval | Valid: time=  3.6s loss=0.608, TAw acc= 75.0% | *
+| Epoch   9, time= 17.8s | Train: skip eval | Valid: time=  2.8s loss=0.585, TAw acc= 76.2% | *
+| Epoch  10, time= 17.0s | Train: skip eval | Valid: time=  2.8s loss=0.561, TAw acc= 77.2% | *
+| Epoch  11, time= 17.7s | Train: skip eval | Valid: time=  2.8s loss=0.543, TAw acc= 78.4% | *
+| Epoch  12, time= 17.3s | Train: skip eval | Valid: time=  2.9s loss=0.533, TAw acc= 78.4% | *
+| Epoch  13, time= 18.6s | Train: skip eval | Valid: time=  3.3s loss=0.519, TAw acc= 80.0% | *
+| Epoch  14, time= 17.9s | Train: skip eval | Valid: time=  2.8s loss=0.510, TAw acc= 80.0% | *
+| Epoch  15, time= 17.7s | Train: skip eval | Valid: time=  2.8s loss=0.505, TAw acc= 79.4% | *
+| Selected 220 train exemplars, time=  7.2s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.605 | TAw acc= 90.2%, forg=  0.1%| TAg acc= 85.3%, forg=  5.0% <<<
+>>> Test on task  1 : loss=0.639 | TAw acc= 85.8%, forg=  2.8%| TAg acc= 79.2%, forg=  9.5% <<<
+>>> Test on task  2 : loss=0.950 | TAw acc= 67.6%, forg=  0.9%| TAg acc= 67.6%, forg=  0.9% <<<
+>>> Test on task  3 : loss=0.490 | TAw acc= 80.1%, forg=  0.0%| TAg acc= 80.1%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_200_herding
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+| Epoch   1, time= 15.4s | Train: skip eval | Valid: time=  2.8s loss=2.531, TAw acc= 27.3% | *
+| Epoch   2, time= 16.1s | Train: skip eval | Valid: time=  2.8s loss=1.786, TAw acc= 40.7% | *
+| Epoch   3, time= 16.1s | Train: skip eval | Valid: time=  2.8s loss=1.550, TAw acc= 45.5% | *
+| Epoch   4, time= 16.1s | Train: skip eval | Valid: time=  3.4s loss=1.430, TAw acc= 48.0% | *
+| Epoch   5, time= 15.1s | Train: skip eval | Valid: time=  2.8s loss=1.341, TAw acc= 52.4% | *
+| Epoch   6, time= 16.0s | Train: skip eval | Valid: time=  2.7s loss=1.277, TAw acc= 54.2% | *
+| Epoch   7, time= 15.8s | Train: skip eval | Valid: time=  2.7s loss=1.225, TAw acc= 56.4% | *
+| Epoch   8, time= 15.7s | Train: skip eval | Valid: time=  2.7s loss=1.181, TAw acc= 58.2% | *
+| Epoch   9, time= 16.0s | Train: skip eval | Valid: time=  2.7s loss=1.157, TAw acc= 58.9% | *
+| Epoch  10, time= 16.2s | Train: skip eval | Valid: time=  2.7s loss=1.123, TAw acc= 58.5% | *
+| Epoch  11, time= 15.9s | Train: skip eval | Valid: time=  3.5s loss=1.096, TAw acc= 61.1% | *
+| Epoch  12, time= 16.1s | Train: skip eval | Valid: time=  2.7s loss=1.076, TAw acc= 61.8% | *
+| Epoch  13, time= 16.2s | Train: skip eval | Valid: time=  2.7s loss=1.057, TAw acc= 62.5% | *
+| Epoch  14, time= 16.1s | Train: skip eval | Valid: time=  2.8s loss=1.045, TAw acc= 64.4% | *
+| Epoch  15, time= 15.9s | Train: skip eval | Valid: time=  2.7s loss=1.027, TAw acc= 65.1% | *
+| Selected 216 train exemplars, time=  6.3s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.738 | TAw acc= 87.6%, forg=  2.8%| TAg acc= 80.1%, forg= 10.2% <<<
+>>> Test on task  1 : loss=0.929 | TAw acc= 83.8%, forg=  4.8%| TAg acc= 72.7%, forg= 16.0% <<<
+>>> Test on task  2 : loss=1.043 | TAw acc= 67.3%, forg=  1.2%| TAg acc= 67.0%, forg=  1.5% <<<
+>>> Test on task  3 : loss=2.324 | TAw acc= 74.1%, forg=  6.0%| TAg acc= 48.0%, forg= 32.1% <<<
+>>> Test on task  4 : loss=1.055 | TAw acc= 59.0%, forg=  0.0%| TAg acc= 59.0%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_200_herding
+************************************************************************************************************
+TAw Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 89.7%  88.7%   0.0%   0.0%   0.0% 	Avg.: 89.2% 
+	 88.6%  88.2%  68.5%   0.0%   0.0% 	Avg.: 81.8% 
+	 90.2%  85.8%  67.6%  80.1%   0.0% 	Avg.: 80.9% 
+	 87.6%  83.8%  67.3%  74.1%  59.0% 	Avg.: 74.4% 
+************************************************************************************************************
+TAg Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 83.4%  88.7%   0.0%   0.0%   0.0% 	Avg.: 86.0% 
+	 86.6%  88.2%  68.5%   0.0%   0.0% 	Avg.: 81.1% 
+	 85.3%  79.2%  67.6%  80.1%   0.0% 	Avg.: 78.0% 
+	 80.1%  72.7%  67.0%  48.0%  59.0% 	Avg.: 65.4% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  0.6%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.6% 
+	  1.7%   0.5%   0.0%   0.0%   0.0% 	Avg.:  1.1% 
+	  0.1%   2.8%   0.9%   0.0%   0.0% 	Avg.:  1.3% 
+	  2.8%   4.8%   1.2%   6.0%   0.0% 	Avg.:  3.7% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  6.9%   0.0%   0.0%   0.0%   0.0% 	Avg.:  6.9% 
+	  3.7%   0.5%   0.0%   0.0%   0.0% 	Avg.:  2.1% 
+	  5.0%   9.5%   0.9%   0.0%   0.0% 	Avg.:  5.1% 
+	 10.2%  16.0%   1.5%  32.1%   0.0% 	Avg.: 14.9% 
+************************************************************************************************************
+[Elapsed time = 0.4 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: oewc
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: NIH300_5epoch_0713oewc_200_entropy
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 15
+	network: ViT_small
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results_Multi
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	alpha: 0.5
+	fi_num_samples: -1
+	fi_sampling_type: max_pred
+	lamb: 5000
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: entropy
+	num_exemplars: 200
+	num_exemplars_per_class: 0
+============================================================================================================
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 6), (1, 6), (2, 5), (3, 5), (4, 5)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 14.2s | Train: skip eval | Valid: time=  2.7s loss=0.429, TAw acc= 83.6% | *
+| Epoch   2, time= 13.0s | Train: skip eval | Valid: time=  2.7s loss=0.287, TAw acc= 88.4% | *
+| Epoch   3, time= 13.1s | Train: skip eval | Valid: time=  2.6s loss=0.260, TAw acc= 89.3% | *
+| Epoch   4, time= 13.4s | Train: skip eval | Valid: time=  2.7s loss=0.227, TAw acc= 90.1% | *
+| Epoch   5, time= 13.1s | Train: skip eval | Valid: time=  2.6s loss=0.231, TAw acc= 90.7% |
+| Epoch   6, time= 13.3s | Train: skip eval | Valid: time=  2.7s loss=0.228, TAw acc= 91.0% |
+| Epoch   7, time= 13.4s | Train: skip eval | Valid: time=  2.7s loss=0.230, TAw acc= 90.7% |
+| Epoch   8, time= 13.0s | Train: skip eval | Valid: time=  2.6s loss=0.252, TAw acc= 89.9% |
+| Epoch   9, time= 13.3s | Train: skip eval | Valid: time=  2.7s loss=0.253, TAw acc= 90.1% | lr=1.0e-05
+| Epoch  10, time= 13.0s | Train: skip eval | Valid: time=  2.6s loss=0.216, TAw acc= 90.4% | *
+| Epoch  11, time= 13.6s | Train: skip eval | Valid: time=  2.8s loss=0.233, TAw acc= 90.4% |
+| Epoch  12, time= 14.3s | Train: skip eval | Valid: time=  2.6s loss=0.233, TAw acc= 90.4% |
+| Epoch  13, time= 13.2s | Train: skip eval | Valid: time=  3.2s loss=0.231, TAw acc= 90.4% |
+| Epoch  14, time= 13.2s | Train: skip eval | Valid: time=  2.7s loss=0.237, TAw acc= 90.7% |
+| Epoch  15, time= 13.2s | Train: skip eval | Valid: time=  2.6s loss=0.249, TAw acc= 90.4% | lr=3.3e-06
+| Selected 204 train exemplars, time=  6.0s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.283 | TAw acc= 90.3%, forg=  0.0%| TAg acc= 90.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_200_entropy
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 13.8s | Train: skip eval | Valid: time=  2.8s loss=1.679, TAw acc= 45.4% | *
+| Epoch   2, time= 14.6s | Train: skip eval | Valid: time=  2.8s loss=1.045, TAw acc= 66.2% | *
+| Epoch   3, time= 13.9s | Train: skip eval | Valid: time=  2.7s loss=0.776, TAw acc= 77.9% | *
+| Epoch   4, time= 14.0s | Train: skip eval | Valid: time=  2.8s loss=0.624, TAw acc= 83.3% | *
+| Epoch   5, time= 15.3s | Train: skip eval | Valid: time=  2.7s loss=0.530, TAw acc= 86.2% | *
+| Epoch   6, time= 14.6s | Train: skip eval | Valid: time=  2.6s loss=0.460, TAw acc= 89.2% | *
+| Epoch   7, time= 13.5s | Train: skip eval | Valid: time=  3.2s loss=0.409, TAw acc= 90.0% | *
+| Epoch   8, time= 15.6s | Train: skip eval | Valid: time=  2.8s loss=0.373, TAw acc= 88.8% | *
+| Epoch   9, time= 13.6s | Train: skip eval | Valid: time=  3.0s loss=0.334, TAw acc= 90.4% | *
+| Epoch  10, time= 14.5s | Train: skip eval | Valid: time=  3.1s loss=0.308, TAw acc= 90.8% | *
+| Epoch  11, time= 14.3s | Train: skip eval | Valid: time=  2.7s loss=0.293, TAw acc= 91.2% | *
+| Epoch  12, time= 14.1s | Train: skip eval | Valid: time=  2.8s loss=0.281, TAw acc= 91.2% | *
+| Epoch  13, time= 14.2s | Train: skip eval | Valid: time=  2.7s loss=0.265, TAw acc= 91.2% | *
+| Epoch  14, time= 13.8s | Train: skip eval | Valid: time=  2.7s loss=0.246, TAw acc= 92.9% | *
+| Epoch  15, time= 14.7s | Train: skip eval | Valid: time=  2.7s loss=0.238, TAw acc= 92.9% | *
+| Selected 204 train exemplars, time=  5.1s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.451 | TAw acc= 90.2%, forg=  0.1%| TAg acc= 85.4%, forg=  4.9% <<<
+>>> Test on task  1 : loss=0.306 | TAw acc= 88.0%, forg=  0.0%| TAg acc= 88.0%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_200_entropy
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time=  9.5s | Train: skip eval | Valid: time=  2.6s loss=1.837, TAw acc= 29.8% | *
+| Epoch   2, time=  9.4s | Train: skip eval | Valid: time=  2.5s loss=1.511, TAw acc= 45.0% | *
+| Epoch   3, time=  9.0s | Train: skip eval | Valid: time=  2.4s loss=1.344, TAw acc= 51.1% | *
+| Epoch   4, time=  9.0s | Train: skip eval | Valid: time=  2.6s loss=1.227, TAw acc= 55.7% | *
+| Epoch   5, time=  9.4s | Train: skip eval | Valid: time=  2.5s loss=1.140, TAw acc= 57.3% | *
+| Epoch   6, time=  9.5s | Train: skip eval | Valid: time=  2.5s loss=1.068, TAw acc= 62.6% | *
+| Epoch   7, time=  9.5s | Train: skip eval | Valid: time=  2.5s loss=1.016, TAw acc= 67.2% | *
+| Epoch   8, time=  9.6s | Train: skip eval | Valid: time=  2.5s loss=0.955, TAw acc= 67.2% | *
+| Epoch   9, time=  9.7s | Train: skip eval | Valid: time=  2.5s loss=0.909, TAw acc= 73.3% | *
+| Epoch  10, time=  9.9s | Train: skip eval | Valid: time=  2.6s loss=0.869, TAw acc= 73.3% | *
+| Epoch  11, time=  9.5s | Train: skip eval | Valid: time=  2.6s loss=0.839, TAw acc= 74.8% | *
+| Epoch  12, time=  9.3s | Train: skip eval | Valid: time=  2.5s loss=0.813, TAw acc= 75.6% | *
+| Epoch  13, time=  9.8s | Train: skip eval | Valid: time=  2.4s loss=0.782, TAw acc= 77.9% | *
+| Epoch  14, time=  9.4s | Train: skip eval | Valid: time=  2.5s loss=0.762, TAw acc= 75.6% | *
+| Epoch  15, time=  9.3s | Train: skip eval | Valid: time=  2.6s loss=0.745, TAw acc= 78.6% | *
+| Selected 204 train exemplars, time=  4.1s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.440 | TAw acc= 89.7%, forg=  0.6%| TAg acc= 88.5%, forg=  1.8% <<<
+>>> Test on task  1 : loss=0.355 | TAw acc= 88.8%, forg= -0.8%| TAg acc= 88.8%, forg= -0.8% <<<
+>>> Test on task  2 : loss=0.818 | TAw acc= 69.1%, forg=  0.0%| TAg acc= 69.1%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_200_entropy
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 17.5s | Train: skip eval | Valid: time=  2.8s loss=1.416, TAw acc= 55.0% | *
+| Epoch   2, time= 18.1s | Train: skip eval | Valid: time=  2.9s loss=1.018, TAw acc= 60.6% | *
+| Epoch   3, time= 17.2s | Train: skip eval | Valid: time=  2.7s loss=0.877, TAw acc= 68.8% | *
+| Epoch   4, time= 17.2s | Train: skip eval | Valid: time=  2.9s loss=0.796, TAw acc= 69.4% | *
+| Epoch   5, time= 18.2s | Train: skip eval | Valid: time=  2.8s loss=0.734, TAw acc= 70.6% | *
+| Epoch   6, time= 18.2s | Train: skip eval | Valid: time=  2.8s loss=0.686, TAw acc= 72.2% | *
+| Epoch   7, time= 17.8s | Train: skip eval | Valid: time=  2.9s loss=0.648, TAw acc= 74.1% | *
+| Epoch   8, time= 18.7s | Train: skip eval | Valid: time=  2.9s loss=0.617, TAw acc= 75.9% | *
+| Epoch   9, time= 17.1s | Train: skip eval | Valid: time=  2.8s loss=0.593, TAw acc= 75.9% | *
+| Epoch  10, time= 17.0s | Train: skip eval | Valid: time=  2.8s loss=0.569, TAw acc= 77.5% | *
+| Epoch  11, time= 17.6s | Train: skip eval | Valid: time=  2.8s loss=0.551, TAw acc= 76.6% | *
+| Epoch  12, time= 17.0s | Train: skip eval | Valid: time=  2.8s loss=0.540, TAw acc= 77.5% | *
+| Epoch  13, time= 18.4s | Train: skip eval | Valid: time=  2.8s loss=0.525, TAw acc= 78.1% | *
+| Epoch  14, time= 18.1s | Train: skip eval | Valid: time=  2.8s loss=0.515, TAw acc= 78.4% | *
+| Epoch  15, time= 17.5s | Train: skip eval | Valid: time=  2.8s loss=0.513, TAw acc= 78.1% | *
+| Selected 220 train exemplars, time=  6.0s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.486 | TAw acc= 89.8%, forg=  0.5%| TAg acc= 88.5%, forg=  1.8% <<<
+>>> Test on task  1 : loss=0.565 | TAw acc= 85.5%, forg=  3.3%| TAg acc= 83.2%, forg=  5.7% <<<
+>>> Test on task  2 : loss=0.995 | TAw acc= 67.3%, forg=  1.8%| TAg acc= 67.3%, forg=  1.8% <<<
+>>> Test on task  3 : loss=0.501 | TAw acc= 79.4%, forg=  0.0%| TAg acc= 79.4%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_200_entropy
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+| Epoch   1, time= 15.9s | Train: skip eval | Valid: time=  2.7s loss=2.408, TAw acc= 33.5% | *
+| Epoch   2, time= 15.6s | Train: skip eval | Valid: time=  2.8s loss=1.718, TAw acc= 39.6% | *
+| Epoch   3, time= 15.5s | Train: skip eval | Valid: time=  2.8s loss=1.508, TAw acc= 45.1% | *
+| Epoch   4, time= 15.6s | Train: skip eval | Valid: time=  2.8s loss=1.398, TAw acc= 51.6% | *
+| Epoch   5, time= 17.0s | Train: skip eval | Valid: time=  2.8s loss=1.313, TAw acc= 52.4% | *
+| Epoch   6, time= 16.1s | Train: skip eval | Valid: time=  2.7s loss=1.253, TAw acc= 56.0% | *
+| Epoch   7, time= 15.9s | Train: skip eval | Valid: time=  2.7s loss=1.209, TAw acc= 55.6% | *
+| Epoch   8, time= 16.1s | Train: skip eval | Valid: time=  2.7s loss=1.165, TAw acc= 57.8% | *
+| Epoch   9, time= 16.5s | Train: skip eval | Valid: time=  2.7s loss=1.145, TAw acc= 56.7% | *
+| Epoch  10, time= 16.0s | Train: skip eval | Valid: time=  2.7s loss=1.113, TAw acc= 58.5% | *
+| Epoch  11, time= 16.8s | Train: skip eval | Valid: time=  2.7s loss=1.087, TAw acc= 60.4% | *
+| Epoch  12, time= 15.6s | Train: skip eval | Valid: time=  2.8s loss=1.070, TAw acc= 60.0% | *
+| Epoch  13, time= 15.7s | Train: skip eval | Valid: time=  2.8s loss=1.057, TAw acc= 60.4% | *
+| Epoch  14, time= 16.4s | Train: skip eval | Valid: time=  2.7s loss=1.040, TAw acc= 61.1% | *
+| Epoch  15, time= 16.6s | Train: skip eval | Valid: time=  2.7s loss=1.023, TAw acc= 63.3% | *
+| Selected 216 train exemplars, time=  5.5s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.598 | TAw acc= 87.9%, forg=  2.4%| TAg acc= 84.1%, forg=  6.2% <<<
+>>> Test on task  1 : loss=0.952 | TAw acc= 81.0%, forg=  7.8%| TAg acc= 74.5%, forg= 14.3% <<<
+>>> Test on task  2 : loss=1.192 | TAw acc= 62.5%, forg=  6.6%| TAg acc= 62.5%, forg=  6.6% <<<
+>>> Test on task  3 : loss=2.421 | TAw acc= 72.4%, forg=  7.0%| TAg acc= 48.4%, forg= 31.0% <<<
+>>> Test on task  4 : loss=1.053 | TAw acc= 60.6%, forg=  0.0%| TAg acc= 60.6%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_200_entropy
+************************************************************************************************************
+TAw Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 90.2%  88.0%   0.0%   0.0%   0.0% 	Avg.: 89.1% 
+	 89.7%  88.8%  69.1%   0.0%   0.0% 	Avg.: 82.5% 
+	 89.8%  85.5%  67.3%  79.4%   0.0% 	Avg.: 80.5% 
+	 87.9%  81.0%  62.5%  72.4%  60.6% 	Avg.: 72.9% 
+************************************************************************************************************
+TAg Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 85.4%  88.0%   0.0%   0.0%   0.0% 	Avg.: 86.7% 
+	 88.5%  88.8%  69.1%   0.0%   0.0% 	Avg.: 82.1% 
+	 88.5%  83.2%  67.3%  79.4%   0.0% 	Avg.: 79.6% 
+	 84.1%  74.5%  62.5%  48.4%  60.6% 	Avg.: 66.0% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  0.1%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.1% 
+	  0.6%  -0.8%   0.0%   0.0%   0.0% 	Avg.: -0.1% 
+	  0.5%   3.3%   1.8%   0.0%   0.0% 	Avg.:  1.9% 
+	  2.4%   7.8%   6.6%   7.0%   0.0% 	Avg.:  6.0% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  4.9%   0.0%   0.0%   0.0%   0.0% 	Avg.:  4.9% 
+	  1.8%  -0.8%   0.0%   0.0%   0.0% 	Avg.:  0.5% 
+	  1.8%   5.7%   1.8%   0.0%   0.0% 	Avg.:  3.1% 
+	  6.2%  14.3%   6.6%  31.0%   0.0% 	Avg.: 14.5% 
+************************************************************************************************************
+[Elapsed time = 0.4 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: oewc
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: NIH300_5epoch_0713oewc_200_random
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 15
+	network: ViT_small
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results_Multi
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	alpha: 0.5
+	fi_num_samples: -1
+	fi_sampling_type: max_pred
+	lamb: 5000
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 200
+	num_exemplars_per_class: 0
+============================================================================================================
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 6), (1, 6), (2, 5), (3, 5), (4, 5)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 13.9s | Train: skip eval | Valid: time=  2.5s loss=0.429, TAw acc= 83.6% | *
+| Epoch   2, time= 13.4s | Train: skip eval | Valid: time=  2.6s loss=0.287, TAw acc= 88.4% | *
+| Epoch   3, time= 13.0s | Train: skip eval | Valid: time=  2.6s loss=0.260, TAw acc= 89.3% | *
+| Epoch   4, time= 13.6s | Train: skip eval | Valid: time=  2.5s loss=0.227, TAw acc= 90.1% | *
+| Epoch   5, time= 13.6s | Train: skip eval | Valid: time=  2.6s loss=0.231, TAw acc= 90.7% |
+| Epoch   6, time= 13.8s | Train: skip eval | Valid: time=  2.7s loss=0.228, TAw acc= 91.0% |
+| Epoch   7, time= 13.1s | Train: skip eval | Valid: time=  2.6s loss=0.230, TAw acc= 90.7% |
+| Epoch   8, time= 13.6s | Train: skip eval | Valid: time=  2.6s loss=0.252, TAw acc= 89.9% |
+| Epoch   9, time= 13.6s | Train: skip eval | Valid: time=  2.8s loss=0.253, TAw acc= 90.1% | lr=1.0e-05
+| Epoch  10, time= 13.9s | Train: skip eval | Valid: time=  2.6s loss=0.216, TAw acc= 90.4% | *
+| Epoch  11, time= 13.6s | Train: skip eval | Valid: time=  2.8s loss=0.233, TAw acc= 90.4% |
+| Epoch  12, time= 13.1s | Train: skip eval | Valid: time=  2.6s loss=0.233, TAw acc= 90.4% |
+| Epoch  13, time= 13.0s | Train: skip eval | Valid: time=  3.5s loss=0.231, TAw acc= 90.4% |
+| Epoch  14, time= 13.7s | Train: skip eval | Valid: time=  2.6s loss=0.237, TAw acc= 90.7% |
+| Epoch  15, time= 13.4s | Train: skip eval | Valid: time=  2.7s loss=0.249, TAw acc= 90.4% | lr=3.3e-06
+| Selected 204 train exemplars, time=  0.4s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.283 | TAw acc= 90.3%, forg=  0.0%| TAg acc= 90.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_200_random
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 14.3s | Train: skip eval | Valid: time=  2.6s loss=1.732, TAw acc= 40.8% | *
+| Epoch   2, time= 14.2s | Train: skip eval | Valid: time=  2.6s loss=1.155, TAw acc= 62.9% | *
+| Epoch   3, time= 13.7s | Train: skip eval | Valid: time=  2.8s loss=0.860, TAw acc= 74.2% | *
+| Epoch   4, time= 13.6s | Train: skip eval | Valid: time=  2.7s loss=0.675, TAw acc= 82.1% | *
+| Epoch   5, time= 14.3s | Train: skip eval | Valid: time=  2.8s loss=0.552, TAw acc= 86.7% | *
+| Epoch   6, time= 14.0s | Train: skip eval | Valid: time=  2.6s loss=0.467, TAw acc= 87.9% | *
+| Epoch   7, time= 14.3s | Train: skip eval | Valid: time=  2.6s loss=0.407, TAw acc= 89.2% | *
+| Epoch   8, time= 13.7s | Train: skip eval | Valid: time=  2.7s loss=0.363, TAw acc= 89.2% | *
+| Epoch   9, time= 14.3s | Train: skip eval | Valid: time=  2.7s loss=0.328, TAw acc= 91.2% | *
+| Epoch  10, time= 13.6s | Train: skip eval | Valid: time=  2.6s loss=0.298, TAw acc= 91.7% | *
+| Epoch  11, time= 14.4s | Train: skip eval | Valid: time=  2.8s loss=0.277, TAw acc= 91.7% | *
+| Epoch  12, time= 14.4s | Train: skip eval | Valid: time=  2.8s loss=0.258, TAw acc= 92.1% | *
+| Epoch  13, time= 14.5s | Train: skip eval | Valid: time=  2.6s loss=0.243, TAw acc= 92.5% | *
+| Epoch  14, time= 13.6s | Train: skip eval | Valid: time=  2.6s loss=0.228, TAw acc= 92.9% | *
+| Epoch  15, time= 14.4s | Train: skip eval | Valid: time=  2.6s loss=0.216, TAw acc= 93.3% | *
+| Selected 204 train exemplars, time=  0.3s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.451 | TAw acc= 90.7%, forg= -0.4%| TAg acc= 86.4%, forg=  3.9% <<<
+>>> Test on task  1 : loss=0.295 | TAw acc= 90.3%, forg=  0.0%| TAg acc= 90.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_200_random
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time=  9.6s | Train: skip eval | Valid: time=  2.5s loss=1.942, TAw acc= 33.6% | *
+| Epoch   2, time=  9.4s | Train: skip eval | Valid: time=  2.4s loss=1.653, TAw acc= 35.1% | *
+| Epoch   3, time=  9.4s | Train: skip eval | Valid: time=  2.4s loss=1.505, TAw acc= 41.2% | *
+| Epoch   4, time=  9.1s | Train: skip eval | Valid: time=  2.6s loss=1.390, TAw acc= 48.9% | *
+| Epoch   5, time=  9.9s | Train: skip eval | Valid: time=  2.5s loss=1.292, TAw acc= 55.0% | *
+| Epoch   6, time=  9.3s | Train: skip eval | Valid: time=  2.4s loss=1.208, TAw acc= 60.3% | *
+| Epoch   7, time=  9.8s | Train: skip eval | Valid: time=  2.5s loss=1.146, TAw acc= 61.1% | *
+| Epoch   8, time=  9.3s | Train: skip eval | Valid: time=  2.5s loss=1.087, TAw acc= 62.6% | *
+| Epoch   9, time=  9.5s | Train: skip eval | Valid: time=  2.4s loss=1.033, TAw acc= 63.4% | *
+| Epoch  10, time= 10.3s | Train: skip eval | Valid: time=  2.5s loss=0.989, TAw acc= 64.9% | *
+| Epoch  11, time=  9.5s | Train: skip eval | Valid: time=  2.8s loss=0.955, TAw acc= 68.7% | *
+| Epoch  12, time=  9.5s | Train: skip eval | Valid: time=  2.5s loss=0.928, TAw acc= 67.2% | *
+| Epoch  13, time=  9.6s | Train: skip eval | Valid: time=  2.4s loss=0.894, TAw acc= 71.8% | *
+| Epoch  14, time=  9.3s | Train: skip eval | Valid: time=  2.5s loss=0.873, TAw acc= 72.5% | *
+| Epoch  15, time=  9.3s | Train: skip eval | Valid: time=  2.4s loss=0.858, TAw acc= 71.8% | *
+| Selected 204 train exemplars, time=  0.2s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.503 | TAw acc= 89.1%, forg=  1.6%| TAg acc= 86.7%, forg=  3.6% <<<
+>>> Test on task  1 : loss=0.352 | TAw acc= 90.0%, forg=  0.3%| TAg acc= 89.8%, forg=  0.5% <<<
+>>> Test on task  2 : loss=0.783 | TAw acc= 73.3%, forg=  0.0%| TAg acc= 73.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_200_random
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 17.4s | Train: skip eval | Valid: time=  2.7s loss=1.204, TAw acc= 55.9% | *
+| Epoch   2, time= 17.2s | Train: skip eval | Valid: time=  2.9s loss=0.890, TAw acc= 63.7% | *
+| Epoch   3, time= 17.7s | Train: skip eval | Valid: time=  2.9s loss=0.762, TAw acc= 69.1% | *
+| Epoch   4, time= 17.3s | Train: skip eval | Valid: time=  2.8s loss=0.696, TAw acc= 72.2% | *
+| Epoch   5, time= 17.8s | Train: skip eval | Valid: time=  2.9s loss=0.632, TAw acc= 72.5% | *
+| Epoch   6, time= 17.2s | Train: skip eval | Valid: time=  2.9s loss=0.591, TAw acc= 75.6% | *
+| Epoch   7, time= 17.7s | Train: skip eval | Valid: time=  2.8s loss=0.559, TAw acc= 77.5% | *
+| Epoch   8, time= 17.5s | Train: skip eval | Valid: time=  2.7s loss=0.530, TAw acc= 78.8% | *
+| Epoch   9, time= 18.3s | Train: skip eval | Valid: time=  2.7s loss=0.508, TAw acc= 80.0% | *
+| Epoch  10, time= 18.0s | Train: skip eval | Valid: time=  2.8s loss=0.486, TAw acc= 80.3% | *
+| Epoch  11, time= 18.5s | Train: skip eval | Valid: time=  2.8s loss=0.467, TAw acc= 82.2% | *
+| Epoch  12, time= 18.1s | Train: skip eval | Valid: time=  2.8s loss=0.454, TAw acc= 83.8% | *
+| Epoch  13, time= 18.3s | Train: skip eval | Valid: time=  2.8s loss=0.445, TAw acc= 83.8% | *
+| Epoch  14, time= 17.4s | Train: skip eval | Valid: time=  2.8s loss=0.435, TAw acc= 84.4% | *
+| Epoch  15, time= 18.6s | Train: skip eval | Valid: time=  2.8s loss=0.430, TAw acc= 83.4% | *
+| Selected 220 train exemplars, time=  0.2s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.576 | TAw acc= 89.2%, forg=  1.4%| TAg acc= 87.2%, forg=  3.1% <<<
+>>> Test on task  1 : loss=0.539 | TAw acc= 88.2%, forg=  2.2%| TAg acc= 84.7%, forg=  5.7% <<<
+>>> Test on task  2 : loss=1.002 | TAw acc= 66.4%, forg=  6.9%| TAg acc= 65.2%, forg=  8.1% <<<
+>>> Test on task  3 : loss=0.502 | TAw acc= 79.2%, forg=  0.0%| TAg acc= 79.2%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_200_random
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+| Epoch   1, time= 15.5s | Train: skip eval | Valid: time=  2.7s loss=2.148, TAw acc= 27.3% | *
+| Epoch   2, time= 16.3s | Train: skip eval | Valid: time=  2.7s loss=1.668, TAw acc= 40.0% | *
+| Epoch   3, time= 16.1s | Train: skip eval | Valid: time=  2.8s loss=1.485, TAw acc= 46.5% | *
+| Epoch   4, time= 15.3s | Train: skip eval | Valid: time=  2.7s loss=1.369, TAw acc= 49.5% | *
+| Epoch   5, time= 15.1s | Train: skip eval | Valid: time=  2.7s loss=1.284, TAw acc= 51.3% | *
+| Epoch   6, time= 16.0s | Train: skip eval | Valid: time=  2.7s loss=1.215, TAw acc= 53.5% | *
+| Epoch   7, time= 16.4s | Train: skip eval | Valid: time=  2.7s loss=1.161, TAw acc= 54.9% | *
+| Epoch   8, time= 15.0s | Train: skip eval | Valid: time=  2.7s loss=1.114, TAw acc= 57.5% | *
+| Epoch   9, time= 15.5s | Train: skip eval | Valid: time=  2.8s loss=1.078, TAw acc= 60.0% | *
+| Epoch  10, time= 15.4s | Train: skip eval | Valid: time=  2.8s loss=1.048, TAw acc= 60.7% | *
+| Epoch  11, time= 16.0s | Train: skip eval | Valid: time=  2.7s loss=1.023, TAw acc= 61.1% | *
+| Epoch  12, time= 15.2s | Train: skip eval | Valid: time=  2.7s loss=1.002, TAw acc= 61.5% | *
+| Epoch  13, time= 15.3s | Train: skip eval | Valid: time=  2.8s loss=0.980, TAw acc= 64.7% | *
+| Epoch  14, time= 16.0s | Train: skip eval | Valid: time=  2.7s loss=0.965, TAw acc= 64.7% | *
+| Epoch  15, time= 15.6s | Train: skip eval | Valid: time=  2.7s loss=0.953, TAw acc= 65.8% | *
+| Selected 216 train exemplars, time=  0.1s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.681 | TAw acc= 89.0%, forg=  1.7%| TAg acc= 84.6%, forg=  5.7% <<<
+>>> Test on task  1 : loss=0.746 | TAw acc= 86.8%, forg=  3.5%| TAg acc= 80.5%, forg=  9.8% <<<
+>>> Test on task  2 : loss=1.019 | TAw acc= 66.4%, forg=  6.9%| TAg acc= 66.4%, forg=  6.9% <<<
+>>> Test on task  3 : loss=2.486 | TAw acc= 72.5%, forg=  6.8%| TAg acc= 49.5%, forg= 29.8% <<<
+>>> Test on task  4 : loss=0.959 | TAw acc= 64.5%, forg=  0.0%| TAg acc= 64.5%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_oewc_NIH300_5epoch_0713oewc_200_random
+************************************************************************************************************
+TAw Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 90.7%  90.3%   0.0%   0.0%   0.0% 	Avg.: 90.5% 
+	 89.1%  90.0%  73.3%   0.0%   0.0% 	Avg.: 84.1% 
+	 89.2%  88.2%  66.4%  79.2%   0.0% 	Avg.: 80.8% 
+	 89.0%  86.8%  66.4%  72.5%  64.5% 	Avg.: 75.8% 
+************************************************************************************************************
+TAg Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 86.4%  90.3%   0.0%   0.0%   0.0% 	Avg.: 88.3% 
+	 86.7%  89.8%  73.3%   0.0%   0.0% 	Avg.: 83.3% 
+	 87.2%  84.7%  65.2%  79.2%   0.0% 	Avg.: 79.1% 
+	 84.6%  80.5%  66.4%  49.5%  64.5% 	Avg.: 69.1% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	 -0.4%   0.0%   0.0%   0.0%   0.0% 	Avg.: -0.4% 
+	  1.6%   0.3%   0.0%   0.0%   0.0% 	Avg.:  0.9% 
+	  1.4%   2.2%   6.9%   0.0%   0.0% 	Avg.:  3.5% 
+	  1.7%   3.5%   6.9%   6.8%   0.0% 	Avg.:  4.7% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  3.9%   0.0%   0.0%   0.0%   0.0% 	Avg.:  3.9% 
+	  3.6%   0.5%   0.0%   0.0%   0.0% 	Avg.:  2.0% 
+	  3.1%   5.7%   8.1%   0.0%   0.0% 	Avg.:  5.6% 
+	  5.7%   9.8%   6.9%  29.8%   0.0% 	Avg.: 13.1% 
+************************************************************************************************************
+[Elapsed time = 0.4 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: lucir
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: NIH300_5epoch_0713lucir
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 15
+	network: ViT_small
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results_Multi
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	K: 2
+	dist: 0.5
+	lamb: 5.0
+	lamb_mr: 1.0
+	remove_adapt_lamda: False
+	remove_less_forget: False
+	remove_margin_ranking: False
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 6), (1, 6), (2, 5), (3, 5), (4, 5)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 13.2s | Train: skip eval | Valid: time=  2.6s loss=1.440, TAw acc= 79.1% | *
+| Epoch   2, time= 12.0s | Train: skip eval | Valid: time=  2.7s loss=1.261, TAw acc= 87.2% | *
+| Epoch   3, time= 12.2s | Train: skip eval | Valid: time=  2.6s loss=1.172, TAw acc= 86.9% | *
+| Epoch   4, time= 12.1s | Train: skip eval | Valid: time=  2.6s loss=1.109, TAw acc= 90.7% | *
+| Epoch   5, time= 12.0s | Train: skip eval | Valid: time=  2.5s loss=1.083, TAw acc= 90.7% | *
+| Epoch   6, time= 12.2s | Train: skip eval | Valid: time=  2.6s loss=1.070, TAw acc= 91.0% | *
+| Epoch   7, time= 12.1s | Train: skip eval | Valid: time=  2.5s loss=1.065, TAw acc= 91.6% | *
+| Epoch   8, time= 11.9s | Train: skip eval | Valid: time=  2.7s loss=1.058, TAw acc= 92.2% | *
+| Epoch   9, time= 11.9s | Train: skip eval | Valid: time=  2.6s loss=1.057, TAw acc= 91.9% | *
+| Epoch  10, time= 12.1s | Train: skip eval | Valid: time=  2.6s loss=1.055, TAw acc= 92.5% | *
+| Epoch  11, time= 12.2s | Train: skip eval | Valid: time=  2.6s loss=1.056, TAw acc= 92.2% |
+| Epoch  12, time= 12.0s | Train: skip eval | Valid: time=  2.5s loss=1.057, TAw acc= 91.6% |
+| Epoch  13, time= 12.1s | Train: skip eval | Valid: time=  2.7s loss=1.054, TAw acc= 92.2% | *
+| Epoch  14, time= 12.2s | Train: skip eval | Valid: time=  2.6s loss=1.057, TAw acc= 91.6% |
+| Epoch  15, time= 12.1s | Train: skip eval | Valid: time=  2.7s loss=1.057, TAw acc= 91.9% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=1.060 | TAw acc= 91.7%, forg=  0.0%| TAg acc= 91.7%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_lucir_NIH300_5epoch_0713lucir
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 11.5s | Train: skip eval | Valid: time=  2.4s loss=2.496, TAw acc= 27.9% | *
+| Epoch   2, time= 11.6s | Train: skip eval | Valid: time=  2.5s loss=2.485, TAw acc= 32.5% | *
+| Epoch   3, time= 11.5s | Train: skip eval | Valid: time=  2.4s loss=2.479, TAw acc= 44.2% | *
+| Epoch   4, time= 11.6s | Train: skip eval | Valid: time=  2.4s loss=2.474, TAw acc= 48.3% | *
+| Epoch   5, time= 11.5s | Train: skip eval | Valid: time=  2.4s loss=2.470, TAw acc= 56.7% | *
+| Epoch   6, time= 11.5s | Train: skip eval | Valid: time=  2.5s loss=2.464, TAw acc= 62.5% | *
+| Epoch   7, time= 11.7s | Train: skip eval | Valid: time=  2.6s loss=2.459, TAw acc= 67.5% | *
+| Epoch   8, time= 11.5s | Train: skip eval | Valid: time=  2.9s loss=2.453, TAw acc= 67.9% | *
+| Epoch   9, time= 11.7s | Train: skip eval | Valid: time=  2.5s loss=2.449, TAw acc= 73.8% | *
+| Epoch  10, time= 11.5s | Train: skip eval | Valid: time=  2.5s loss=2.445, TAw acc= 79.6% | *
+| Epoch  11, time= 11.7s | Train: skip eval | Valid: time=  2.5s loss=2.442, TAw acc= 78.3% | *
+| Epoch  12, time= 11.6s | Train: skip eval | Valid: time=  2.5s loss=2.437, TAw acc= 81.2% | *
+| Epoch  13, time= 11.4s | Train: skip eval | Valid: time=  2.5s loss=2.431, TAw acc= 84.2% | *
+| Epoch  14, time= 12.0s | Train: skip eval | Valid: time=  2.9s loss=2.430, TAw acc= 82.9% | *
+| Epoch  15, time= 11.2s | Train: skip eval | Valid: time=  2.5s loss=2.426, TAw acc= 84.6% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=1.711 | TAw acc= 91.6%, forg=  0.1%| TAg acc= 91.6%, forg=  0.1% <<<
+>>> Test on task  1 : loss=2.429 | TAw acc= 83.0%, forg=  0.0%| TAg acc=  0.0%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_lucir_NIH300_5epoch_0713lucir
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time=  7.4s | Train: skip eval | Valid: time=  2.3s loss=2.817, TAw acc= 19.8% | *
+| Epoch   2, time=  8.3s | Train: skip eval | Valid: time=  2.4s loss=2.815, TAw acc= 26.7% | *
+| Epoch   3, time=  7.5s | Train: skip eval | Valid: time=  2.4s loss=2.814, TAw acc= 25.2% | *
+| Epoch   4, time=  7.4s | Train: skip eval | Valid: time=  2.4s loss=2.812, TAw acc= 26.7% | *
+| Epoch   5, time=  7.4s | Train: skip eval | Valid: time=  2.3s loss=2.810, TAw acc= 29.8% | *
+| Epoch   6, time=  7.3s | Train: skip eval | Valid: time=  2.3s loss=2.809, TAw acc= 29.0% | *
+| Epoch   7, time=  7.6s | Train: skip eval | Valid: time=  2.5s loss=2.808, TAw acc= 30.5% | *
+| Epoch   8, time=  7.4s | Train: skip eval | Valid: time=  2.3s loss=2.806, TAw acc= 32.8% | *
+| Epoch   9, time=  7.3s | Train: skip eval | Valid: time=  2.4s loss=2.805, TAw acc= 35.9% | *
+| Epoch  10, time=  7.6s | Train: skip eval | Valid: time=  2.4s loss=2.805, TAw acc= 34.4% | *
+| Epoch  11, time=  7.4s | Train: skip eval | Valid: time=  2.6s loss=2.805, TAw acc= 36.6% | *
+| Epoch  12, time=  7.4s | Train: skip eval | Valid: time=  2.4s loss=2.803, TAw acc= 32.8% | *
+| Epoch  13, time=  7.3s | Train: skip eval | Valid: time=  2.5s loss=2.802, TAw acc= 36.6% | *
+| Epoch  14, time=  7.4s | Train: skip eval | Valid: time=  2.4s loss=2.802, TAw acc= 37.4% | *
+| Epoch  15, time=  7.6s | Train: skip eval | Valid: time=  2.4s loss=2.802, TAw acc= 37.4% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.049 | TAw acc= 91.0%, forg=  0.7%| TAg acc= 91.0%, forg=  0.7% <<<
+>>> Test on task  1 : loss=2.766 | TAw acc= 78.2%, forg=  4.8%| TAg acc=  0.0%, forg=  0.0% <<<
+>>> Test on task  2 : loss=2.801 | TAw acc= 42.0%, forg=  0.0%| TAg acc=  0.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_lucir_NIH300_5epoch_0713lucir
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 14.7s | Train: skip eval | Valid: time=  2.5s loss=3.043, TAw acc= 40.3% | *
+| Epoch   2, time= 14.5s | Train: skip eval | Valid: time=  2.5s loss=3.041, TAw acc= 45.0% | *
+| Epoch   3, time= 14.9s | Train: skip eval | Valid: time=  2.7s loss=3.039, TAw acc= 48.1% | *
+| Epoch   4, time= 14.3s | Train: skip eval | Valid: time=  2.6s loss=3.037, TAw acc= 54.4% | *
+/root/continual_learning_with_vit/src/approach/lucir.py:47: UserWarning: Warning: LUCIR is expected to use exemplars. Check documentation.
+  warnings.warn("Warning: LUCIR is expected to use exemplars. Check documentation.")
+/root/continual_learning_with_vit/src/approach/lucir.py:98: UserWarning: Warning: ReLU not removed from last block.
+  warnings.warn("Warning: ReLU not removed from last block.")
+| Epoch   5, time= 14.4s | Train: skip eval | Valid: time=  2.6s loss=3.035, TAw acc= 55.3% | *
+| Epoch   6, time= 15.1s | Train: skip eval | Valid: time=  2.5s loss=3.034, TAw acc= 57.5% | *
+| Epoch   7, time= 14.6s | Train: skip eval | Valid: time=  2.5s loss=3.032, TAw acc= 59.7% | *
+| Epoch   8, time= 14.6s | Train: skip eval | Valid: time=  2.6s loss=3.031, TAw acc= 59.7% | *
+| Epoch   9, time= 15.2s | Train: skip eval | Valid: time=  2.5s loss=3.030, TAw acc= 62.2% | *
+| Epoch  10, time= 15.1s | Train: skip eval | Valid: time=  2.9s loss=3.029, TAw acc= 63.7% | *
+| Epoch  11, time= 14.5s | Train: skip eval | Valid: time=  2.6s loss=3.028, TAw acc= 66.6% | *
+| Epoch  12, time= 14.6s | Train: skip eval | Valid: time=  2.6s loss=3.027, TAw acc= 67.5% | *
+| Epoch  13, time= 14.6s | Train: skip eval | Valid: time=  2.5s loss=3.026, TAw acc= 68.1% | *
+| Epoch  14, time= 14.5s | Train: skip eval | Valid: time=  2.6s loss=3.024, TAw acc= 68.4% | *
+| Epoch  15, time= 14.6s | Train: skip eval | Valid: time=  2.5s loss=3.024, TAw acc= 70.6% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.299 | TAw acc= 91.5%, forg=  0.2%| TAg acc= 91.5%, forg=  0.2% <<<
+>>> Test on task  1 : loss=3.019 | TAw acc= 80.3%, forg=  2.7%| TAg acc=  0.0%, forg=  0.0% <<<
+>>> Test on task  2 : loss=3.072 | TAw acc= 40.8%, forg=  1.2%| TAg acc=  0.0%, forg=  0.3% <<<
+>>> Test on task  3 : loss=3.027 | TAw acc= 65.9%, forg=  0.0%| TAg acc=  0.0%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_lucir_NIH300_5epoch_0713lucir
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+| Epoch   1, time= 13.1s | Train: skip eval | Valid: time=  2.5s loss=3.273, TAw acc= 30.5% | *
+| Epoch   2, time= 13.5s | Train: skip eval | Valid: time=  2.5s loss=3.270, TAw acc= 32.7% | *
+| Epoch   3, time= 12.9s | Train: skip eval | Valid: time=  2.5s loss=3.268, TAw acc= 34.5% | *
+| Epoch   4, time= 13.1s | Train: skip eval | Valid: time=  2.5s loss=3.267, TAw acc= 34.9% | *
+| Epoch   5, time= 13.0s | Train: skip eval | Valid: time=  2.6s loss=3.266, TAw acc= 35.6% | *
+| Epoch   6, time= 13.3s | Train: skip eval | Valid: time=  2.5s loss=3.265, TAw acc= 37.8% | *
+| Epoch   7, time= 12.8s | Train: skip eval | Valid: time=  3.0s loss=3.264, TAw acc= 36.4% | *
+| Epoch   8, time= 13.9s | Train: skip eval | Valid: time=  2.5s loss=3.264, TAw acc= 35.6% | *
+| Epoch   9, time= 13.0s | Train: skip eval | Valid: time=  2.5s loss=3.263, TAw acc= 38.2% | *
+| Epoch  10, time= 12.9s | Train: skip eval | Valid: time=  2.5s loss=3.262, TAw acc= 39.3% | *
+| Epoch  11, time= 13.4s | Train: skip eval | Valid: time=  2.6s loss=3.261, TAw acc= 38.9% | *
+| Epoch  12, time= 13.2s | Train: skip eval | Valid: time=  2.5s loss=3.261, TAw acc= 37.8% | *
+| Epoch  13, time= 12.8s | Train: skip eval | Valid: time=  2.5s loss=3.260, TAw acc= 39.6% | *
+| Epoch  14, time= 13.0s | Train: skip eval | Valid: time=  2.4s loss=3.260, TAw acc= 40.4% |
+| Epoch  15, time= 13.1s | Train: skip eval | Valid: time=  2.6s loss=3.260, TAw acc= 39.6% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.503 | TAw acc= 91.6%, forg=  0.1%| TAg acc= 91.6%, forg=  0.1% <<<
+>>> Test on task  1 : loss=3.219 | TAw acc= 77.5%, forg=  5.5%| TAg acc=  0.0%, forg=  0.0% <<<
+>>> Test on task  2 : loss=3.278 | TAw acc= 40.5%, forg=  1.5%| TAg acc=  0.0%, forg=  0.3% <<<
+>>> Test on task  3 : loss=3.232 | TAw acc= 66.2%, forg= -0.4%| TAg acc=  0.1%, forg= -0.1% <<<
+>>> Test on task  4 : loss=3.260 | TAw acc= 40.6%, forg=  0.0%| TAg acc=  0.0%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_lucir_NIH300_5epoch_0713lucir
+************************************************************************************************************
+TAw Acc
+	 91.7%   0.0%   0.0%   0.0%   0.0% 	Avg.: 91.7% 
+	 91.6%  83.0%   0.0%   0.0%   0.0% 	Avg.: 87.3% 
+	 91.0%  78.2%  42.0%   0.0%   0.0% 	Avg.: 70.4% 
+	 91.5%  80.3%  40.8%  65.9%   0.0% 	Avg.: 69.6% 
+	 91.6%  77.5%  40.5%  66.2%  40.6% 	Avg.: 63.3% 
+************************************************************************************************************
+TAg Acc
+	 91.7%   0.0%   0.0%   0.0%   0.0% 	Avg.: 91.7% 
+	 91.6%   0.0%   0.0%   0.0%   0.0% 	Avg.: 45.8% 
+	 91.0%   0.0%   0.3%   0.0%   0.0% 	Avg.: 30.4% 
+	 91.5%   0.0%   0.0%   0.0%   0.0% 	Avg.: 22.9% 
+	 91.6%   0.0%   0.0%   0.1%   0.0% 	Avg.: 18.4% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  0.1%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.1% 
+	  0.7%   4.8%   0.0%   0.0%   0.0% 	Avg.:  2.8% 
+	  0.2%   2.7%   1.2%   0.0%   0.0% 	Avg.:  1.4% 
+	  0.1%   5.5%   1.5%  -0.4%   0.0% 	Avg.:  1.7% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  0.1%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.1% 
+	  0.7%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.4% 
+	  0.2%   0.0%   0.3%   0.0%   0.0% 	Avg.:  0.2% 
+	  0.1%   0.0%   0.3%  -0.1%   0.0% 	Avg.:  0.1% 
+************************************************************************************************************
+[Elapsed time = 0.3 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: lwf
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: NIH300_5epoch_0713lwf
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 15
+	network: ViT_small
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results_Multi
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	T: 2
+	lamb: 1
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 6), (1, 6), (2, 5), (3, 5), (4, 5)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 14.6s | Train: skip eval | Valid: time=  2.5s loss=0.429, TAw acc= 83.6% | *
+| Epoch   2, time= 13.1s | Train: skip eval | Valid: time=  2.6s loss=0.287, TAw acc= 88.4% | *
+| Epoch   3, time= 13.4s | Train: skip eval | Valid: time=  2.7s loss=0.260, TAw acc= 89.3% | *
+| Epoch   4, time= 13.6s | Train: skip eval | Valid: time=  2.7s loss=0.227, TAw acc= 90.1% | *
+| Epoch   5, time= 13.5s | Train: skip eval | Valid: time=  2.6s loss=0.231, TAw acc= 90.7% |
+| Epoch   6, time= 14.0s | Train: skip eval | Valid: time=  2.7s loss=0.228, TAw acc= 91.0% |
+| Epoch   7, time= 12.9s | Train: skip eval | Valid: time=  2.5s loss=0.230, TAw acc= 90.7% |
+| Epoch   8, time= 13.6s | Train: skip eval | Valid: time=  2.6s loss=0.252, TAw acc= 89.9% |
+| Epoch   9, time= 13.2s | Train: skip eval | Valid: time=  2.6s loss=0.253, TAw acc= 90.1% | lr=1.0e-05
+| Epoch  10, time= 13.4s | Train: skip eval | Valid: time=  2.6s loss=0.216, TAw acc= 90.4% | *
+| Epoch  11, time= 13.4s | Train: skip eval | Valid: time=  3.2s loss=0.233, TAw acc= 90.4% |
+| Epoch  12, time= 13.5s | Train: skip eval | Valid: time=  2.6s loss=0.233, TAw acc= 90.4% |
+| Epoch  13, time= 14.0s | Train: skip eval | Valid: time=  2.5s loss=0.231, TAw acc= 90.4% |
+| Epoch  14, time= 12.9s | Train: skip eval | Valid: time=  2.6s loss=0.237, TAw acc= 90.7% |
+| Epoch  15, time= 13.4s | Train: skip eval | Valid: time=  2.7s loss=0.249, TAw acc= 90.4% | lr=3.3e-06
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.283 | TAw acc= 90.3%, forg=  0.0%| TAg acc= 90.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_lwf_NIH300_5epoch_0713lwf
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 11.9s | Train: skip eval | Valid: time=  2.6s loss=2.356, TAw acc= 63.3% | *
+| Epoch   2, time= 12.2s | Train: skip eval | Valid: time=  2.7s loss=2.057, TAw acc= 74.6% | *
+| Epoch   3, time= 12.4s | Train: skip eval | Valid: time=  2.7s loss=1.895, TAw acc= 81.2% | *
+| Epoch   4, time= 11.8s | Train: skip eval | Valid: time=  2.7s loss=1.789, TAw acc= 85.4% | *
+| Epoch   5, time= 12.3s | Train: skip eval | Valid: time=  2.7s loss=1.718, TAw acc= 87.5% | *
+| Epoch   6, time= 11.9s | Train: skip eval | Valid: time=  2.7s loss=1.666, TAw acc= 89.2% | *
+| Epoch   7, time= 11.9s | Train: skip eval | Valid: time=  2.7s loss=1.626, TAw acc= 89.6% | *
+| Epoch   8, time= 12.1s | Train: skip eval | Valid: time=  2.7s loss=1.596, TAw acc= 90.0% | *
+| Epoch   9, time= 11.9s | Train: skip eval | Valid: time=  2.6s loss=1.571, TAw acc= 91.2% | *
+| Epoch  10, time= 12.3s | Train: skip eval | Valid: time=  2.7s loss=1.552, TAw acc= 91.2% | *
+| Epoch  11, time= 11.9s | Train: skip eval | Valid: time=  2.7s loss=1.536, TAw acc= 92.5% | *
+| Epoch  12, time= 12.2s | Train: skip eval | Valid: time=  2.6s loss=1.521, TAw acc= 91.2% | *
+| Epoch  13, time= 12.1s | Train: skip eval | Valid: time=  2.7s loss=1.508, TAw acc= 93.3% | *
+| Epoch  14, time= 11.8s | Train: skip eval | Valid: time=  2.7s loss=1.497, TAw acc= 92.5% | *
+| Epoch  15, time= 12.2s | Train: skip eval | Valid: time=  2.7s loss=1.489, TAw acc= 92.9% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.293 | TAw acc= 90.1%, forg=  0.2%| TAg acc= 90.0%, forg=  0.4% <<<
+>>> Test on task  1 : loss=1.529 | TAw acc= 90.8%, forg=  0.0%| TAg acc= 75.7%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_lwf_NIH300_5epoch_0713lwf
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time=  7.6s | Train: skip eval | Valid: time=  2.6s loss=3.523, TAw acc= 38.9% | *
+| Epoch   2, time=  7.8s | Train: skip eval | Valid: time=  2.5s loss=3.441, TAw acc= 42.7% | *
+| Epoch   3, time=  7.5s | Train: skip eval | Valid: time=  2.5s loss=3.374, TAw acc= 45.0% | *
+| Epoch   4, time=  7.7s | Train: skip eval | Valid: time=  2.5s loss=3.313, TAw acc= 49.6% | *
+| Epoch   5, time=  7.7s | Train: skip eval | Valid: time=  2.5s loss=3.262, TAw acc= 51.1% | *
+| Epoch   6, time=  7.6s | Train: skip eval | Valid: time=  2.4s loss=3.221, TAw acc= 55.7% | *
+| Epoch   7, time=  7.6s | Train: skip eval | Valid: time=  2.5s loss=3.178, TAw acc= 58.8% | *
+| Epoch   8, time=  7.7s | Train: skip eval | Valid: time=  2.4s loss=3.141, TAw acc= 60.3% | *
+| Epoch   9, time=  7.6s | Train: skip eval | Valid: time=  2.5s loss=3.111, TAw acc= 64.1% | *
+| Epoch  10, time=  7.7s | Train: skip eval | Valid: time=  2.5s loss=3.083, TAw acc= 67.2% | *
+| Epoch  11, time=  7.9s | Train: skip eval | Valid: time=  3.0s loss=3.058, TAw acc= 66.4% | *
+| Epoch  12, time=  7.6s | Train: skip eval | Valid: time=  2.4s loss=3.038, TAw acc= 67.9% | *
+| Epoch  13, time=  7.9s | Train: skip eval | Valid: time=  2.4s loss=3.020, TAw acc= 69.5% | *
+| Epoch  14, time=  7.5s | Train: skip eval | Valid: time=  2.4s loss=3.004, TAw acc= 71.0% | *
+| Epoch  15, time=  7.6s | Train: skip eval | Valid: time=  2.5s loss=2.986, TAw acc= 71.0% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.303 | TAw acc= 89.2%, forg=  1.1%| TAg acc= 88.8%, forg=  1.6% <<<
+>>> Test on task  1 : loss=1.550 | TAw acc= 89.0%, forg=  1.8%| TAg acc= 64.8%, forg= 10.8% <<<
+>>> Test on task  2 : loss=2.967 | TAw acc= 65.5%, forg=  0.0%| TAg acc=  6.6%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_lwf_NIH300_5epoch_0713lwf
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 15.2s | Train: skip eval | Valid: time=  2.9s loss=3.794, TAw acc= 50.0% | *
+| Epoch   2, time= 15.5s | Train: skip eval | Valid: time=  2.9s loss=3.571, TAw acc= 63.4% | *
+| Epoch   3, time= 15.5s | Train: skip eval | Valid: time=  2.9s loss=3.463, TAw acc= 67.2% | *
+| Epoch   4, time= 15.6s | Train: skip eval | Valid: time=  2.9s loss=3.385, TAw acc= 73.4% | *
+| Epoch   5, time= 15.4s | Train: skip eval | Valid: time=  2.8s loss=3.327, TAw acc= 76.6% | *
+| Epoch   6, time= 15.4s | Train: skip eval | Valid: time=  2.9s loss=3.279, TAw acc= 76.6% | *
+| Epoch   7, time= 15.1s | Train: skip eval | Valid: time=  2.8s loss=3.244, TAw acc= 78.1% | *
+| Epoch   8, time= 15.4s | Train: skip eval | Valid: time=  2.8s loss=3.214, TAw acc= 78.1% | *
+| Epoch   9, time= 15.4s | Train: skip eval | Valid: time=  3.5s loss=3.195, TAw acc= 79.7% | *
+| Epoch  10, time= 15.0s | Train: skip eval | Valid: time=  2.9s loss=3.167, TAw acc= 79.4% | *
+| Epoch  11, time= 15.7s | Train: skip eval | Valid: time=  2.8s loss=3.147, TAw acc= 80.3% | *
+| Epoch  12, time= 15.3s | Train: skip eval | Valid: time=  2.8s loss=3.129, TAw acc= 80.9% | *
+| Epoch  13, time= 15.1s | Train: skip eval | Valid: time=  2.8s loss=3.113, TAw acc= 80.3% | *
+| Epoch  14, time= 15.5s | Train: skip eval | Valid: time=  3.3s loss=3.099, TAw acc= 81.6% | *
+| Epoch  15, time= 15.3s | Train: skip eval | Valid: time=  2.9s loss=3.092, TAw acc= 83.1% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.347 | TAw acc= 88.6%, forg=  1.7%| TAg acc= 86.8%, forg=  3.5% <<<
+>>> Test on task  1 : loss=1.759 | TAw acc= 84.7%, forg=  6.2%| TAg acc= 52.8%, forg= 22.8% <<<
+>>> Test on task  2 : loss=3.114 | TAw acc= 64.3%, forg=  1.2%| TAg acc=  4.2%, forg=  2.4% <<<
+>>> Test on task  3 : loss=3.159 | TAw acc= 78.8%, forg=  0.0%| TAg acc= 71.5%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_lwf_NIH300_5epoch_0713lwf
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+| Epoch   1, time= 13.7s | Train: skip eval | Valid: time=  2.8s loss=4.231, TAw acc= 37.1% | *
+| Epoch   2, time= 13.8s | Train: skip eval | Valid: time=  2.8s loss=4.100, TAw acc= 46.2% | *
+| Epoch   3, time= 13.3s | Train: skip eval | Valid: time=  3.7s loss=4.020, TAw acc= 50.9% | *
+| Epoch   4, time= 13.6s | Train: skip eval | Valid: time=  2.7s loss=3.959, TAw acc= 54.2% | *
+| Epoch   5, time= 13.3s | Train: skip eval | Valid: time=  2.8s loss=3.907, TAw acc= 54.5% | *
+| Epoch   6, time= 14.0s | Train: skip eval | Valid: time=  2.8s loss=3.869, TAw acc= 58.5% | *
+| Epoch   7, time= 13.5s | Train: skip eval | Valid: time=  2.7s loss=3.833, TAw acc= 58.5% | *
+| Epoch   8, time= 13.7s | Train: skip eval | Valid: time=  2.7s loss=3.801, TAw acc= 60.0% | *
+| Epoch   9, time= 13.6s | Train: skip eval | Valid: time=  2.8s loss=3.778, TAw acc= 61.1% | *
+| Epoch  10, time= 13.6s | Train: skip eval | Valid: time=  2.7s loss=3.755, TAw acc= 61.8% | *
+| Epoch  11, time= 13.3s | Train: skip eval | Valid: time=  2.7s loss=3.737, TAw acc= 62.5% | *
+| Epoch  12, time= 13.3s | Train: skip eval | Valid: time=  2.7s loss=3.721, TAw acc= 63.3% | *
+| Epoch  13, time= 13.9s | Train: skip eval | Valid: time=  2.8s loss=3.706, TAw acc= 64.4% | *
+| Epoch  14, time= 13.3s | Train: skip eval | Valid: time=  2.7s loss=3.693, TAw acc= 64.7% | *
+| Epoch  15, time= 13.4s | Train: skip eval | Valid: time=  2.7s loss=3.683, TAw acc= 65.8% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.331 | TAw acc= 89.6%, forg=  0.7%| TAg acc= 85.9%, forg=  4.4% <<<
+>>> Test on task  1 : loss=1.845 | TAw acc= 85.0%, forg=  5.8%| TAg acc= 56.0%, forg= 19.7% <<<
+>>> Test on task  2 : loss=3.192 | TAw acc= 65.2%, forg=  0.3%| TAg acc=  8.7%, forg= -2.1% <<<
+>>> Test on task  3 : loss=3.213 | TAw acc= 76.5%, forg=  2.2%| TAg acc= 65.5%, forg=  6.0% <<<
+>>> Test on task  4 : loss=3.703 | TAw acc= 64.8%, forg=  0.0%| TAg acc= 16.6%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_lwf_NIH300_5epoch_0713lwf
+************************************************************************************************************
+TAw Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 90.1%  90.8%   0.0%   0.0%   0.0% 	Avg.: 90.5% 
+	 89.2%  89.0%  65.5%   0.0%   0.0% 	Avg.: 81.2% 
+	 88.6%  84.7%  64.3%  78.8%   0.0% 	Avg.: 79.1% 
+	 89.6%  85.0%  65.2%  76.5%  64.8% 	Avg.: 76.2% 
+************************************************************************************************************
+TAg Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 90.0%  75.7%   0.0%   0.0%   0.0% 	Avg.: 82.8% 
+	 88.8%  64.8%   6.6%   0.0%   0.0% 	Avg.: 53.4% 
+	 86.8%  52.8%   4.2%  71.5%   0.0% 	Avg.: 53.8% 
+	 85.9%  56.0%   8.7%  65.5%  16.6% 	Avg.: 46.5% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  0.2%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.2% 
+	  1.1%   1.8%   0.0%   0.0%   0.0% 	Avg.:  1.5% 
+	  1.7%   6.2%   1.2%   0.0%   0.0% 	Avg.:  3.0% 
+	  0.7%   5.8%   0.3%   2.2%   0.0% 	Avg.:  2.3% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  0.4%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.4% 
+	  1.6%  10.8%   0.0%   0.0%   0.0% 	Avg.:  6.2% 
+	  3.5%  22.8%   2.4%   0.0%   0.0% 	Avg.:  9.6% 
+	  4.4%  19.7%  -2.1%   6.0%   0.0% 	Avg.:  7.0% 
+************************************************************************************************************
+[Elapsed time = 0.3 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: mas
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: NIH300_5epoch_0713mas
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 15
+	network: ViT_small
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results_Multi
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	alpha: 0.5
+	fi_num_samples: -1
+	lamb: 1
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 6), (1, 6), (2, 5), (3, 5), (4, 5)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 14.7s | Train: skip eval | Valid: time=  2.6s loss=0.429, TAw acc= 83.6% | *
+| Epoch   2, time= 14.1s | Train: skip eval | Valid: time=  2.7s loss=0.287, TAw acc= 88.4% | *
+| Epoch   3, time= 14.1s | Train: skip eval | Valid: time=  2.6s loss=0.260, TAw acc= 89.3% | *
+| Epoch   4, time= 13.7s | Train: skip eval | Valid: time=  2.7s loss=0.227, TAw acc= 90.1% | *
+| Epoch   5, time= 14.0s | Train: skip eval | Valid: time=  2.7s loss=0.231, TAw acc= 90.7% |
+| Epoch   6, time= 13.9s | Train: skip eval | Valid: time=  2.6s loss=0.228, TAw acc= 91.0% |
+| Epoch   7, time= 13.3s | Train: skip eval | Valid: time=  2.6s loss=0.230, TAw acc= 90.7% |
+| Epoch   8, time= 13.2s | Train: skip eval | Valid: time=  2.6s loss=0.252, TAw acc= 89.9% |
+| Epoch   9, time= 14.2s | Train: skip eval | Valid: time=  2.6s loss=0.253, TAw acc= 90.1% | lr=1.0e-05
+| Epoch  10, time= 13.9s | Train: skip eval | Valid: time=  2.6s loss=0.216, TAw acc= 90.4% | *
+| Epoch  11, time= 13.3s | Train: skip eval | Valid: time=  2.6s loss=0.233, TAw acc= 90.4% |
+| Epoch  12, time= 13.7s | Train: skip eval | Valid: time=  2.8s loss=0.233, TAw acc= 90.4% |
+| Epoch  13, time= 13.9s | Train: skip eval | Valid: time=  2.7s loss=0.231, TAw acc= 90.4% |
+| Epoch  14, time= 14.0s | Train: skip eval | Valid: time=  2.7s loss=0.237, TAw acc= 90.7% |
+| Epoch  15, time= 13.7s | Train: skip eval | Valid: time=  2.8s loss=0.249, TAw acc= 90.4% | lr=3.3e-06
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.283 | TAw acc= 90.3%, forg=  0.0%| TAg acc= 90.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_mas_NIH300_5epoch_0713mas
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 13.3s | Train: skip eval | Valid: time=  2.7s loss=1.311, TAw acc= 51.7% | *
+| Epoch   2, time= 13.4s | Train: skip eval | Valid: time=  2.6s loss=0.939, TAw acc= 66.2% | *
+| Epoch   3, time= 13.4s | Train: skip eval | Valid: time=  3.5s loss=0.732, TAw acc= 75.8% | *
+| Epoch   4, time= 13.4s | Train: skip eval | Valid: time=  2.7s loss=0.594, TAw acc= 85.0% | *
+| Epoch   5, time= 13.4s | Train: skip eval | Valid: time=  3.4s loss=0.497, TAw acc= 86.2% | *
+| Epoch   6, time= 13.1s | Train: skip eval | Valid: time=  2.7s loss=0.427, TAw acc= 88.8% | *
+| Epoch   7, time= 13.5s | Train: skip eval | Valid: time=  2.7s loss=0.378, TAw acc= 89.6% | *
+| Epoch   8, time= 13.2s | Train: skip eval | Valid: time=  2.6s loss=0.338, TAw acc= 91.7% | *
+| Epoch   9, time= 13.4s | Train: skip eval | Valid: time=  3.2s loss=0.304, TAw acc= 91.7% | *
+| Epoch  10, time= 13.4s | Train: skip eval | Valid: time=  2.6s loss=0.285, TAw acc= 91.7% | *
+| Epoch  11, time= 12.5s | Train: skip eval | Valid: time=  2.7s loss=0.262, TAw acc= 92.5% | *
+| Epoch  12, time= 13.0s | Train: skip eval | Valid: time=  2.7s loss=0.244, TAw acc= 93.8% | *
+| Epoch  13, time= 13.9s | Train: skip eval | Valid: time=  3.3s loss=0.231, TAw acc= 93.8% | *
+| Epoch  14, time= 13.5s | Train: skip eval | Valid: time=  2.7s loss=0.222, TAw acc= 94.2% | *
+| Epoch  15, time= 13.6s | Train: skip eval | Valid: time=  2.7s loss=0.210, TAw acc= 95.0% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.306 | TAw acc= 90.0%, forg=  0.4%| TAg acc= 85.8%, forg=  4.5% <<<
+>>> Test on task  1 : loss=0.286 | TAw acc= 90.2%, forg=  0.0%| TAg acc= 84.8%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_mas_NIH300_5epoch_0713mas
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time=  8.1s | Train: skip eval | Valid: time=  2.5s loss=1.462, TAw acc= 33.6% | *
+| Epoch   2, time=  8.4s | Train: skip eval | Valid: time=  2.4s loss=1.375, TAw acc= 41.2% | *
+| Epoch   3, time=  8.3s | Train: skip eval | Valid: time=  2.5s loss=1.302, TAw acc= 45.0% | *
+| Epoch   4, time=  8.4s | Train: skip eval | Valid: time=  2.5s loss=1.237, TAw acc= 51.1% | *
+| Epoch   5, time=  8.1s | Train: skip eval | Valid: time=  2.5s loss=1.180, TAw acc= 54.2% | *
+| Epoch   6, time=  8.5s | Train: skip eval | Valid: time=  2.5s loss=1.126, TAw acc= 56.5% | *
+| Epoch   7, time=  8.3s | Train: skip eval | Valid: time=  2.4s loss=1.087, TAw acc= 58.0% | *
+| Epoch   8, time=  8.6s | Train: skip eval | Valid: time=  2.5s loss=1.042, TAw acc= 59.5% | *
+| Epoch   9, time=  8.5s | Train: skip eval | Valid: time=  2.6s loss=1.007, TAw acc= 61.1% | *
+| Epoch  10, time=  8.5s | Train: skip eval | Valid: time=  2.4s loss=0.975, TAw acc= 62.6% | *
+| Epoch  11, time=  8.2s | Train: skip eval | Valid: time=  2.6s loss=0.947, TAw acc= 63.4% | *
+| Epoch  12, time=  8.4s | Train: skip eval | Valid: time=  2.6s loss=0.922, TAw acc= 66.4% | *
+| Epoch  13, time=  8.5s | Train: skip eval | Valid: time=  2.5s loss=0.903, TAw acc= 65.6% | *
+| Epoch  14, time=  8.4s | Train: skip eval | Valid: time=  2.5s loss=0.885, TAw acc= 67.9% | *
+| Epoch  15, time=  8.4s | Train: skip eval | Valid: time=  2.6s loss=0.872, TAw acc= 67.9% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.336 | TAw acc= 88.4%, forg=  1.9%| TAg acc= 84.1%, forg=  6.2% <<<
+>>> Test on task  1 : loss=0.310 | TAw acc= 88.7%, forg=  1.5%| TAg acc= 83.7%, forg=  1.2% <<<
+>>> Test on task  2 : loss=0.835 | TAw acc= 67.3%, forg=  0.0%| TAg acc= 32.1%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_mas_NIH300_5epoch_0713mas
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 16.9s | Train: skip eval | Valid: time=  2.8s loss=0.958, TAw acc= 56.9% | *
+| Epoch   2, time= 17.4s | Train: skip eval | Valid: time=  2.8s loss=0.801, TAw acc= 63.4% | *
+| Epoch   3, time= 17.1s | Train: skip eval | Valid: time=  2.8s loss=0.724, TAw acc= 69.7% | *
+| Epoch   4, time= 16.9s | Train: skip eval | Valid: time=  2.8s loss=0.655, TAw acc= 72.2% | *
+| Epoch   5, time= 16.1s | Train: skip eval | Valid: time=  2.8s loss=0.613, TAw acc= 76.9% | *
+| Epoch   6, time= 16.7s | Train: skip eval | Valid: time=  3.3s loss=0.580, TAw acc= 77.5% | *
+| Epoch   7, time= 15.7s | Train: skip eval | Valid: time=  2.7s loss=0.560, TAw acc= 77.8% | *
+| Epoch   8, time= 17.1s | Train: skip eval | Valid: time=  3.3s loss=0.528, TAw acc= 78.4% | *
+| Epoch   9, time= 16.1s | Train: skip eval | Valid: time=  2.8s loss=0.501, TAw acc= 80.0% | *
+| Epoch  10, time= 16.7s | Train: skip eval | Valid: time=  2.7s loss=0.490, TAw acc= 80.3% | *
+| Epoch  11, time= 16.7s | Train: skip eval | Valid: time=  2.8s loss=0.472, TAw acc= 80.9% | *
+| Epoch  12, time= 16.7s | Train: skip eval | Valid: time=  2.8s loss=0.458, TAw acc= 81.2% | *
+| Epoch  13, time= 16.3s | Train: skip eval | Valid: time=  2.8s loss=0.455, TAw acc= 80.9% | *
+| Epoch  14, time= 16.7s | Train: skip eval | Valid: time=  2.8s loss=0.442, TAw acc= 81.2% | *
+| Epoch  15, time= 16.6s | Train: skip eval | Valid: time=  3.2s loss=0.438, TAw acc= 81.6% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.347 | TAw acc= 87.6%, forg=  2.8%| TAg acc= 82.2%, forg=  8.1% <<<
+>>> Test on task  1 : loss=0.319 | TAw acc= 90.5%, forg= -0.3%| TAg acc= 70.7%, forg= 14.2% <<<
+>>> Test on task  2 : loss=0.989 | TAw acc= 59.2%, forg=  8.1%| TAg acc= 14.7%, forg= 17.4% <<<
+>>> Test on task  3 : loss=0.509 | TAw acc= 79.8%, forg=  0.0%| TAg acc= 73.4%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_mas_NIH300_5epoch_0713mas
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+| Epoch   1, time= 15.0s | Train: skip eval | Valid: time=  2.7s loss=1.476, TAw acc= 36.0% | *
+| Epoch   2, time= 14.6s | Train: skip eval | Valid: time=  2.8s loss=1.334, TAw acc= 46.5% | *
+| Epoch   3, time= 13.9s | Train: skip eval | Valid: time=  2.7s loss=1.237, TAw acc= 52.4% | *
+| Epoch   4, time= 15.0s | Train: skip eval | Valid: time=  2.8s loss=1.166, TAw acc= 54.5% | *
+| Epoch   5, time= 15.5s | Train: skip eval | Valid: time=  2.8s loss=1.109, TAw acc= 57.5% | *
+| Epoch   6, time= 14.8s | Train: skip eval | Valid: time=  2.7s loss=1.068, TAw acc= 57.5% | *
+| Epoch   7, time= 15.1s | Train: skip eval | Valid: time=  2.7s loss=1.025, TAw acc= 59.6% | *
+| Epoch   8, time= 15.1s | Train: skip eval | Valid: time=  2.7s loss=0.993, TAw acc= 62.2% | *
+| Epoch   9, time= 14.1s | Train: skip eval | Valid: time=  2.7s loss=0.972, TAw acc= 62.5% | *
+| Epoch  10, time= 15.7s | Train: skip eval | Valid: time=  2.8s loss=0.950, TAw acc= 62.5% | *
+| Epoch  11, time= 14.8s | Train: skip eval | Valid: time=  2.7s loss=0.933, TAw acc= 64.4% | *
+| Epoch  12, time= 15.1s | Train: skip eval | Valid: time=  2.9s loss=0.915, TAw acc= 65.8% | *
+| Epoch  13, time= 15.2s | Train: skip eval | Valid: time=  2.7s loss=0.903, TAw acc= 66.5% | *
+| Epoch  14, time= 15.2s | Train: skip eval | Valid: time=  3.2s loss=0.889, TAw acc= 67.3% | *
+| Epoch  15, time= 15.4s | Train: skip eval | Valid: time=  3.4s loss=0.879, TAw acc= 66.5% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.407 | TAw acc= 85.4%, forg=  4.9%| TAg acc= 75.8%, forg= 14.5% <<<
+>>> Test on task  1 : loss=0.390 | TAw acc= 88.8%, forg=  1.7%| TAg acc= 72.8%, forg= 12.0% <<<
+>>> Test on task  2 : loss=1.116 | TAw acc= 53.2%, forg= 14.1%| TAg acc= 21.6%, forg= 10.5% <<<
+>>> Test on task  3 : loss=0.584 | TAw acc= 77.0%, forg=  2.7%| TAg acc= 68.1%, forg=  5.2% <<<
+>>> Test on task  4 : loss=0.919 | TAw acc= 63.7%, forg=  0.0%| TAg acc= 17.7%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_mas_NIH300_5epoch_0713mas
+************************************************************************************************************
+TAw Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 90.0%  90.2%   0.0%   0.0%   0.0% 	Avg.: 90.1% 
+	 88.4%  88.7%  67.3%   0.0%   0.0% 	Avg.: 81.4% 
+	 87.6%  90.5%  59.2%  79.8%   0.0% 	Avg.: 79.2% 
+	 85.4%  88.8%  53.2%  77.0%  63.7% 	Avg.: 73.6% 
+************************************************************************************************************
+TAg Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 85.8%  84.8%   0.0%   0.0%   0.0% 	Avg.: 85.3% 
+	 84.1%  83.7%  32.1%   0.0%   0.0% 	Avg.: 66.6% 
+	 82.2%  70.7%  14.7%  73.4%   0.0% 	Avg.: 60.2% 
+	 75.8%  72.8%  21.6%  68.1%  17.7% 	Avg.: 51.2% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  0.4%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.4% 
+	  1.9%   1.5%   0.0%   0.0%   0.0% 	Avg.:  1.7% 
+	  2.8%  -0.3%   8.1%   0.0%   0.0% 	Avg.:  3.5% 
+	  4.9%   1.7%  14.1%   2.7%   0.0% 	Avg.:  5.9% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  4.5%   0.0%   0.0%   0.0%   0.0% 	Avg.:  4.5% 
+	  6.2%   1.2%   0.0%   0.0%   0.0% 	Avg.:  3.7% 
+	  8.1%  14.2%  17.4%   0.0%   0.0% 	Avg.: 13.2% 
+	 14.5%  12.0%  10.5%   5.2%   0.0% 	Avg.: 10.6% 
+************************************************************************************************************
+[Elapsed time = 0.4 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: path_integral
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: NIH300_5epoch_0713path_integral
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 15
+	network: ViT_small
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results_Multi
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	damping: 0.1
+	lamb: 0.1
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 6), (1, 6), (2, 5), (3, 5), (4, 5)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 21.9s | Train: skip eval | Valid: time=  2.6s loss=0.429, TAw acc= 83.6% | *
+| Epoch   2, time= 21.1s | Train: skip eval | Valid: time=  2.6s loss=0.287, TAw acc= 88.4% | *
+| Epoch   3, time= 21.1s | Train: skip eval | Valid: time=  3.0s loss=0.260, TAw acc= 89.3% | *
+| Epoch   4, time= 20.2s | Train: skip eval | Valid: time=  2.6s loss=0.227, TAw acc= 90.1% | *
+| Epoch   5, time= 22.5s | Train: skip eval | Valid: time=  2.7s loss=0.231, TAw acc= 90.7% |
+| Epoch   6, time= 20.7s | Train: skip eval | Valid: time=  2.6s loss=0.228, TAw acc= 91.0% |
+| Epoch   7, time= 20.4s | Train: skip eval | Valid: time=  2.6s loss=0.230, TAw acc= 90.7% |
+| Epoch   8, time= 20.1s | Train: skip eval | Valid: time=  2.6s loss=0.252, TAw acc= 89.9% |
+| Epoch   9, time= 21.1s | Train: skip eval | Valid: time=  2.7s loss=0.253, TAw acc= 90.1% | lr=1.0e-05
+| Epoch  10, time= 20.3s | Train: skip eval | Valid: time=  2.7s loss=0.216, TAw acc= 90.4% | *
+| Epoch  11, time= 20.5s | Train: skip eval | Valid: time=  2.7s loss=0.233, TAw acc= 90.4% |
+| Epoch  12, time= 20.8s | Train: skip eval | Valid: time=  2.6s loss=0.233, TAw acc= 90.4% |
+| Epoch  13, time= 20.8s | Train: skip eval | Valid: time=  2.7s loss=0.231, TAw acc= 90.4% |
+| Epoch  14, time= 20.5s | Train: skip eval | Valid: time=  2.7s loss=0.237, TAw acc= 90.7% |
+| Epoch  15, time= 20.9s | Train: skip eval | Valid: time=  2.6s loss=0.249, TAw acc= 90.4% | lr=3.3e-06
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.283 | TAw acc= 90.3%, forg=  0.0%| TAg acc= 90.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_path_integral_NIH300_5epoch_0713path_integral
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 18.2s | Train: skip eval | Valid: time=  2.7s loss=1.099, TAw acc= 63.7% | *
+| Epoch   2, time= 18.9s | Train: skip eval | Valid: time=  2.7s loss=0.788, TAw acc= 74.2% | *
+| Epoch   3, time= 17.8s | Train: skip eval | Valid: time=  2.6s loss=0.619, TAw acc= 81.2% | *
+| Epoch   4, time= 17.9s | Train: skip eval | Valid: time=  2.6s loss=0.509, TAw acc= 85.4% | *
+| Epoch   5, time= 19.6s | Train: skip eval | Valid: time=  2.7s loss=0.436, TAw acc= 87.5% | *
+| Epoch   6, time= 17.5s | Train: skip eval | Valid: time=  2.7s loss=0.384, TAw acc= 89.6% | *
+| Epoch   7, time= 19.4s | Train: skip eval | Valid: time=  2.6s loss=0.345, TAw acc= 90.4% | *
+| Epoch   8, time= 19.0s | Train: skip eval | Valid: time=  2.5s loss=0.316, TAw acc= 90.0% | *
+| Epoch   9, time= 18.0s | Train: skip eval | Valid: time=  2.6s loss=0.294, TAw acc= 91.7% | *
+| Epoch  10, time= 19.6s | Train: skip eval | Valid: time=  2.6s loss=0.278, TAw acc= 92.1% | *
+| Epoch  11, time= 19.5s | Train: skip eval | Valid: time=  2.7s loss=0.263, TAw acc= 92.1% | *
+| Epoch  12, time= 18.8s | Train: skip eval | Valid: time=  2.7s loss=0.251, TAw acc= 92.1% | *
+| Epoch  13, time= 18.0s | Train: skip eval | Valid: time=  2.6s loss=0.239, TAw acc= 92.1% | *
+| Epoch  14, time= 19.5s | Train: skip eval | Valid: time=  2.6s loss=0.231, TAw acc= 93.3% | *
+| Epoch  15, time= 17.7s | Train: skip eval | Valid: time=  2.7s loss=0.224, TAw acc= 93.3% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.316 | TAw acc= 89.8%, forg=  0.5%| TAg acc= 87.2%, forg=  3.1% <<<
+>>> Test on task  1 : loss=0.252 | TAw acc= 90.5%, forg=  0.0%| TAg acc= 87.8%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_path_integral_NIH300_5epoch_0713path_integral
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time= 10.9s | Train: skip eval | Valid: time=  2.5s loss=1.397, TAw acc= 37.4% | *
+| Epoch   2, time= 10.9s | Train: skip eval | Valid: time=  2.4s loss=1.305, TAw acc= 42.7% | *
+| Epoch   3, time= 10.8s | Train: skip eval | Valid: time=  2.5s loss=1.232, TAw acc= 45.0% | *
+| Epoch   4, time= 10.9s | Train: skip eval | Valid: time=  2.6s loss=1.170, TAw acc= 51.1% | *
+| Epoch   5, time= 11.9s | Train: skip eval | Valid: time=  2.5s loss=1.119, TAw acc= 52.7% | *
+| Epoch   6, time= 10.9s | Train: skip eval | Valid: time=  2.4s loss=1.078, TAw acc= 57.3% | *
+| Epoch   7, time= 10.9s | Train: skip eval | Valid: time=  2.4s loss=1.036, TAw acc= 59.5% | *
+| Epoch   8, time= 10.8s | Train: skip eval | Valid: time=  2.4s loss=1.000, TAw acc= 64.1% | *
+| Epoch   9, time= 10.8s | Train: skip eval | Valid: time=  2.4s loss=0.970, TAw acc= 67.9% | *
+| Epoch  10, time= 11.0s | Train: skip eval | Valid: time=  2.5s loss=0.940, TAw acc= 67.2% | *
+| Epoch  11, time= 10.8s | Train: skip eval | Valid: time=  2.5s loss=0.915, TAw acc= 71.0% | *
+| Epoch  12, time= 11.9s | Train: skip eval | Valid: time=  2.5s loss=0.895, TAw acc= 69.5% | *
+| Epoch  13, time= 11.9s | Train: skip eval | Valid: time=  2.5s loss=0.877, TAw acc= 71.8% | *
+| Epoch  14, time= 11.7s | Train: skip eval | Valid: time=  2.4s loss=0.860, TAw acc= 72.5% | *
+| Epoch  15, time= 11.6s | Train: skip eval | Valid: time=  2.7s loss=0.842, TAw acc= 73.3% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.346 | TAw acc= 87.8%, forg=  2.5%| TAg acc= 85.5%, forg=  4.8% <<<
+>>> Test on task  1 : loss=0.286 | TAw acc= 89.3%, forg=  1.2%| TAg acc= 79.7%, forg=  8.2% <<<
+>>> Test on task  2 : loss=0.849 | TAw acc= 67.9%, forg=  0.0%| TAg acc= 26.7%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_path_integral_NIH300_5epoch_0713path_integral
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 22.9s | Train: skip eval | Valid: time=  2.8s loss=1.118, TAw acc= 48.1% | *
+| Epoch   2, time= 24.6s | Train: skip eval | Valid: time=  2.7s loss=0.880, TAw acc= 64.4% | *
+| Epoch   3, time= 23.5s | Train: skip eval | Valid: time=  2.8s loss=0.768, TAw acc= 68.1% | *
+| Epoch   4, time= 23.4s | Train: skip eval | Valid: time=  3.1s loss=0.690, TAw acc= 71.2% | *
+| Epoch   5, time= 23.2s | Train: skip eval | Valid: time=  2.8s loss=0.633, TAw acc= 75.0% | *
+| Epoch   6, time= 23.7s | Train: skip eval | Valid: time=  2.7s loss=0.588, TAw acc= 74.1% | *
+| Epoch   7, time= 25.2s | Train: skip eval | Valid: time=  2.8s loss=0.553, TAw acc= 77.8% | *
+| Epoch   8, time= 22.7s | Train: skip eval | Valid: time=  2.7s loss=0.525, TAw acc= 81.6% | *
+| Epoch   9, time= 23.8s | Train: skip eval | Valid: time=  2.7s loss=0.509, TAw acc= 81.2% | *
+| Epoch  10, time= 24.2s | Train: skip eval | Valid: time=  2.7s loss=0.480, TAw acc= 82.8% | *
+| Epoch  11, time= 24.6s | Train: skip eval | Valid: time=  2.7s loss=0.463, TAw acc= 82.8% | *
+| Epoch  12, time= 23.2s | Train: skip eval | Valid: time=  2.7s loss=0.449, TAw acc= 83.4% | *
+| Epoch  13, time= 23.0s | Train: skip eval | Valid: time=  2.8s loss=0.435, TAw acc= 83.8% | *
+| Epoch  14, time= 22.7s | Train: skip eval | Valid: time=  2.7s loss=0.424, TAw acc= 84.1% | *
+| Epoch  15, time= 25.6s | Train: skip eval | Valid: time=  2.7s loss=0.424, TAw acc= 82.8% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.393 | TAw acc= 87.2%, forg=  3.1%| TAg acc= 82.3%, forg=  8.0% <<<
+>>> Test on task  1 : loss=0.495 | TAw acc= 78.7%, forg= 11.8%| TAg acc= 61.5%, forg= 26.3% <<<
+>>> Test on task  2 : loss=0.984 | TAw acc= 59.5%, forg=  8.4%| TAg acc= 12.3%, forg= 14.4% <<<
+>>> Test on task  3 : loss=0.511 | TAw acc= 79.9%, forg=  0.0%| TAg acc= 73.5%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_path_integral_NIH300_5epoch_0713path_integral
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+| Epoch   1, time= 20.5s | Train: skip eval | Valid: time=  2.6s loss=1.457, TAw acc= 39.3% | *
+| Epoch   2, time= 21.6s | Train: skip eval | Valid: time=  2.7s loss=1.319, TAw acc= 46.5% | *
+| Epoch   3, time= 20.2s | Train: skip eval | Valid: time=  2.7s loss=1.234, TAw acc= 49.8% | *
+| Epoch   4, time= 21.8s | Train: skip eval | Valid: time=  2.7s loss=1.168, TAw acc= 54.5% | *
+| Epoch   5, time= 20.6s | Train: skip eval | Valid: time=  2.7s loss=1.113, TAw acc= 55.6% | *
+| Epoch   6, time= 20.1s | Train: skip eval | Valid: time=  2.6s loss=1.074, TAw acc= 58.2% | *
+| Epoch   7, time= 20.0s | Train: skip eval | Valid: time=  2.6s loss=1.039, TAw acc= 60.4% | *
+| Epoch   8, time= 20.6s | Train: skip eval | Valid: time=  2.7s loss=1.010, TAw acc= 61.5% | *
+| Epoch   9, time= 20.0s | Train: skip eval | Valid: time=  2.7s loss=0.984, TAw acc= 63.3% | *
+| Epoch  10, time= 20.3s | Train: skip eval | Valid: time=  2.6s loss=0.962, TAw acc= 64.7% | *
+| Epoch  11, time= 20.1s | Train: skip eval | Valid: time=  3.1s loss=0.945, TAw acc= 65.8% | *
+| Epoch  12, time= 22.0s | Train: skip eval | Valid: time=  2.7s loss=0.930, TAw acc= 65.5% | *
+| Epoch  13, time= 20.7s | Train: skip eval | Valid: time=  2.7s loss=0.916, TAw acc= 65.8% | *
+| Epoch  14, time= 20.7s | Train: skip eval | Valid: time=  2.6s loss=0.905, TAw acc= 65.5% | *
+| Epoch  15, time= 19.8s | Train: skip eval | Valid: time=  2.7s loss=0.894, TAw acc= 65.1% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.365 | TAw acc= 87.9%, forg=  2.4%| TAg acc= 81.1%, forg=  9.2% <<<
+>>> Test on task  1 : loss=0.520 | TAw acc= 79.8%, forg= 10.7%| TAg acc= 65.0%, forg= 22.8% <<<
+>>> Test on task  2 : loss=1.036 | TAw acc= 57.1%, forg= 10.8%| TAg acc=  8.7%, forg= 18.0% <<<
+>>> Test on task  3 : loss=0.676 | TAw acc= 71.8%, forg=  8.1%| TAg acc= 60.5%, forg= 13.0% <<<
+>>> Test on task  4 : loss=0.906 | TAw acc= 65.1%, forg=  0.0%| TAg acc= 27.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_path_integral_NIH300_5epoch_0713path_integral
+************************************************************************************************************
+TAw Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 89.8%  90.5%   0.0%   0.0%   0.0% 	Avg.: 90.2% 
+	 87.8%  89.3%  67.9%   0.0%   0.0% 	Avg.: 81.7% 
+	 87.2%  78.7%  59.5%  79.9%   0.0% 	Avg.: 76.3% 
+	 87.9%  79.8%  57.1%  71.8%  65.1% 	Avg.: 72.3% 
+************************************************************************************************************
+TAg Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 87.2%  87.8%   0.0%   0.0%   0.0% 	Avg.: 87.5% 
+	 85.5%  79.7%  26.7%   0.0%   0.0% 	Avg.: 64.0% 
+	 82.3%  61.5%  12.3%  73.5%   0.0% 	Avg.: 57.4% 
+	 81.1%  65.0%   8.7%  60.5%  27.3% 	Avg.: 48.5% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  0.5%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.5% 
+	  2.5%   1.2%   0.0%   0.0%   0.0% 	Avg.:  1.8% 
+	  3.1%  11.8%   8.4%   0.0%   0.0% 	Avg.:  7.8% 
+	  2.4%  10.7%  10.8%   8.1%   0.0% 	Avg.:  8.0% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  3.1%   0.0%   0.0%   0.0%   0.0% 	Avg.:  3.1% 
+	  4.8%   8.2%   0.0%   0.0%   0.0% 	Avg.:  6.5% 
+	  8.0%  26.3%  14.4%   0.0%   0.0% 	Avg.: 16.3% 
+	  9.2%  22.8%  18.0%  13.0%   0.0% 	Avg.: 15.8% 
+************************************************************************************************************
+[Elapsed time = 0.5 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: r_walk
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: NIH300_5epoch_0713r_walk_noexampler
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 15
+	network: ViT_small
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results_Multi
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	alpha: 0.5
+	damping: 0.1
+	fim_num_samples: -1
+	fim_sampling_type: max_pred
+	lamb: 1
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 6), (1, 6), (2, 5), (3, 5), (4, 5)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 22.0s | Train: skip eval | Valid: time=  2.7s loss=0.429, TAw acc= 83.6% | *
+| Epoch   2, time= 21.4s | Train: skip eval | Valid: time=  2.7s loss=0.287, TAw acc= 88.4% | *
+| Epoch   3, time= 21.0s | Train: skip eval | Valid: time=  2.7s loss=0.260, TAw acc= 89.3% | *
+| Epoch   4, time= 21.5s | Train: skip eval | Valid: time=  3.6s loss=0.227, TAw acc= 90.1% | *
+| Epoch   5, time= 21.2s | Train: skip eval | Valid: time=  2.8s loss=0.231, TAw acc= 90.7% |
+| Epoch   6, time= 20.2s | Train: skip eval | Valid: time=  3.1s loss=0.228, TAw acc= 91.0% |
+| Epoch   7, time= 21.3s | Train: skip eval | Valid: time=  3.4s loss=0.230, TAw acc= 90.7% |
+| Epoch   8, time= 21.2s | Train: skip eval | Valid: time=  2.6s loss=0.252, TAw acc= 89.9% |
+| Epoch   9, time= 20.1s | Train: skip eval | Valid: time=  3.4s loss=0.253, TAw acc= 90.1% | lr=1.0e-05
+| Epoch  10, time= 20.7s | Train: skip eval | Valid: time=  2.7s loss=0.216, TAw acc= 90.4% | *
+| Epoch  11, time= 21.4s | Train: skip eval | Valid: time=  2.7s loss=0.233, TAw acc= 90.4% |
+| Epoch  12, time= 21.8s | Train: skip eval | Valid: time=  2.6s loss=0.233, TAw acc= 90.4% |
+| Epoch  13, time= 20.9s | Train: skip eval | Valid: time=  2.6s loss=0.231, TAw acc= 90.4% |
+| Epoch  14, time= 20.1s | Train: skip eval | Valid: time=  2.6s loss=0.237, TAw acc= 90.7% |
+| Epoch  15, time= 21.4s | Train: skip eval | Valid: time=  2.6s loss=0.249, TAw acc= 90.4% | lr=3.3e-06
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.283 | TAw acc= 90.3%, forg=  0.0%| TAg acc= 90.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_r_walk_NIH300_5epoch_0713r_walk_noexampler
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 17.8s | Train: skip eval | Valid: time=  2.6s loss=1.311, TAw acc= 51.7% | *
+| Epoch   2, time= 19.7s | Train: skip eval | Valid: time=  2.6s loss=0.939, TAw acc= 66.2% | *
+| Epoch   3, time= 17.7s | Train: skip eval | Valid: time=  2.6s loss=0.732, TAw acc= 75.8% | *
+| Epoch   4, time= 19.9s | Train: skip eval | Valid: time=  2.7s loss=0.594, TAw acc= 85.0% | *
+| Epoch   5, time= 17.9s | Train: skip eval | Valid: time=  2.7s loss=0.496, TAw acc= 86.2% | *
+| Epoch   6, time= 18.3s | Train: skip eval | Valid: time=  2.7s loss=0.427, TAw acc= 88.8% | *
+| Epoch   7, time= 18.0s | Train: skip eval | Valid: time=  2.6s loss=0.377, TAw acc= 89.6% | *
+| Epoch   8, time= 19.9s | Train: skip eval | Valid: time=  2.7s loss=0.337, TAw acc= 91.7% | *
+| Epoch   9, time= 18.1s | Train: skip eval | Valid: time=  2.7s loss=0.304, TAw acc= 91.7% | *
+| Epoch  10, time= 17.9s | Train: skip eval | Valid: time=  2.7s loss=0.285, TAw acc= 91.7% | *
+| Epoch  11, time= 18.2s | Train: skip eval | Valid: time=  2.8s loss=0.262, TAw acc= 92.5% | *
+| Epoch  12, time= 17.8s | Train: skip eval | Valid: time=  2.7s loss=0.244, TAw acc= 93.8% | *
+| Epoch  13, time= 18.3s | Train: skip eval | Valid: time=  2.6s loss=0.230, TAw acc= 93.8% | *
+| Epoch  14, time= 19.9s | Train: skip eval | Valid: time=  2.6s loss=0.221, TAw acc= 94.2% | *
+| Epoch  15, time= 18.5s | Train: skip eval | Valid: time=  2.7s loss=0.209, TAw acc= 95.0% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.306 | TAw acc= 90.0%, forg=  0.4%| TAg acc= 85.8%, forg=  4.5% <<<
+>>> Test on task  1 : loss=0.286 | TAw acc= 90.0%, forg=  0.0%| TAg acc= 84.8%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_r_walk_NIH300_5epoch_0713r_walk_noexampler
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time= 11.0s | Train: skip eval | Valid: time=  2.7s loss=1.462, TAw acc= 33.6% | *
+| Epoch   2, time= 10.6s | Train: skip eval | Valid: time=  2.6s loss=1.375, TAw acc= 41.2% | *
+| Epoch   3, time= 11.3s | Train: skip eval | Valid: time=  2.6s loss=1.302, TAw acc= 45.0% | *
+| Epoch   4, time= 11.2s | Train: skip eval | Valid: time=  2.5s loss=1.237, TAw acc= 51.1% | *
+| Epoch   5, time= 11.2s | Train: skip eval | Valid: time=  3.1s loss=1.180, TAw acc= 54.2% | *
+| Epoch   6, time= 11.1s | Train: skip eval | Valid: time=  2.5s loss=1.126, TAw acc= 56.5% | *
+| Epoch   7, time= 12.2s | Train: skip eval | Valid: time=  2.5s loss=1.086, TAw acc= 58.0% | *
+| Epoch   8, time= 12.1s | Train: skip eval | Valid: time=  2.5s loss=1.042, TAw acc= 59.5% | *
+| Epoch   9, time= 12.1s | Train: skip eval | Valid: time=  2.5s loss=1.007, TAw acc= 61.1% | *
+| Epoch  10, time= 12.0s | Train: skip eval | Valid: time=  2.6s loss=0.975, TAw acc= 62.6% | *
+| Epoch  11, time= 11.2s | Train: skip eval | Valid: time=  2.5s loss=0.947, TAw acc= 64.1% | *
+| Epoch  12, time= 11.2s | Train: skip eval | Valid: time=  2.5s loss=0.922, TAw acc= 65.6% | *
+| Epoch  13, time= 12.1s | Train: skip eval | Valid: time=  2.5s loss=0.903, TAw acc= 64.1% | *
+| Epoch  14, time= 11.1s | Train: skip eval | Valid: time=  2.5s loss=0.885, TAw acc= 67.2% | *
+| Epoch  15, time= 11.0s | Train: skip eval | Valid: time=  2.5s loss=0.872, TAw acc= 67.9% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.336 | TAw acc= 88.4%, forg=  1.9%| TAg acc= 84.1%, forg=  6.2% <<<
+>>> Test on task  1 : loss=0.310 | TAw acc= 88.8%, forg=  1.2%| TAg acc= 83.7%, forg=  1.2% <<<
+>>> Test on task  2 : loss=0.835 | TAw acc= 67.6%, forg=  0.0%| TAg acc= 32.4%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_r_walk_NIH300_5epoch_0713r_walk_noexampler
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 25.4s | Train: skip eval | Valid: time=  2.9s loss=0.959, TAw acc= 56.9% | *
+| Epoch   2, time= 23.4s | Train: skip eval | Valid: time=  3.5s loss=0.802, TAw acc= 64.1% | *
+| Epoch   3, time= 23.5s | Train: skip eval | Valid: time=  2.8s loss=0.725, TAw acc= 69.7% | *
+| Epoch   4, time= 23.9s | Train: skip eval | Valid: time=  3.6s loss=0.654, TAw acc= 71.6% | *
+| Epoch   5, time= 24.7s | Train: skip eval | Valid: time=  2.9s loss=0.614, TAw acc= 76.2% | *
+| Epoch   6, time= 24.5s | Train: skip eval | Valid: time=  2.8s loss=0.582, TAw acc= 77.2% | *
+| Epoch   7, time= 23.9s | Train: skip eval | Valid: time=  3.4s loss=0.559, TAw acc= 77.8% | *
+| Epoch   8, time= 23.7s | Train: skip eval | Valid: time=  2.8s loss=0.529, TAw acc= 78.4% | *
+| Epoch   9, time= 23.9s | Train: skip eval | Valid: time=  2.8s loss=0.501, TAw acc= 80.3% | *
+| Epoch  10, time= 24.6s | Train: skip eval | Valid: time=  2.9s loss=0.490, TAw acc= 80.0% | *
+| Epoch  11, time= 23.3s | Train: skip eval | Valid: time=  2.8s loss=0.472, TAw acc= 80.6% | *
+| Epoch  12, time= 23.5s | Train: skip eval | Valid: time=  2.9s loss=0.458, TAw acc= 81.2% | *
+| Epoch  13, time= 23.5s | Train: skip eval | Valid: time=  2.8s loss=0.454, TAw acc= 80.9% | *
+| Epoch  14, time= 23.3s | Train: skip eval | Valid: time=  2.8s loss=0.440, TAw acc= 80.9% | *
+| Epoch  15, time= 26.2s | Train: skip eval | Valid: time=  2.8s loss=0.437, TAw acc= 81.6% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.348 | TAw acc= 87.9%, forg=  2.4%| TAg acc= 82.3%, forg=  8.0% <<<
+>>> Test on task  1 : loss=0.320 | TAw acc= 90.2%, forg= -0.2%| TAg acc= 70.2%, forg= 14.7% <<<
+>>> Test on task  2 : loss=0.989 | TAw acc= 59.2%, forg=  8.4%| TAg acc= 15.3%, forg= 17.1% <<<
+>>> Test on task  3 : loss=0.511 | TAw acc= 79.5%, forg=  0.0%| TAg acc= 72.9%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_r_walk_NIH300_5epoch_0713r_walk_noexampler
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+| Epoch   1, time= 22.3s | Train: skip eval | Valid: time=  2.7s loss=1.478, TAw acc= 35.3% | *
+| Epoch   2, time= 21.0s | Train: skip eval | Valid: time=  2.9s loss=1.337, TAw acc= 46.9% | *
+| Epoch   3, time= 20.8s | Train: skip eval | Valid: time=  2.8s loss=1.239, TAw acc= 52.7% | *
+| Epoch   4, time= 22.3s | Train: skip eval | Valid: time=  2.7s loss=1.168, TAw acc= 54.5% | *
+| Epoch   5, time= 22.7s | Train: skip eval | Valid: time=  2.8s loss=1.111, TAw acc= 57.5% | *
+| Epoch   6, time= 20.7s | Train: skip eval | Valid: time=  2.8s loss=1.070, TAw acc= 57.1% | *
+| Epoch   7, time= 21.2s | Train: skip eval | Valid: time=  2.7s loss=1.027, TAw acc= 59.3% | *
+| Epoch   8, time= 20.6s | Train: skip eval | Valid: time=  2.8s loss=0.995, TAw acc= 61.8% | *
+| Epoch   9, time= 21.4s | Train: skip eval | Valid: time=  2.8s loss=0.973, TAw acc= 61.1% | *
+| Epoch  10, time= 20.5s | Train: skip eval | Valid: time=  2.8s loss=0.951, TAw acc= 61.8% | *
+| Epoch  11, time= 21.5s | Train: skip eval | Valid: time=  3.1s loss=0.933, TAw acc= 64.4% | *
+| Epoch  12, time= 21.2s | Train: skip eval | Valid: time=  2.7s loss=0.914, TAw acc= 64.4% | *
+| Epoch  13, time= 21.1s | Train: skip eval | Valid: time=  2.8s loss=0.902, TAw acc= 65.8% | *
+| Epoch  14, time= 21.7s | Train: skip eval | Valid: time=  2.8s loss=0.888, TAw acc= 66.9% | *
+| Epoch  15, time= 23.2s | Train: skip eval | Valid: time=  2.8s loss=0.878, TAw acc= 66.5% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.408 | TAw acc= 85.0%, forg=  5.3%| TAg acc= 75.6%, forg= 14.7% <<<
+>>> Test on task  1 : loss=0.389 | TAw acc= 89.0%, forg=  1.2%| TAg acc= 72.5%, forg= 12.3% <<<
+>>> Test on task  2 : loss=1.108 | TAw acc= 53.8%, forg= 13.8%| TAg acc= 21.6%, forg= 10.8% <<<
+>>> Test on task  3 : loss=0.583 | TAw acc= 76.8%, forg=  2.8%| TAg acc= 67.9%, forg=  5.0% <<<
+>>> Test on task  4 : loss=0.919 | TAw acc= 63.7%, forg=  0.0%| TAg acc= 17.2%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_r_walk_NIH300_5epoch_0713r_walk_noexampler
+************************************************************************************************************
+TAw Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 90.0%  90.0%   0.0%   0.0%   0.0% 	Avg.: 90.0% 
+	 88.4%  88.8%  67.6%   0.0%   0.0% 	Avg.: 81.6% 
+	 87.9%  90.2%  59.2%  79.5%   0.0% 	Avg.: 79.2% 
+	 85.0%  89.0%  53.8%  76.8%  63.7% 	Avg.: 73.6% 
+************************************************************************************************************
+TAg Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 85.8%  84.8%   0.0%   0.0%   0.0% 	Avg.: 85.3% 
+	 84.1%  83.7%  32.4%   0.0%   0.0% 	Avg.: 66.7% 
+	 82.3%  70.2%  15.3%  72.9%   0.0% 	Avg.: 60.2% 
+	 75.6%  72.5%  21.6%  67.9%  17.2% 	Avg.: 50.9% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  0.4%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.4% 
+	  1.9%   1.2%   0.0%   0.0%   0.0% 	Avg.:  1.5% 
+	  2.4%  -0.2%   8.4%   0.0%   0.0% 	Avg.:  3.5% 
+	  5.3%   1.2%  13.8%   2.8%   0.0% 	Avg.:  5.7% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  4.5%   0.0%   0.0%   0.0%   0.0% 	Avg.:  4.5% 
+	  6.2%   1.2%   0.0%   0.0%   0.0% 	Avg.:  3.7% 
+	  8.0%  14.7%  17.1%   0.0%   0.0% 	Avg.: 13.3% 
+	 14.7%  12.3%  10.8%   5.0%   0.0% 	Avg.: 10.7% 
+************************************************************************************************************
+[Elapsed time = 0.5 h]
+Done!
+/root/continual_learning_with_vit/src/approach/eeil.py:40: UserWarning: Warning: EEIL is expected to use exemplars. Check documentation.
+  warnings.warn("Warning: EEIL is expected to use exemplars. Check documentation.")
+Traceback (most recent call last):
+  File "main_incremental.py", line 321, in <module>
+    main()
+  File "main_incremental.py", line 269, in main
+    appr.train(t, trn_loader[t], val_loader[t])
+  File "/root/continual_learning_with_vit/src/approach/incremental_learning.py", line 60, in train
+    self.train_loop(t, trn_loader, val_loader)
+  File "/root/continual_learning_with_vit/src/approach/eeil.py", line 120, in train_loop
+    self._train_balanced(t, trn_loader, val_loader)
+  File "/root/continual_learning_with_vit/src/approach/eeil.py", line 83, in _train_balanced
+    loader = self._get_train_loader(trn_loader, True)
+  File "/root/continual_learning_with_vit/src/approach/eeil.py", line 96, in _get_train_loader
+    return DataLoader(ds, batch_size=trn_loader.batch_size,
+  File "/usr/local/miniconda3/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 344, in __init__
+    sampler = RandomSampler(dataset, generator=generator)  # type: ignore[arg-type]
+  File "/usr/local/miniconda3/lib/python3.8/site-packages/torch/utils/data/sampler.py", line 107, in __init__
+    raise ValueError("num_samples should be a positive integer "
+ValueError: num_samples should be a positive integer value, but got num_samples=0
+============================================================================================================
+Arguments =
+	approach: eeil
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: NIH300_5epoch_0713eeil_noexampler
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 15
+	network: ViT_small
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results_Multi
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	T: 2.0
+	lamb: 1.0
+	lr_finetuning_factor: 0.01
+	nepochs_finetuning: 40
+	noise_grad: False
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 6), (1, 6), (2, 5), (3, 5), (4, 5)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 14.6s | Train: skip eval | Valid: time=  2.7s loss=0.429, TAw acc= 83.6% | *
+| Epoch   2, time= 13.0s | Train: skip eval | Valid: time=  2.5s loss=0.287, TAw acc= 88.4% | *
+| Epoch   3, time= 13.2s | Train: skip eval | Valid: time=  2.6s loss=0.260, TAw acc= 89.3% | *
+| Epoch   4, time= 14.0s | Train: skip eval | Valid: time=  2.6s loss=0.227, TAw acc= 90.1% | *
+| Epoch   5, time= 13.1s | Train: skip eval | Valid: time=  2.5s loss=0.231, TAw acc= 90.7% |
+| Epoch   6, time= 12.8s | Train: skip eval | Valid: time=  2.6s loss=0.228, TAw acc= 91.0% |
+| Epoch   7, time= 13.7s | Train: skip eval | Valid: time=  2.6s loss=0.230, TAw acc= 90.7% |
+| Epoch   8, time= 13.5s | Train: skip eval | Valid: time=  2.6s loss=0.252, TAw acc= 89.9% |
+| Epoch   9, time= 13.8s | Train: skip eval | Valid: time=  2.6s loss=0.253, TAw acc= 90.1% | lr=1.0e-05
+| Epoch  10, time= 13.2s | Train: skip eval | Valid: time=  2.8s loss=0.216, TAw acc= 90.4% | *
+| Epoch  11, time= 14.1s | Train: skip eval | Valid: time=  2.6s loss=0.233, TAw acc= 90.4% |
+| Epoch  12, time= 13.7s | Train: skip eval | Valid: time=  2.6s loss=0.233, TAw acc= 90.4% |
+| Epoch  13, time= 13.9s | Train: skip eval | Valid: time=  2.6s loss=0.231, TAw acc= 90.4% |
+| Epoch  14, time= 13.8s | Train: skip eval | Valid: time=  2.6s loss=0.237, TAw acc= 90.7% |
+| Epoch  15, time= 13.7s | Train: skip eval | Valid: time=  2.6s loss=0.249, TAw acc= 90.4% | lr=3.3e-06
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.283 | TAw acc= 90.3%, forg=  0.0%| TAg acc= 90.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_eeil_NIH300_5epoch_0713eeil_noexampler
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 11.8s | Train: skip eval | Valid: time=  2.5s loss=1.552, TAw acc= 52.1% | *
+| Epoch   2, time= 12.7s | Train: skip eval | Valid: time=  2.5s loss=1.027, TAw acc= 71.2% | *
+| Epoch   3, time= 12.1s | Train: skip eval | Valid: time=  2.5s loss=0.777, TAw acc= 78.3% | *
+| Epoch   4, time= 12.0s | Train: skip eval | Valid: time=  2.4s loss=0.629, TAw acc= 81.7% | *
+| Epoch   5, time= 11.8s | Train: skip eval | Valid: time=  2.5s loss=0.534, TAw acc= 85.0% | *
+| Epoch   6, time= 11.8s | Train: skip eval | Valid: time=  2.5s loss=0.467, TAw acc= 87.1% | *
+| Epoch   7, time= 12.2s | Train: skip eval | Valid: time=  2.5s loss=0.414, TAw acc= 88.8% | *
+| Epoch   8, time= 11.9s | Train: skip eval | Valid: time=  2.5s loss=0.375, TAw acc= 88.8% | *
+| Epoch   9, time= 12.3s | Train: skip eval | Valid: time=  2.5s loss=0.344, TAw acc= 89.2% | *
+| Epoch  10, time= 11.9s | Train: skip eval | Valid: time=  2.5s loss=0.319, TAw acc= 89.6% | *
+| Epoch  11, time= 12.0s | Train: skip eval | Valid: time=  2.5s loss=0.298, TAw acc= 90.8% | *
+| Epoch  12, time= 11.8s | Train: skip eval | Valid: time=  2.5s loss=0.281, TAw acc= 91.2% | *
+| Epoch  13, time= 12.1s | Train: skip eval | Valid: time=  2.4s loss=0.266, TAw acc= 92.1% | *
+| Epoch  14, time= 11.8s | Train: skip eval | Valid: time=  2.5s loss=0.255, TAw acc= 92.1% | *
+| Epoch  15, time= 11.8s | Train: skip eval | Valid: time=  2.4s loss=0.243, TAw acc= 92.9% | *
+Traceback (most recent call last):
+  File "main_incremental.py", line 321, in <module>
+    main()
+  File "main_incremental.py", line 212, in main
+    appr = Appr(net, device, **appr_kwargs)
+  File "/root/continual_learning_with_vit/src/approach/dmc.py", line 28, in __init__
+    aux_trn_ldr, _, aux_val_ldr, _ = get_loaders([self.aux_dataset], num_tasks=1, nc_first_task=None, validation=0,
+  File "/root/continual_learning_with_vit/src/datasets/data_loader.py", line 35, in get_loaders
+    trn_dset, val_dset, tst_dset, curtaskcla = get_datasets(cur_dataset, dc['path'], num_tasks, nc_first_task,
+  File "/root/continual_learning_with_vit/src/datasets/data_loader.py", line 142, in get_datasets
+    with open(os.path.join(path, 'train_data_batch_{}'.format(i)), 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/root/continual_learning_with_vit/data/ILSVRC12_32/train_data_batch_1'
+============================================================================================================
+Arguments =
+	approach: dmc
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: NIH300_5epoch_0713dmc
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 15
+	network: ViT_small
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results_Multi
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	aux_batch_size: 128
+	aux_dataset: imagenet_32_reduced
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+Adjusting learning rate of group 0 to 3.0000e-05.
+Traceback (most recent call last):
+  File "main_incremental.py", line 321, in <module>
+    main()
+  File "main_incremental.py", line 269, in main
+    appr.train(t, trn_loader[t], val_loader[t])
+  File "/root/continual_learning_with_vit/src/approach/incremental_learning.py", line 60, in train
+    self.train_loop(t, trn_loader, val_loader)
+  File "/root/continual_learning_with_vit/src/approach/lwm.py", line 102, in train_loop
+    super().train_loop(t, trn_loader, val_loader)
+  File "/root/continual_learning_with_vit/src/approach/incremental_learning.py", line 119, in train_loop
+    self.train_epoch(t, trn_loader)
+  File "/root/continual_learning_with_vit/src/approach/lwm.py", line 120, in train_epoch
+    with GradCAM(self.model_old, self.gradcam_layer) as gradcam_old:
+  File "/root/continual_learning_with_vit/src/approach/lwm.py", line 215, in __init__
+    assert hasattr(
+AssertionError: Model <class 'networks.network.LLL_Net'> has got attribute layer: layer3
+============================================================================================================
+Arguments =
+	approach: lwm
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: NIH300_5epoch_0713lwm
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 15
+	network: ViT_small
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results_Multi
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	beta: 1
+	gamma: 1
+	gradcam_layer: layer3
+	log_gradcam_samples: 0
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 6), (1, 6), (2, 5), (3, 5), (4, 5)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 13.8s | Train: skip eval | Valid: time=  2.6s loss=0.429, TAw acc= 83.6% | *
+| Epoch   2, time= 13.7s | Train: skip eval | Valid: time=  2.6s loss=0.287, TAw acc= 88.4% | *
+| Epoch   3, time= 13.6s | Train: skip eval | Valid: time=  2.7s loss=0.260, TAw acc= 89.3% | *
+| Epoch   4, time= 13.4s | Train: skip eval | Valid: time=  2.6s loss=0.227, TAw acc= 90.1% | *
+| Epoch   5, time= 13.8s | Train: skip eval | Valid: time=  2.6s loss=0.231, TAw acc= 90.7% |
+| Epoch   6, time= 13.5s | Train: skip eval | Valid: time=  2.6s loss=0.228, TAw acc= 91.0% |
+| Epoch   7, time= 13.8s | Train: skip eval | Valid: time=  2.7s loss=0.230, TAw acc= 90.7% |
+| Epoch   8, time= 13.7s | Train: skip eval | Valid: time=  2.6s loss=0.252, TAw acc= 89.9% |
+| Epoch   9, time= 13.8s | Train: skip eval | Valid: time=  2.6s loss=0.253, TAw acc= 90.1% | lr=1.0e-05
+| Epoch  10, time= 13.8s | Train: skip eval | Valid: time=  2.6s loss=0.216, TAw acc= 90.4% | *
+| Epoch  11, time= 14.2s | Train: skip eval | Valid: time=  2.6s loss=0.233, TAw acc= 90.4% |
+| Epoch  12, time= 14.0s | Train: skip eval | Valid: time=  2.6s loss=0.233, TAw acc= 90.4% |
+| Epoch  13, time= 13.8s | Train: skip eval | Valid: time=  2.6s loss=0.231, TAw acc= 90.4% |
+| Epoch  14, time= 13.1s | Train: skip eval | Valid: time=  2.7s loss=0.237, TAw acc= 90.7% |
+| Epoch  15, time= 14.1s | Train: skip eval | Valid: time=  2.7s loss=0.249, TAw acc= 90.4% | lr=3.3e-06
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.283 | TAw acc= 90.3%, forg=  0.0%| TAg acc= 90.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_lwm_NIH300_5epoch_0713lwm
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+============================================================================================================
+Arguments =
+	approach: finetuning
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: NIH300_5epoch_0713finetuning
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 15
+	network: ViT_small
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results_Multi
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	all_outputs: False
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 6), (1, 6), (2, 5), (3, 5), (4, 5)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 14.3s | Train: skip eval | Valid: time=  2.6s loss=0.429, TAw acc= 83.6% | *
+| Epoch   2, time= 14.0s | Train: skip eval | Valid: time=  3.0s loss=0.287, TAw acc= 88.4% | *
+| Epoch   3, time= 13.8s | Train: skip eval | Valid: time=  2.7s loss=0.260, TAw acc= 89.3% | *
+| Epoch   4, time= 13.1s | Train: skip eval | Valid: time=  2.6s loss=0.227, TAw acc= 90.1% | *
+| Epoch   5, time= 13.7s | Train: skip eval | Valid: time=  2.7s loss=0.231, TAw acc= 90.7% |
+| Epoch   6, time= 13.0s | Train: skip eval | Valid: time=  2.6s loss=0.228, TAw acc= 91.0% |
+| Epoch   7, time= 14.0s | Train: skip eval | Valid: time=  2.6s loss=0.230, TAw acc= 90.7% |
+| Epoch   8, time= 14.3s | Train: skip eval | Valid: time=  2.6s loss=0.252, TAw acc= 89.9% |
+| Epoch   9, time= 13.5s | Train: skip eval | Valid: time=  2.7s loss=0.253, TAw acc= 90.1% | lr=1.0e-05
+| Epoch  10, time= 14.4s | Train: skip eval | Valid: time=  2.7s loss=0.216, TAw acc= 90.4% | *
+| Epoch  11, time= 14.2s | Train: skip eval | Valid: time=  2.6s loss=0.233, TAw acc= 90.4% |
+| Epoch  12, time= 13.5s | Train: skip eval | Valid: time=  2.5s loss=0.233, TAw acc= 90.4% |
+| Epoch  13, time= 13.8s | Train: skip eval | Valid: time=  2.6s loss=0.231, TAw acc= 90.4% |
+| Epoch  14, time= 13.7s | Train: skip eval | Valid: time=  2.6s loss=0.237, TAw acc= 90.7% |
+| Epoch  15, time= 14.0s | Train: skip eval | Valid: time=  2.6s loss=0.249, TAw acc= 90.4% | lr=3.3e-06
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.283 | TAw acc= 90.3%, forg=  0.0%| TAg acc= 90.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_finetuning_NIH300_5epoch_0713finetuning
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 10.0s | Train: skip eval | Valid: time=  2.5s loss=1.099, TAw acc= 63.7% | *
+| Epoch   2, time= 10.1s | Train: skip eval | Valid: time=  2.6s loss=0.788, TAw acc= 74.2% | *
+| Epoch   3, time= 10.2s | Train: skip eval | Valid: time=  2.6s loss=0.619, TAw acc= 81.2% | *
+| Epoch   4, time= 10.7s | Train: skip eval | Valid: time=  2.4s loss=0.509, TAw acc= 85.4% | *
+| Epoch   5, time= 10.8s | Train: skip eval | Valid: time=  2.4s loss=0.436, TAw acc= 87.5% | *
+| Epoch   6, time= 10.8s | Train: skip eval | Valid: time=  2.4s loss=0.383, TAw acc= 89.6% | *
+| Epoch   7, time= 10.8s | Train: skip eval | Valid: time=  2.4s loss=0.345, TAw acc= 90.4% | *
+| Epoch   8, time= 10.8s | Train: skip eval | Valid: time=  2.4s loss=0.316, TAw acc= 90.0% | *
+| Epoch   9, time=  9.9s | Train: skip eval | Valid: time=  2.5s loss=0.294, TAw acc= 91.7% | *
+| Epoch  10, time= 10.1s | Train: skip eval | Valid: time=  2.5s loss=0.278, TAw acc= 92.1% | *
+| Epoch  11, time= 10.1s | Train: skip eval | Valid: time=  2.6s loss=0.263, TAw acc= 92.1% | *
+| Epoch  12, time= 10.0s | Train: skip eval | Valid: time=  2.5s loss=0.250, TAw acc= 92.5% | *
+| Epoch  13, time= 10.1s | Train: skip eval | Valid: time=  2.5s loss=0.240, TAw acc= 92.1% | *
+| Epoch  14, time= 10.7s | Train: skip eval | Valid: time=  2.4s loss=0.231, TAw acc= 93.3% | *
+| Epoch  15, time= 10.1s | Train: skip eval | Valid: time=  2.5s loss=0.223, TAw acc= 92.9% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.317 | TAw acc= 90.0%, forg=  0.4%| TAg acc= 87.3%, forg=  3.0% <<<
+>>> Test on task  1 : loss=0.252 | TAw acc= 90.7%, forg=  0.0%| TAg acc= 88.0%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_finetuning_NIH300_5epoch_0713finetuning
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time=  6.7s | Train: skip eval | Valid: time=  2.4s loss=1.397, TAw acc= 37.4% | *
+| Epoch   2, time=  7.0s | Train: skip eval | Valid: time=  2.2s loss=1.306, TAw acc= 42.7% | *
+| Epoch   3, time=  7.0s | Train: skip eval | Valid: time=  2.3s loss=1.233, TAw acc= 45.0% | *
+| Epoch   4, time=  6.6s | Train: skip eval | Valid: time=  2.3s loss=1.171, TAw acc= 51.1% | *
+| Epoch   5, time=  6.6s | Train: skip eval | Valid: time=  2.3s loss=1.119, TAw acc= 53.4% | *
+| Epoch   6, time=  6.5s | Train: skip eval | Valid: time=  2.3s loss=1.078, TAw acc= 58.0% | *
+| Epoch   7, time=  7.1s | Train: skip eval | Valid: time=  2.5s loss=1.035, TAw acc= 59.5% | *
+| Epoch   8, time=  6.6s | Train: skip eval | Valid: time=  2.4s loss=0.999, TAw acc= 64.9% | *
+| Epoch   9, time=  6.6s | Train: skip eval | Valid: time=  2.4s loss=0.968, TAw acc= 67.9% | *
+| Epoch  10, time=  7.1s | Train: skip eval | Valid: time=  2.3s loss=0.938, TAw acc= 67.2% | *
+| Epoch  11, time=  6.6s | Train: skip eval | Valid: time=  2.4s loss=0.913, TAw acc= 70.2% | *
+| Epoch  12, time=  6.3s | Train: skip eval | Valid: time=  3.2s loss=0.893, TAw acc= 69.5% | *
+| Epoch  13, time=  7.0s | Train: skip eval | Valid: time=  2.3s loss=0.875, TAw acc= 71.0% | *
+| Epoch  14, time=  6.6s | Train: skip eval | Valid: time=  2.4s loss=0.858, TAw acc= 71.8% | *
+| Epoch  15, time=  7.1s | Train: skip eval | Valid: time=  2.4s loss=0.840, TAw acc= 72.5% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.348 | TAw acc= 87.3%, forg=  3.0%| TAg acc= 85.0%, forg=  5.3% <<<
+>>> Test on task  1 : loss=0.286 | TAw acc= 89.3%, forg=  1.3%| TAg acc= 79.7%, forg=  8.3% <<<
+>>> Test on task  2 : loss=0.846 | TAw acc= 68.2%, forg=  0.0%| TAg acc= 27.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_finetuning_NIH300_5epoch_0713finetuning
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 13.7s | Train: skip eval | Valid: time=  2.6s loss=1.121, TAw acc= 48.4% | *
+| Epoch   2, time= 13.0s | Train: skip eval | Valid: time=  2.7s loss=0.884, TAw acc= 64.1% | *
+| Epoch   3, time= 13.9s | Train: skip eval | Valid: time=  2.6s loss=0.772, TAw acc= 68.4% | *
+| Epoch   4, time= 13.5s | Train: skip eval | Valid: time=  2.5s loss=0.695, TAw acc= 71.6% | *
+| Epoch   5, time= 13.1s | Train: skip eval | Valid: time=  2.6s loss=0.638, TAw acc= 73.4% | *
+| Epoch   6, time= 13.1s | Train: skip eval | Valid: time=  2.5s loss=0.591, TAw acc= 75.0% | *
+| Epoch   7, time= 12.9s | Train: skip eval | Valid: time=  2.5s loss=0.556, TAw acc= 78.1% | *
+| Epoch   8, time= 13.5s | Train: skip eval | Valid: time=  2.6s loss=0.527, TAw acc= 80.9% | *
+| Epoch   9, time= 12.6s | Train: skip eval | Valid: time=  2.5s loss=0.511, TAw acc= 80.6% | *
+| Epoch  10, time= 13.4s | Train: skip eval | Valid: time=  2.7s loss=0.483, TAw acc= 82.8% | *
+| Epoch  11, time= 13.7s | Train: skip eval | Valid: time=  2.6s loss=0.465, TAw acc= 82.8% | *
+| Epoch  12, time= 13.4s | Train: skip eval | Valid: time=  3.2s loss=0.451, TAw acc= 83.1% | *
+| Epoch  13, time= 13.7s | Train: skip eval | Valid: time=  3.2s loss=0.436, TAw acc= 83.4% | *
+| Epoch  14, time= 13.1s | Train: skip eval | Valid: time=  2.8s loss=0.424, TAw acc= 82.8% | *
+| Epoch  15, time= 13.3s | Train: skip eval | Valid: time=  2.6s loss=0.424, TAw acc= 83.4% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.388 | TAw acc= 87.7%, forg=  2.6%| TAg acc= 82.7%, forg=  7.7% <<<
+>>> Test on task  1 : loss=0.489 | TAw acc= 79.2%, forg= 11.5%| TAg acc= 62.2%, forg= 25.8% <<<
+>>> Test on task  2 : loss=0.977 | TAw acc= 59.8%, forg=  8.4%| TAg acc= 13.2%, forg= 14.1% <<<
+>>> Test on task  3 : loss=0.511 | TAw acc= 80.0%, forg=  0.0%| TAg acc= 74.0%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_finetuning_NIH300_5epoch_0713finetuning
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+| Epoch   1, time= 12.2s | Train: skip eval | Valid: time=  2.6s loss=1.456, TAw acc= 38.9% | *
+| Epoch   2, time= 11.6s | Train: skip eval | Valid: time=  2.5s loss=1.316, TAw acc= 46.5% | *
+| Epoch   3, time= 12.2s | Train: skip eval | Valid: time=  2.5s loss=1.231, TAw acc= 49.5% | *
+| Epoch   4, time= 11.8s | Train: skip eval | Valid: time=  2.5s loss=1.166, TAw acc= 53.8% | *
+| Epoch   5, time= 11.9s | Train: skip eval | Valid: time=  2.5s loss=1.111, TAw acc= 56.0% | *
+| Epoch   6, time= 12.1s | Train: skip eval | Valid: time=  2.6s loss=1.074, TAw acc= 58.5% | *
+| Epoch   7, time= 12.2s | Train: skip eval | Valid: time=  2.5s loss=1.038, TAw acc= 60.0% | *
+| Epoch   8, time= 12.0s | Train: skip eval | Valid: time=  2.8s loss=1.010, TAw acc= 61.1% | *
+| Epoch   9, time= 12.0s | Train: skip eval | Valid: time=  2.5s loss=0.985, TAw acc= 62.9% | *
+| Epoch  10, time= 12.0s | Train: skip eval | Valid: time=  3.2s loss=0.964, TAw acc= 63.6% | *
+| Epoch  11, time= 11.5s | Train: skip eval | Valid: time=  2.5s loss=0.947, TAw acc= 63.6% | *
+| Epoch  12, time= 12.3s | Train: skip eval | Valid: time=  2.5s loss=0.932, TAw acc= 64.0% | *
+| Epoch  13, time= 12.3s | Train: skip eval | Valid: time=  2.5s loss=0.919, TAw acc= 64.7% | *
+| Epoch  14, time= 11.1s | Train: skip eval | Valid: time=  3.3s loss=0.907, TAw acc= 64.7% | *
+| Epoch  15, time= 11.7s | Train: skip eval | Valid: time=  2.5s loss=0.897, TAw acc= 64.7% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.363 | TAw acc= 88.6%, forg=  1.7%| TAg acc= 82.2%, forg=  8.1% <<<
+>>> Test on task  1 : loss=0.523 | TAw acc= 79.7%, forg= 11.0%| TAg acc= 64.7%, forg= 23.3% <<<
+>>> Test on task  2 : loss=1.040 | TAw acc= 56.2%, forg= 12.0%| TAg acc=  9.0%, forg= 18.3% <<<
+>>> Test on task  3 : loss=0.681 | TAw acc= 71.2%, forg=  8.8%| TAg acc= 59.6%, forg= 14.4% <<<
+>>> Test on task  4 : loss=0.905 | TAw acc= 64.5%, forg=  0.0%| TAg acc= 27.5%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_finetuning_NIH300_5epoch_0713finetuning
+************************************************************************************************************
+TAw Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 90.0%  90.7%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 87.3%  89.3%  68.2%   0.0%   0.0% 	Avg.: 81.6% 
+	 87.7%  79.2%  59.8%  80.0%   0.0% 	Avg.: 76.7% 
+	 88.6%  79.7%  56.2%  71.2%  64.5% 	Avg.: 72.0% 
+************************************************************************************************************
+TAg Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 87.3%  88.0%   0.0%   0.0%   0.0% 	Avg.: 87.7% 
+	 85.0%  79.7%  27.3%   0.0%   0.0% 	Avg.: 64.0% 
+	 82.7%  62.2%  13.2%  74.0%   0.0% 	Avg.: 58.0% 
+	 82.2%  64.7%   9.0%  59.6%  27.5% 	Avg.: 48.6% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  0.4%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.4% 
+	  3.0%   1.3%   0.0%   0.0%   0.0% 	Avg.:  2.2% 
+	  2.6%  11.5%   8.4%   0.0%   0.0% 	Avg.:  7.5% 
+	  1.7%  11.0%  12.0%   8.8%   0.0% 	Avg.:  8.4% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  3.0%   0.0%   0.0%   0.0%   0.0% 	Avg.:  3.0% 
+	  5.3%   8.3%   0.0%   0.0%   0.0% 	Avg.:  6.8% 
+	  7.7%  25.8%  14.1%   0.0%   0.0% 	Avg.: 15.9% 
+	  8.1%  23.3%  18.3%  14.4%   0.0% 	Avg.: 16.0% 
+************************************************************************************************************
+[Elapsed time = 0.3 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: icarl
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: NIH300_5epoch_0713icarl
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 15
+	network: ViT_small
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results_Multi
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	lamb: 1.0
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 200
+	num_exemplars_per_class: 0
+============================================================================================================
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 6), (1, 6), (2, 5), (3, 5), (4, 5)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 14.6s | Train: skip eval | Valid: time=  2.5s loss=0.429, TAw acc= 83.6% | *
+| Epoch   2, time= 13.9s | Train: skip eval | Valid: time=  2.7s loss=0.287, TAw acc= 88.4% | *
+| Epoch   3, time= 13.5s | Train: skip eval | Valid: time=  3.4s loss=0.260, TAw acc= 89.3% | *
+| Epoch   4, time= 14.0s | Train: skip eval | Valid: time=  2.6s loss=0.227, TAw acc= 90.1% | *
+| Epoch   5, time= 13.8s | Train: skip eval | Valid: time=  2.5s loss=0.231, TAw acc= 90.7% |
+| Epoch   6, time= 13.5s | Train: skip eval | Valid: time=  2.7s loss=0.228, TAw acc= 91.0% |
+| Epoch   7, time= 13.5s | Train: skip eval | Valid: time=  2.6s loss=0.230, TAw acc= 90.7% |
+| Epoch   8, time= 13.7s | Train: skip eval | Valid: time=  2.7s loss=0.252, TAw acc= 89.9% |
+| Epoch   9, time= 13.4s | Train: skip eval | Valid: time=  2.6s loss=0.253, TAw acc= 90.1% | lr=1.0e-05
+| Epoch  10, time= 13.9s | Train: skip eval | Valid: time=  2.6s loss=0.216, TAw acc= 90.4% | *
+| Epoch  11, time= 13.3s | Train: skip eval | Valid: time=  2.6s loss=0.233, TAw acc= 90.4% |
+| Epoch  12, time= 14.2s | Train: skip eval | Valid: time=  2.6s loss=0.233, TAw acc= 90.4% |
+| Epoch  13, time= 13.3s | Train: skip eval | Valid: time=  2.6s loss=0.231, TAw acc= 90.4% |
+| Epoch  14, time= 13.2s | Train: skip eval | Valid: time=  2.6s loss=0.237, TAw acc= 90.7% |
+| Epoch  15, time= 13.0s | Train: skip eval | Valid: time=  2.6s loss=0.249, TAw acc= 90.4% | lr=3.3e-06
+| Selected 204 train exemplars, time=  0.4s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.283 | TAw acc= 88.0%, forg=  0.0%| TAg acc= 88.0%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_icarl_NIH300_5epoch_0713icarl
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 13.0s | Train: skip eval | Valid: time=  2.8s loss=4.685, TAw acc= 44.6% | *
+| Epoch   2, time= 13.2s | Train: skip eval | Valid: time=  2.7s loss=3.931, TAw acc= 68.8% | *
+| Epoch   3, time= 13.4s | Train: skip eval | Valid: time=  3.3s loss=3.576, TAw acc= 77.5% | *
+| Epoch   4, time= 13.1s | Train: skip eval | Valid: time=  2.7s loss=3.372, TAw acc= 80.8% | *
+| Epoch   5, time= 12.9s | Train: skip eval | Valid: time=  2.7s loss=3.240, TAw acc= 83.8% | *
+| Epoch   6, time= 14.1s | Train: skip eval | Valid: time=  2.7s loss=3.141, TAw acc= 84.2% | *
+| Epoch   7, time= 12.8s | Train: skip eval | Valid: time=  2.8s loss=3.073, TAw acc= 86.7% | *
+| Epoch   8, time= 13.0s | Train: skip eval | Valid: time=  2.7s loss=3.016, TAw acc= 87.5% | *
+| Epoch   9, time= 12.7s | Train: skip eval | Valid: time=  2.7s loss=2.968, TAw acc= 90.0% | *
+| Epoch  10, time= 13.2s | Train: skip eval | Valid: time=  2.7s loss=2.936, TAw acc= 90.4% | *
+| Epoch  11, time= 12.9s | Train: skip eval | Valid: time=  2.7s loss=2.899, TAw acc= 91.2% | *
+| Epoch  12, time= 12.7s | Train: skip eval | Valid: time=  2.7s loss=2.878, TAw acc= 92.5% | *
+| Epoch  13, time= 13.2s | Train: skip eval | Valid: time=  2.7s loss=2.851, TAw acc= 92.5% | *
+| Epoch  14, time= 13.2s | Train: skip eval | Valid: time=  2.7s loss=2.833, TAw acc= 92.5% | *
+| Epoch  15, time= 13.7s | Train: skip eval | Valid: time=  2.7s loss=2.817, TAw acc= 92.9% | *
+| Selected 204 train exemplars, time=  0.3s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.466 | TAw acc= 88.6%, forg= -0.6%| TAg acc= 86.5%, forg=  1.6% <<<
+>>> Test on task  1 : loss=2.845 | TAw acc= 88.8%, forg=  0.0%| TAg acc= 88.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_icarl_NIH300_5epoch_0713icarl
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time=  9.5s | Train: skip eval | Valid: time=  2.5s loss=9.406, TAw acc= 29.8% | *
+| Epoch   2, time=  9.4s | Train: skip eval | Valid: time=  2.5s loss=8.829, TAw acc= 43.5% | *
+| Epoch   3, time=  8.7s | Train: skip eval | Valid: time=  2.5s loss=8.564, TAw acc= 51.9% | *
+| Epoch   4, time=  8.7s | Train: skip eval | Valid: time=  2.5s loss=8.398, TAw acc= 55.0% | *
+| Epoch   5, time=  8.8s | Train: skip eval | Valid: time=  2.5s loss=8.281, TAw acc= 57.3% | *
+| Epoch   6, time=  8.6s | Train: skip eval | Valid: time=  2.5s loss=8.183, TAw acc= 59.5% | *
+| Epoch   7, time=  9.0s | Train: skip eval | Valid: time=  2.5s loss=8.106, TAw acc= 61.1% | *
+| Epoch   8, time=  8.8s | Train: skip eval | Valid: time=  2.5s loss=8.038, TAw acc= 61.8% | *
+| Epoch   9, time=  8.8s | Train: skip eval | Valid: time=  2.6s loss=7.980, TAw acc= 63.4% | *
+| Epoch  10, time=  8.7s | Train: skip eval | Valid: time=  2.5s loss=7.930, TAw acc= 65.6% | *
+| Epoch  11, time=  8.8s | Train: skip eval | Valid: time=  2.6s loss=7.883, TAw acc= 64.1% | *
+| Epoch  12, time=  8.7s | Train: skip eval | Valid: time=  2.5s loss=7.851, TAw acc= 69.5% | *
+| Epoch  13, time=  8.6s | Train: skip eval | Valid: time=  2.5s loss=7.818, TAw acc= 69.5% | *
+| Epoch  14, time=  8.8s | Train: skip eval | Valid: time=  2.5s loss=7.774, TAw acc= 67.2% | *
+| Epoch  15, time=  8.7s | Train: skip eval | Valid: time=  2.6s loss=7.743, TAw acc= 69.5% | *
+| Selected 204 train exemplars, time=  0.2s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.477 | TAw acc= 89.2%, forg= -0.6%| TAg acc= 87.6%, forg=  0.5% <<<
+>>> Test on task  1 : loss=2.893 | TAw acc= 88.0%, forg=  0.8%| TAg acc= 87.7%, forg=  0.7% <<<
+>>> Test on task  2 : loss=7.710 | TAw acc= 59.8%, forg=  0.0%| TAg acc= 59.8%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_icarl_NIH300_5epoch_0713icarl
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 16.3s | Train: skip eval | Valid: time=  2.9s loss=10.855, TAw acc= 54.1% | *
+| Epoch   2, time= 16.8s | Train: skip eval | Valid: time=  3.0s loss=10.250, TAw acc= 65.9% | *
+| Epoch   3, time= 16.6s | Train: skip eval | Valid: time=  2.9s loss=10.029, TAw acc= 70.6% | *
+| Epoch   4, time= 16.3s | Train: skip eval | Valid: time=  2.9s loss=9.903, TAw acc= 73.1% | *
+| Epoch   5, time= 16.6s | Train: skip eval | Valid: time=  2.9s loss=9.822, TAw acc= 74.7% | *
+| Epoch   6, time= 16.7s | Train: skip eval | Valid: time=  3.0s loss=9.758, TAw acc= 76.6% | *
+| Epoch   7, time= 17.0s | Train: skip eval | Valid: time=  3.5s loss=9.709, TAw acc= 77.2% | *
+| Epoch   8, time= 17.1s | Train: skip eval | Valid: time=  2.9s loss=9.667, TAw acc= 79.4% | *
+| Epoch   9, time= 16.6s | Train: skip eval | Valid: time=  3.0s loss=9.633, TAw acc= 80.3% | *
+| Epoch  10, time= 16.8s | Train: skip eval | Valid: time=  3.0s loss=9.603, TAw acc= 82.2% | *
+| Epoch  11, time= 16.7s | Train: skip eval | Valid: time=  2.9s loss=9.576, TAw acc= 82.5% | *
+| Epoch  12, time= 16.6s | Train: skip eval | Valid: time=  3.1s loss=9.552, TAw acc= 82.5% | *
+| Epoch  13, time= 16.8s | Train: skip eval | Valid: time=  2.9s loss=9.534, TAw acc= 82.8% | *
+| Epoch  14, time= 16.9s | Train: skip eval | Valid: time=  2.9s loss=9.520, TAw acc= 83.8% | *
+| Epoch  15, time= 16.8s | Train: skip eval | Valid: time=  2.9s loss=9.504, TAw acc= 84.1% | *
+| Selected 220 train exemplars, time=  0.1s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.566 | TAw acc= 89.5%, forg= -0.2%| TAg acc= 87.1%, forg=  1.0% <<<
+>>> Test on task  1 : loss=3.093 | TAw acc= 87.2%, forg=  1.7%| TAg acc= 87.0%, forg=  1.3% <<<
+>>> Test on task  2 : loss=7.817 | TAw acc= 56.5%, forg=  3.3%| TAg acc= 56.5%, forg=  3.3% <<<
+>>> Test on task  3 : loss=9.598 | TAw acc= 71.4%, forg=  0.0%| TAg acc= 69.2%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_icarl_NIH300_5epoch_0713icarl
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+| Epoch   1, time= 15.2s | Train: skip eval | Valid: time=  2.9s loss=14.626, TAw acc= 28.7% | *
+| Epoch   2, time= 14.9s | Train: skip eval | Valid: time=  2.8s loss=13.833, TAw acc= 36.4% | *
+| Epoch   3, time= 14.9s | Train: skip eval | Valid: time=  2.8s loss=13.459, TAw acc= 43.3% | *
+| Epoch   4, time= 15.2s | Train: skip eval | Valid: time=  2.9s loss=13.238, TAw acc= 45.5% | *
+| Epoch   5, time= 15.2s | Train: skip eval | Valid: time=  2.9s loss=13.084, TAw acc= 49.5% | *
+| Epoch   6, time= 15.1s | Train: skip eval | Valid: time=  2.9s loss=12.966, TAw acc= 50.2% | *
+| Epoch   7, time= 15.5s | Train: skip eval | Valid: time=  2.8s loss=12.867, TAw acc= 51.3% | *
+| Epoch   8, time= 15.2s | Train: skip eval | Valid: time=  2.8s loss=12.789, TAw acc= 53.1% | *
+| Epoch   9, time= 15.0s | Train: skip eval | Valid: time=  2.9s loss=12.721, TAw acc= 54.2% | *
+| Epoch  10, time= 15.1s | Train: skip eval | Valid: time=  2.9s loss=12.663, TAw acc= 56.0% | *
+| Epoch  11, time= 14.8s | Train: skip eval | Valid: time=  2.9s loss=12.612, TAw acc= 57.1% | *
+| Epoch  12, time= 15.5s | Train: skip eval | Valid: time=  2.8s loss=12.567, TAw acc= 57.8% | *
+| Epoch  13, time= 15.3s | Train: skip eval | Valid: time=  2.9s loss=12.531, TAw acc= 58.9% | *
+| Epoch  14, time= 14.8s | Train: skip eval | Valid: time=  2.8s loss=12.495, TAw acc= 59.6% | *
+| Epoch  15, time= 15.0s | Train: skip eval | Valid: time=  2.8s loss=12.469, TAw acc= 60.7% | *
+| Selected 216 train exemplars, time=  0.2s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.692 | TAw acc= 89.1%, forg=  0.4%| TAg acc= 87.2%, forg=  0.8% <<<
+>>> Test on task  1 : loss=3.231 | TAw acc= 86.8%, forg=  2.0%| TAg acc= 86.7%, forg=  1.7% <<<
+>>> Test on task  2 : loss=7.866 | TAw acc= 58.0%, forg=  1.8%| TAg acc= 58.0%, forg=  1.8% <<<
+>>> Test on task  3 : loss=10.735 | TAw acc= 71.6%, forg= -0.3%| TAg acc= 55.9%, forg= 13.4% <<<
+>>> Test on task  4 : loss=12.762 | TAw acc= 45.9%, forg=  0.0%| TAg acc= 37.2%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_icarl_NIH300_5epoch_0713icarl
+************************************************************************************************************
+TAw Acc
+	 88.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 88.0% 
+	 88.6%  88.8%   0.0%   0.0%   0.0% 	Avg.: 88.7% 
+	 89.2%  88.0%  59.8%   0.0%   0.0% 	Avg.: 79.0% 
+	 89.5%  87.2%  56.5%  71.4%   0.0% 	Avg.: 76.1% 
+	 89.1%  86.8%  58.0%  71.6%  45.9% 	Avg.: 70.3% 
+************************************************************************************************************
+TAg Acc
+	 88.0%   0.0%   0.0%   0.0%   0.0% 	Avg.: 88.0% 
+	 86.5%  88.3%   0.0%   0.0%   0.0% 	Avg.: 87.4% 
+	 87.6%  87.7%  59.8%   0.0%   0.0% 	Avg.: 78.3% 
+	 87.1%  87.0%  56.5%  69.2%   0.0% 	Avg.: 74.9% 
+	 87.2%  86.7%  58.0%  55.9%  37.2% 	Avg.: 65.0% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	 -0.6%   0.0%   0.0%   0.0%   0.0% 	Avg.: -0.6% 
+	 -0.6%   0.8%   0.0%   0.0%   0.0% 	Avg.:  0.1% 
+	 -0.2%   1.7%   3.3%   0.0%   0.0% 	Avg.:  1.6% 
+	  0.4%   2.0%   1.8%  -0.3%   0.0% 	Avg.:  1.0% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  1.6%   0.0%   0.0%   0.0%   0.0% 	Avg.:  1.6% 
+	  0.5%   0.7%   0.0%   0.0%   0.0% 	Avg.:  0.6% 
+	  1.0%   1.3%   3.3%   0.0%   0.0% 	Avg.:  1.9% 
+	  0.8%   1.7%   1.8%  13.4%   0.0% 	Avg.:  4.4% 
+************************************************************************************************************
+[Elapsed time = 0.4 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: freezing
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: NIH300_5epoch_0713freezing
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 15
+	network: ViT_small
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results_Multi
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	all_outputs: False
+	freeze_after: 0
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 6), (1, 6), (2, 5), (3, 5), (4, 5)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 14.3s | Train: skip eval | Valid: time=  2.6s loss=0.429, TAw acc= 83.6% | *
+| Epoch   2, time= 13.8s | Train: skip eval | Valid: time=  2.5s loss=0.287, TAw acc= 88.4% | *
+| Epoch   3, time= 12.8s | Train: skip eval | Valid: time=  2.7s loss=0.260, TAw acc= 89.3% | *
+| Epoch   4, time= 13.4s | Train: skip eval | Valid: time=  2.7s loss=0.227, TAw acc= 90.1% | *
+| Epoch   5, time= 13.5s | Train: skip eval | Valid: time=  2.9s loss=0.231, TAw acc= 90.7% |
+| Epoch   6, time= 13.3s | Train: skip eval | Valid: time=  3.2s loss=0.228, TAw acc= 91.0% |
+| Epoch   7, time= 13.1s | Train: skip eval | Valid: time=  2.6s loss=0.230, TAw acc= 90.7% |
+| Epoch   8, time= 13.3s | Train: skip eval | Valid: time=  3.4s loss=0.252, TAw acc= 89.9% |
+| Epoch   9, time= 13.5s | Train: skip eval | Valid: time=  2.6s loss=0.253, TAw acc= 90.1% | lr=1.0e-05
+| Epoch  10, time= 13.4s | Train: skip eval | Valid: time=  2.6s loss=0.216, TAw acc= 90.4% | *
+| Epoch  11, time= 14.3s | Train: skip eval | Valid: time=  2.6s loss=0.233, TAw acc= 90.4% |
+| Epoch  12, time= 13.0s | Train: skip eval | Valid: time=  3.2s loss=0.233, TAw acc= 90.4% |
+| Epoch  13, time= 13.0s | Train: skip eval | Valid: time=  2.6s loss=0.231, TAw acc= 90.4% |
+| Epoch  14, time= 13.4s | Train: skip eval | Valid: time=  2.6s loss=0.237, TAw acc= 90.7% |
+| Epoch  15, time= 13.6s | Train: skip eval | Valid: time=  2.5s loss=0.249, TAw acc= 90.4% | lr=3.3e-06
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.283 | TAw acc= 90.3%, forg=  0.0%| TAg acc= 90.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_freezing_NIH300_5epoch_0713freezing
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time=  6.4s | Train: skip eval | Valid: time=  2.4s loss=1.935, TAw acc= 20.0% | *
+| Epoch   2, time=  6.6s | Train: skip eval | Valid: time=  2.4s loss=1.935, TAw acc= 20.0% |
+| Epoch   3, time=  7.0s | Train: skip eval | Valid: time=  2.4s loss=1.935, TAw acc= 20.0% |
+| Epoch   4, time=  7.0s | Train: skip eval | Valid: time=  2.5s loss=1.935, TAw acc= 20.0% |
+| Epoch   5, time=  6.9s | Train: skip eval | Valid: time=  2.5s loss=1.935, TAw acc= 20.0% |
+| Epoch   6, time=  6.9s | Train: skip eval | Valid: time=  2.4s loss=1.935, TAw acc= 20.0% | lr=1.0e-05
+| Epoch   7, time=  7.0s | Train: skip eval | Valid: time=  2.4s loss=1.935, TAw acc= 20.0% |
+| Epoch   8, time=  6.5s | Train: skip eval | Valid: time=  2.5s loss=1.935, TAw acc= 20.0% |
+| Epoch   9, time=  7.1s | Train: skip eval | Valid: time=  3.0s loss=1.935, TAw acc= 20.0% |
+| Epoch  10, time=  6.5s | Train: skip eval | Valid: time=  2.4s loss=1.935, TAw acc= 20.0% |
+| Epoch  11, time=  6.6s | Train: skip eval | Valid: time=  2.4s loss=1.935, TAw acc= 20.0% | lr=3.3e-06
+| Epoch  12, time=  6.4s | Train: skip eval | Valid: time=  2.5s loss=1.935, TAw acc= 20.0% |
+| Epoch  13, time=  6.9s | Train: skip eval | Valid: time=  2.5s loss=1.935, TAw acc= 20.0% |
+| Epoch  14, time=  7.0s | Train: skip eval | Valid: time=  2.5s loss=1.935, TAw acc= 20.0% |
+| Epoch  15, time=  6.7s | Train: skip eval | Valid: time=  2.5s loss=1.935, TAw acc= 20.0% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.283 | TAw acc= 90.2%, forg=  0.1%| TAg acc= 90.2%, forg=  0.1% <<<
+>>> Test on task  1 : loss=1.920 | TAw acc= 22.5%, forg=  0.0%| TAg acc=  0.3%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_freezing_NIH300_5epoch_0713freezing
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time=  4.8s | Train: skip eval | Valid: time=  2.3s loss=1.754, TAw acc= 19.8% | *
+| Epoch   2, time=  4.7s | Train: skip eval | Valid: time=  2.3s loss=1.754, TAw acc= 19.8% |
+| Epoch   3, time=  4.7s | Train: skip eval | Valid: time=  2.3s loss=1.754, TAw acc= 19.8% |
+| Epoch   4, time=  4.6s | Train: skip eval | Valid: time=  2.3s loss=1.754, TAw acc= 19.8% |
+| Epoch   5, time=  4.9s | Train: skip eval | Valid: time=  2.3s loss=1.754, TAw acc= 19.8% |
+| Epoch   6, time=  4.6s | Train: skip eval | Valid: time=  2.4s loss=1.754, TAw acc= 19.8% | lr=1.0e-05
+| Epoch   7, time=  4.6s | Train: skip eval | Valid: time=  3.3s loss=1.754, TAw acc= 19.8% |
+| Epoch   8, time=  4.6s | Train: skip eval | Valid: time=  2.4s loss=1.754, TAw acc= 19.8% |
+| Epoch   9, time=  4.8s | Train: skip eval | Valid: time=  2.4s loss=1.754, TAw acc= 19.8% |
+| Epoch  10, time=  4.9s | Train: skip eval | Valid: time=  2.4s loss=1.754, TAw acc= 19.8% |
+| Epoch  11, time=  4.9s | Train: skip eval | Valid: time=  2.4s loss=1.754, TAw acc= 19.8% | lr=3.3e-06
+| Epoch  12, time=  5.4s | Train: skip eval | Valid: time=  2.4s loss=1.754, TAw acc= 19.8% |
+| Epoch  13, time=  4.6s | Train: skip eval | Valid: time=  2.4s loss=1.754, TAw acc= 19.8% |
+| Epoch  14, time=  4.7s | Train: skip eval | Valid: time=  2.3s loss=1.754, TAw acc= 19.8% |
+| Epoch  15, time=  5.0s | Train: skip eval | Valid: time=  2.4s loss=1.754, TAw acc= 19.8% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.283 | TAw acc= 90.2%, forg=  0.1%| TAg acc= 90.0%, forg=  0.4% <<<
+>>> Test on task  1 : loss=1.920 | TAw acc= 22.5%, forg=  0.0%| TAg acc=  0.2%, forg=  0.2% <<<
+>>> Test on task  2 : loss=1.748 | TAw acc= 23.1%, forg=  0.0%| TAg acc=  0.9%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_freezing_NIH300_5epoch_0713freezing
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time=  7.9s | Train: skip eval | Valid: time=  2.6s loss=2.015, TAw acc= 11.2% | *
+| Epoch   2, time=  8.7s | Train: skip eval | Valid: time=  3.1s loss=2.015, TAw acc= 11.2% |
+| Epoch   3, time=  8.1s | Train: skip eval | Valid: time=  2.6s loss=2.015, TAw acc= 11.2% |
+| Epoch   4, time=  8.3s | Train: skip eval | Valid: time=  2.6s loss=2.015, TAw acc= 11.2% |
+| Epoch   5, time=  7.9s | Train: skip eval | Valid: time=  2.6s loss=2.015, TAw acc= 11.2% |
+| Epoch   6, time=  8.6s | Train: skip eval | Valid: time=  2.6s loss=2.015, TAw acc= 11.2% | lr=1.0e-05
+| Epoch   7, time=  8.3s | Train: skip eval | Valid: time=  2.6s loss=2.015, TAw acc= 11.2% |
+| Epoch   8, time=  8.5s | Train: skip eval | Valid: time=  2.7s loss=2.015, TAw acc= 11.2% |
+| Epoch   9, time=  8.1s | Train: skip eval | Valid: time=  2.6s loss=2.015, TAw acc= 11.2% |
+| Epoch  10, time=  8.3s | Train: skip eval | Valid: time=  2.6s loss=2.015, TAw acc= 11.2% |
+| Epoch  11, time=  8.6s | Train: skip eval | Valid: time=  2.5s loss=2.015, TAw acc= 11.2% | lr=3.3e-06
+| Epoch  12, time=  7.8s | Train: skip eval | Valid: time=  2.5s loss=2.015, TAw acc= 11.2% |
+| Epoch  13, time=  8.7s | Train: skip eval | Valid: time=  2.8s loss=2.015, TAw acc= 11.2% |
+| Epoch  14, time=  8.6s | Train: skip eval | Valid: time=  2.5s loss=2.015, TAw acc= 11.2% |
+| Epoch  15, time=  8.3s | Train: skip eval | Valid: time=  2.6s loss=2.015, TAw acc= 11.2% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.283 | TAw acc= 90.2%, forg=  0.1%| TAg acc= 89.7%, forg=  0.6% <<<
+>>> Test on task  1 : loss=1.920 | TAw acc= 22.5%, forg=  0.0%| TAg acc=  0.2%, forg=  0.2% <<<
+>>> Test on task  2 : loss=1.748 | TAw acc= 23.1%, forg=  0.0%| TAg acc=  0.9%, forg=  0.0% <<<
+>>> Test on task  3 : loss=2.045 | TAw acc=  9.0%, forg=  0.0%| TAg acc=  0.0%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_freezing_NIH300_5epoch_0713freezing
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+| Epoch   1, time=  7.2s | Train: skip eval | Valid: time=  2.6s loss=1.783, TAw acc= 23.3% | *
+| Epoch   2, time=  7.2s | Train: skip eval | Valid: time=  2.6s loss=1.783, TAw acc= 23.3% |
+| Epoch   3, time=  7.5s | Train: skip eval | Valid: time=  2.5s loss=1.783, TAw acc= 23.3% |
+| Epoch   4, time=  7.5s | Train: skip eval | Valid: time=  2.5s loss=1.783, TAw acc= 23.3% |
+| Epoch   5, time=  7.1s | Train: skip eval | Valid: time=  2.5s loss=1.783, TAw acc= 23.3% |
+| Epoch   6, time=  7.3s | Train: skip eval | Valid: time=  2.6s loss=1.783, TAw acc= 23.3% | lr=1.0e-05
+| Epoch   7, time=  7.1s | Train: skip eval | Valid: time=  2.5s loss=1.783, TAw acc= 23.3% |
+| Epoch   8, time=  7.1s | Train: skip eval | Valid: time=  2.5s loss=1.783, TAw acc= 23.3% |
+| Epoch   9, time=  7.3s | Train: skip eval | Valid: time=  2.5s loss=1.783, TAw acc= 23.3% |
+| Epoch  10, time=  7.1s | Train: skip eval | Valid: time=  2.5s loss=1.783, TAw acc= 23.3% |
+| Epoch  11, time=  7.7s | Train: skip eval | Valid: time=  2.5s loss=1.783, TAw acc= 23.3% | lr=3.3e-06
+| Epoch  12, time=  7.7s | Train: skip eval | Valid: time=  2.5s loss=1.783, TAw acc= 23.3% |
+| Epoch  13, time=  7.1s | Train: skip eval | Valid: time=  2.5s loss=1.783, TAw acc= 23.3% |
+| Epoch  14, time=  7.1s | Train: skip eval | Valid: time=  2.6s loss=1.783, TAw acc= 23.3% |
+| Epoch  15, time=  7.9s | Train: skip eval | Valid: time=  2.6s loss=1.783, TAw acc= 23.3% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.283 | TAw acc= 90.2%, forg=  0.1%| TAg acc= 89.7%, forg=  0.6% <<<
+>>> Test on task  1 : loss=1.920 | TAw acc= 22.5%, forg=  0.0%| TAg acc=  0.2%, forg=  0.2% <<<
+>>> Test on task  2 : loss=1.748 | TAw acc= 23.1%, forg=  0.0%| TAg acc=  0.9%, forg=  0.0% <<<
+>>> Test on task  3 : loss=2.045 | TAw acc=  9.0%, forg=  0.0%| TAg acc=  0.0%, forg=  0.0% <<<
+>>> Test on task  4 : loss=1.784 | TAw acc= 21.9%, forg=  0.0%| TAg acc=  6.4%, forg=  0.0% <<<
+Save at ../results_Multi/multidisease_freezing_NIH300_5epoch_0713freezing
+************************************************************************************************************
+TAw Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 90.2%  22.5%   0.0%   0.0%   0.0% 	Avg.: 56.3% 
+	 90.2%  22.5%  23.1%   0.0%   0.0% 	Avg.: 45.3% 
+	 90.2%  22.5%  23.1%   9.0%   0.0% 	Avg.: 36.2% 
+	 90.2%  22.5%  23.1%   9.0%  21.9% 	Avg.: 33.4% 
+************************************************************************************************************
+TAg Acc
+	 90.3%   0.0%   0.0%   0.0%   0.0% 	Avg.: 90.3% 
+	 90.2%   0.3%   0.0%   0.0%   0.0% 	Avg.: 45.3% 
+	 90.0%   0.2%   0.9%   0.0%   0.0% 	Avg.: 30.3% 
+	 89.7%   0.2%   0.9%   0.0%   0.0% 	Avg.: 22.7% 
+	 89.7%   0.2%   0.9%   0.0%   6.4% 	Avg.: 19.4% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  0.1%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.1% 
+	  0.1%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.1% 
+	  0.1%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.0% 
+	  0.1%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.0% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  0.1%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.1% 
+	  0.4%   0.2%   0.0%   0.0%   0.0% 	Avg.:  0.3% 
+	  0.6%   0.2%   0.0%   0.0%   0.0% 	Avg.:  0.3% 
+	  0.6%   0.2%   0.0%   0.0%   0.0% 	Avg.:  0.2% 
+************************************************************************************************************
+[Elapsed time = 0.2 h]
+Done!

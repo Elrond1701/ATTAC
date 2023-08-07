@@ -1,0 +1,116 @@
+Traceback (most recent call last):
+  File "main_incremental.py", line 321, in <module>
+    main()
+  File "main_incremental.py", line 192, in main
+    trn_loader, val_loader, tst_loader, taskcla = get_loaders(args.datasets, args.num_tasks, args.nc_first_task,
+  File "/root/continual_learning_with_vit/src/datasets/data_loader.py", line 35, in get_loaders
+    trn_dset, val_dset, tst_dset, curtaskcla = get_datasets(cur_dataset, dc['path'], num_tasks, nc_first_task,
+  File "/root/continual_learning_with_vit/src/datasets/data_loader.py", line 167, in get_datasets
+    all_data, taskcla, class_indices = basedat.get_data(path, num_tasks=num_tasks, nc_first_task=nc_first_task,
+  File "/root/continual_learning_with_vit/src/datasets/base_dataset.py", line 57, in get_data
+    cpertask = np.array([nc_first_task] + [remaining_classes // (num_tasks - 1)] * (num_tasks - 1))
+ZeroDivisionError: integer division or modulo by zero
+============================================================================================================
+Arguments =
+	approach: joint
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: 10epoch_0713joint
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 0.003
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: 4
+	nepochs: 10
+	network: ViT_small
+	no_cudnn_deterministic: False
+	num_tasks: 1
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	freeze_after: -1
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+WARNING: ../results/multidisease_joint_10epoch_0713joint already exists!
+Traceback (most recent call last):
+  File "main_incremental.py", line 321, in <module>
+    main()
+  File "main_incremental.py", line 192, in main
+    trn_loader, val_loader, tst_loader, taskcla = get_loaders(args.datasets, args.num_tasks, args.nc_first_task,
+  File "/root/continual_learning_with_vit/src/datasets/data_loader.py", line 35, in get_loaders
+    trn_dset, val_dset, tst_dset, curtaskcla = get_datasets(cur_dataset, dc['path'], num_tasks, nc_first_task,
+  File "/root/continual_learning_with_vit/src/datasets/data_loader.py", line 167, in get_datasets
+    all_data, taskcla, class_indices = basedat.get_data(path, num_tasks=num_tasks, nc_first_task=nc_first_task,
+  File "/root/continual_learning_with_vit/src/datasets/base_dataset.py", line 57, in get_data
+    cpertask = np.array([nc_first_task] + [remaining_classes // (num_tasks - 1)] * (num_tasks - 1))
+ZeroDivisionError: integer division or modulo by zero
+============================================================================================================
+Arguments =
+	approach: joint
+	batch_size: 32
+	clipping: 10000
+	datasets: ['multidisease']
+	eval_on_train: False
+	exp_name: 10epoch_0713_10_network_epochjointOVit_tiny_16_augreg_224
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 0.003
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: 4
+	nepochs: 10
+	network: OVit_tiny_16_augreg_224
+	no_cudnn_deterministic: False
+	num_tasks: 1
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	freeze_after: -1
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+WARNING: ../results/multidisease_joint_10epoch_0713_10_network_epochjointOVit_tiny_16_augreg_224 already exists!

@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "main_incremental.py", line 321, in <module>
+    main()
+  File "main_incremental.py", line 269, in main
+    appr.train(t, trn_loader[t], val_loader[t])
+  File "/hy-tmp/continual_learning_with_vit/src/approach/incremental_learning.py", line 58, in train
+    self.train_loop(t, trn_loader, val_loader)
+  File "/hy-tmp/continual_learning_with_vit/src/approach/joint.py", line 65, in train_loop
+    super().train_loop(t, trn_loader, val_loader)
+  File "/hy-tmp/continual_learning_with_vit/src/approach/incremental_learning.py", line 112, in train_loop
+    self.train_epoch(t, trn_loader)
+  File "/hy-tmp/continual_learning_with_vit/src/approach/joint.py", line 85, in train_epoch
+    self.optimizer.step()
+  File "/usr/local/miniconda3/lib/python3.8/site-packages/torch/optim/optimizer.py", line 140, in wrapper
+    out = func(*args, **kwargs)
+  File "/usr/local/miniconda3/lib/python3.8/site-packages/torch/optim/optimizer.py", line 23, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/usr/local/miniconda3/lib/python3.8/site-packages/torch/optim/sgd.py", line 151, in step
+    sgd(params_with_grad,
+  File "/usr/local/miniconda3/lib/python3.8/site-packages/torch/optim/sgd.py", line 202, in sgd
+    func(params,
+  File "/usr/local/miniconda3/lib/python3.8/site-packages/torch/optim/sgd.py", line 245, in _single_tensor_sgd
+    param.add_(d_p, alpha=-lr)
+KeyboardInterrupt

@@ -1,0 +1,2169 @@
+============================================================================================================
+Arguments =
+	approach: finetuning
+	batch_size: 32
+	clipping: 10000
+	datasets: ['food101']
+	eval_on_train: False
+	exp_name: finetuning_food101_tasks_5_epochs_10
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 10
+	network: OVit_tiny_16_augreg_224
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../ViT_results/test_VIT_food101_5
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	all_outputs: False
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+WARNING: ../ViT_results/test_VIT_food101_5/food101_finetuning_finetuning_food101_tasks_5_epochs_10 already exists!
+LLL_Net(
+  (model): OVit_tiny_16_augreg_224(
+    (ovit): OVisionTransformer(
+      (patch_embed): PatchEmbed(
+        (proj): Conv2d(3, 384, kernel_size=(16, 16), stride=(16, 16))
+        (norm): Identity()
+      )
+      (pos_drop): Dropout(p=0.0, inplace=False)
+      (blocks): Sequential(
+        (0): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (1): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (2): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (3): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (4): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (5): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (6): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (7): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (8): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (9): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (10): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (11): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+      (norm): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+      (pre_logits): Identity()
+      (head): Identity()
+    )
+    (fc): Sequential()
+  )
+  (heads): ModuleList()
+)
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 21), (1, 20), (2, 20), (3, 20), (4, 20)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 54.5s | Train: skip eval | Valid: time=  6.2s loss=0.527, TAw acc= 85.2% | *
+| Epoch   2, time= 52.9s | Train: skip eval | Valid: time=  6.0s loss=0.381, TAw acc= 88.6% | *
+| Epoch   3, time= 52.9s | Train: skip eval | Valid: time=  6.2s loss=0.349, TAw acc= 90.0% | *
+| Epoch   4, time= 53.3s | Train: skip eval | Valid: time=  6.1s loss=0.344, TAw acc= 90.2% | *
+| Epoch   5, time= 53.4s | Train: skip eval | Valid: time=  6.0s loss=0.347, TAw acc= 90.1% |
+| Epoch   6, time= 53.3s | Train: skip eval | Valid: time=  6.1s loss=0.356, TAw acc= 90.0% |
+| Epoch   7, time= 52.9s | Train: skip eval | Valid: time=  6.1s loss=0.369, TAw acc= 90.1% |
+| Epoch   8, time= 53.0s | Train: skip eval | Valid: time=  6.0s loss=0.381, TAw acc= 89.6% |
+| Epoch   9, time= 53.6s | Train: skip eval | Valid: time=  6.1s loss=0.392, TAw acc= 90.0% | lr=1.0e-05
+| Epoch  10, time= 52.1s | Train: skip eval | Valid: time=  6.1s loss=0.339, TAw acc= 90.2% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.194 | TAw acc= 94.2%, forgtaw=  0.0% | TAg acc= 94.2%, forgtag=  0.0% <<<
+Save at ../ViT_results/test_VIT_food101_5/food101_finetuning_finetuning_food101_tasks_5_epochs_10
+avg_forg_taw: [0. 0. 0. 0. 0.]
+arrtaw [1. 1. 2. 3. 4.]
+np.sum(np.tril(forg_taw, k=-1), axis=1): [0. 0. 0. 0. 0.]
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 51.1s | Train: skip eval | Valid: time=  5.9s loss=0.916, TAw acc= 75.0% | *
+| Epoch   2, time= 52.8s | Train: skip eval | Valid: time=  5.9s loss=0.612, TAw acc= 82.2% | *
+| Epoch   3, time= 51.3s | Train: skip eval | Valid: time=  6.0s loss=0.495, TAw acc= 85.3% | *
+| Epoch   4, time= 51.2s | Train: skip eval | Valid: time=  5.9s loss=0.447, TAw acc= 86.9% | *
+| Epoch   5, time= 51.7s | Train: skip eval | Valid: time=  5.9s loss=0.422, TAw acc= 87.9% | *
+| Epoch   6, time= 51.0s | Train: skip eval | Valid: time=  5.9s loss=0.404, TAw acc= 87.9% | *
+| Epoch   7, time= 51.0s | Train: skip eval | Valid: time=  5.9s loss=0.397, TAw acc= 88.2% | *
+| Epoch   8, time= 50.8s | Train: skip eval | Valid: time=  6.0s loss=0.384, TAw acc= 88.8% | *
+| Epoch   9, time= 50.4s | Train: skip eval | Valid: time=  5.9s loss=0.385, TAw acc= 88.6% |
+| Epoch  10, time= 50.6s | Train: skip eval | Valid: time=  5.9s loss=0.387, TAw acc= 88.8% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.482 | TAw acc= 86.6%, forgtaw=  7.6% | TAg acc= 67.4%, forgtag= 26.8% <<<
+>>> Test on task  1 : loss=0.242 | TAw acc= 92.6%, forgtaw=  0.0% | TAg acc= 89.8%, forgtag=  0.0% <<<
+bwt_taw[t] -0.07580952380952377
+bwt_tag[t] -0.26761904761904765
+Save at ../ViT_results/test_VIT_food101_5/food101_finetuning_finetuning_food101_tasks_5_epochs_10
+avg_forg_taw: [0.         0.07580952 0.         0.         0.        ]
+arrtaw [1. 1. 2. 3. 4.]
+np.sum(np.tril(forg_taw, k=-1), axis=1): [0.         0.07580952 0.         0.         0.        ]
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time= 52.7s | Train: skip eval | Valid: time=  5.9s loss=1.144, TAw acc= 69.5% | *
+| Epoch   2, time= 50.6s | Train: skip eval | Valid: time=  5.9s loss=0.783, TAw acc= 77.5% | *
+| Epoch   3, time= 51.2s | Train: skip eval | Valid: time=  6.0s loss=0.650, TAw acc= 81.1% | *
+| Epoch   4, time= 50.5s | Train: skip eval | Valid: time=  6.0s loss=0.571, TAw acc= 83.6% | *
+| Epoch   5, time= 51.3s | Train: skip eval | Valid: time=  5.9s loss=0.546, TAw acc= 84.5% | *
+| Epoch   6, time= 50.2s | Train: skip eval | Valid: time=  6.0s loss=0.516, TAw acc= 84.5% | *
+| Epoch   7, time= 51.2s | Train: skip eval | Valid: time=  6.0s loss=0.507, TAw acc= 85.7% | *
+| Epoch   8, time= 49.7s | Train: skip eval | Valid: time=  6.0s loss=0.509, TAw acc= 85.1% |
+| Epoch   9, time= 51.4s | Train: skip eval | Valid: time=  5.9s loss=0.499, TAw acc= 85.9% | *
+| Epoch  10, time= 54.1s | Train: skip eval | Valid: time=  5.9s loss=0.502, TAw acc= 85.6% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.973 | TAw acc= 73.1%, forgtaw= 21.1% | TAg acc= 33.2%, forgtag= 61.0% <<<
+>>> Test on task  1 : loss=0.806 | TAw acc= 77.2%, forgtaw= 15.4% | TAg acc= 45.3%, forgtag= 44.5% <<<
+>>> Test on task  2 : loss=0.377 | TAw acc= 88.4%, forgtaw=  0.0% | TAg acc= 86.6%, forgtag=  0.0% <<<
+bwt_taw[t] -0.1447238095238096
+bwt_tag[t] -0.39353809523809524
+Save at ../ViT_results/test_VIT_food101_5/food101_finetuning_finetuning_food101_tasks_5_epochs_10
+avg_forg_taw: [0.         0.07580952 0.18262857 0.         0.        ]
+arrtaw [1. 1. 2. 3. 4.]
+np.sum(np.tril(forg_taw, k=-1), axis=1): [0.         0.07580952 0.36525714 0.         0.        ]
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 51.7s | Train: skip eval | Valid: time=  5.9s loss=1.023, TAw acc= 72.9% | *
+| Epoch   2, time= 50.9s | Train: skip eval | Valid: time=  5.9s loss=0.708, TAw acc= 80.1% | *
+| Epoch   3, time= 53.2s | Train: skip eval | Valid: time=  5.9s loss=0.605, TAw acc= 82.3% | *
+| Epoch   4, time= 50.7s | Train: skip eval | Valid: time=  6.0s loss=0.535, TAw acc= 84.7% | *
+| Epoch   5, time= 51.3s | Train: skip eval | Valid: time=  5.9s loss=0.508, TAw acc= 84.6% | *
+| Epoch   6, time= 50.7s | Train: skip eval | Valid: time=  6.1s loss=0.484, TAw acc= 85.9% | *
+| Epoch   7, time= 50.9s | Train: skip eval | Valid: time=  5.9s loss=0.477, TAw acc= 86.5% | *
+| Epoch   8, time= 50.7s | Train: skip eval | Valid: time=  5.9s loss=0.467, TAw acc= 86.4% | *
+| Epoch   9, time= 50.7s | Train: skip eval | Valid: time=  6.0s loss=0.469, TAw acc= 86.3% |
+| Epoch  10, time= 51.2s | Train: skip eval | Valid: time=  5.9s loss=0.474, TAw acc= 86.8% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=1.684 | TAw acc= 53.2%, forgtaw= 41.0% | TAg acc= 13.0%, forgtag= 81.2% <<<
+>>> Test on task  1 : loss=1.550 | TAw acc= 56.1%, forgtaw= 36.5% | TAg acc= 13.4%, forgtag= 76.3% <<<
+>>> Test on task  2 : loss=1.092 | TAw acc= 68.7%, forgtaw= 19.7% | TAg acc= 33.5%, forgtag= 53.1% <<<
+>>> Test on task  3 : loss=0.329 | TAw acc= 89.8%, forgtaw=  0.0% | TAg acc= 88.4%, forgtag=  0.0% <<<
+bwt_taw[t] -0.20228253968253965
+bwt_tag[t] -0.35057460317460315
+Save at ../ViT_results/test_VIT_food101_5/food101_finetuning_finetuning_food101_tasks_5_epochs_10
+avg_forg_taw: [0.         0.07580952 0.18262857 0.32403492 0.        ]
+arrtaw [1. 1. 2. 3. 4.]
+np.sum(np.tril(forg_taw, k=-1), axis=1): [0.         0.07580952 0.36525714 0.97210476 0.        ]
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+| Epoch   1, time= 51.1s | Train: skip eval | Valid: time=  5.9s loss=1.032, TAw acc= 70.9% | *
+| Epoch   2, time= 51.3s | Train: skip eval | Valid: time=  6.1s loss=0.738, TAw acc= 79.1% | *
+| Epoch   3, time= 54.3s | Train: skip eval | Valid: time=  5.9s loss=0.634, TAw acc= 80.6% | *
+| Epoch   4, time= 49.8s | Train: skip eval | Valid: time=  6.0s loss=0.584, TAw acc= 81.7% | *
+| Epoch   5, time= 51.2s | Train: skip eval | Valid: time=  5.9s loss=0.544, TAw acc= 83.4% | *
+| Epoch   6, time= 51.1s | Train: skip eval | Valid: time=  5.9s loss=0.527, TAw acc= 83.9% | *
+| Epoch   7, time= 51.1s | Train: skip eval | Valid: time=  6.0s loss=0.515, TAw acc= 84.8% | *
+| Epoch   8, time= 50.2s | Train: skip eval | Valid: time=  5.9s loss=0.510, TAw acc= 85.1% | *
+| Epoch   9, time= 51.9s | Train: skip eval | Valid: time=  6.0s loss=0.515, TAw acc= 85.0% |
+| Epoch  10, time= 50.8s | Train: skip eval | Valid: time=  5.8s loss=0.516, TAw acc= 85.5% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.526 | TAw acc= 29.5%, forgtaw= 64.7% | TAg acc=  3.4%, forgtag= 90.8% <<<
+>>> Test on task  1 : loss=2.348 | TAw acc= 33.0%, forgtaw= 59.6% | TAg acc=  4.3%, forgtag= 85.5% <<<
+>>> Test on task  2 : loss=1.995 | TAw acc= 44.0%, forgtaw= 44.4% | TAg acc= 15.2%, forgtag= 71.4% <<<
+>>> Test on task  3 : loss=1.033 | TAw acc= 70.9%, forgtaw= 18.9% | TAg acc= 36.1%, forgtag= 52.3% <<<
+>>> Test on task  4 : loss=0.408 | TAw acc= 87.9%, forgtaw=  0.0% | TAg acc= 85.9%, forgtag=  0.0% <<<
+bwt_taw[t] -0.22618809523809524
+bwt_tag[t] -0.22349285714285716
+Save at ../ViT_results/test_VIT_food101_5/food101_finetuning_finetuning_food101_tasks_5_epochs_10
+avg_forg_taw: [0.         0.07580952 0.18262857 0.32403492 0.46921429]
+arrtaw [1. 1. 2. 3. 4.]
+np.sum(np.tril(forg_taw, k=-1), axis=1): [0.         0.07580952 0.36525714 0.97210476 1.87685714]
+************************************************************************************************************
+TAw Acc
+	 94.2%   0.0%   0.0%   0.0%   0.0% 	Avg.: 94.2% 
+	 86.6%  92.6%   0.0%   0.0%   0.0% 	Avg.: 89.6% 
+	 73.1%  77.2%  88.4%   0.0%   0.0% 	Avg.: 79.6% 
+	 53.2%  56.1%  68.7%  89.8%   0.0% 	Avg.: 67.0% 
+	 29.5%  33.0%  44.0%  70.9%  87.9% 	Avg.: 53.1% 
+************************************************************************************************************
+TAg Acc
+	 94.2%   0.0%   0.0%   0.0%   0.0% 	Avg.: 94.2% 
+	 67.4%  89.8%   0.0%   0.0%   0.0% 	Avg.: 78.6% 
+	 33.2%  45.3%  86.6%   0.0%   0.0% 	Avg.: 55.0% 
+	 13.0%  13.4%  33.5%  88.4%   0.0% 	Avg.: 37.1% 
+	  3.4%   4.3%  15.2%  36.1%  85.9% 	Avg.: 29.0% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  7.6%   0.0%   0.0%   0.0%   0.0% 	Avg.:  7.6% 
+	 21.1%  15.4%   0.0%   0.0%   0.0% 	Avg.: 18.3% 
+	 41.0%  36.5%  19.7%   0.0%   0.0% 	Avg.: 32.4% 
+	 64.7%  59.6%  44.4%  18.9%   0.0% 	Avg.: 46.9% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	 26.8%   0.0%   0.0%   0.0%   0.0% 	Avg.: 26.8% 
+	 61.0%  44.5%   0.0%   0.0%   0.0% 	Avg.: 52.7% 
+	 81.2%  76.3%  53.1%   0.0%   0.0% 	Avg.: 70.2% 
+	 90.8%  85.5%  71.4%  52.3%   0.0% 	Avg.: 75.0% 
+************************************************************************************************************
+[Elapsed time = 0.8 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: freezing
+	batch_size: 32
+	clipping: 10000
+	datasets: ['food101']
+	eval_on_train: False
+	exp_name: freezing_food101_tasks_5_epochs_10
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 10
+	network: OVit_tiny_16_augreg_224
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../ViT_results/test_VIT_food101_5
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	all_outputs: False
+	freeze_after: 0
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+WARNING: ../ViT_results/test_VIT_food101_5/food101_freezing_freezing_food101_tasks_5_epochs_10 already exists!
+LLL_Net(
+  (model): OVit_tiny_16_augreg_224(
+    (ovit): OVisionTransformer(
+      (patch_embed): PatchEmbed(
+        (proj): Conv2d(3, 384, kernel_size=(16, 16), stride=(16, 16))
+        (norm): Identity()
+      )
+      (pos_drop): Dropout(p=0.0, inplace=False)
+      (blocks): Sequential(
+        (0): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (1): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (2): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (3): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (4): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (5): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (6): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (7): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (8): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (9): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (10): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (11): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+      (norm): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+      (pre_logits): Identity()
+      (head): Identity()
+    )
+    (fc): Sequential()
+  )
+  (heads): ModuleList()
+)
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 21), (1, 20), (2, 20), (3, 20), (4, 20)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 55.0s | Train: skip eval | Valid: time=  6.1s loss=0.527, TAw acc= 85.2% | *
+| Epoch   2, time= 53.2s | Train: skip eval | Valid: time=  6.1s loss=0.381, TAw acc= 88.6% | *
+| Epoch   3, time= 52.2s | Train: skip eval | Valid: time=  6.0s loss=0.349, TAw acc= 90.0% | *
+| Epoch   4, time= 53.5s | Train: skip eval | Valid: time=  6.0s loss=0.344, TAw acc= 90.2% | *
+| Epoch   5, time= 53.2s | Train: skip eval | Valid: time=  6.0s loss=0.347, TAw acc= 90.1% |
+| Epoch   6, time= 52.9s | Train: skip eval | Valid: time=  6.1s loss=0.356, TAw acc= 90.0% |
+| Epoch   7, time= 53.2s | Train: skip eval | Valid: time=  6.0s loss=0.369, TAw acc= 90.1% |
+| Epoch   8, time= 53.0s | Train: skip eval | Valid: time=  5.9s loss=0.381, TAw acc= 89.6% |
+| Epoch   9, time= 53.3s | Train: skip eval | Valid: time=  6.0s loss=0.392, TAw acc= 90.0% | lr=1.0e-05
+| Epoch  10, time= 53.7s | Train: skip eval | Valid: time=  6.1s loss=0.339, TAw acc= 90.2% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.194 | TAw acc= 94.2%, forgtaw=  0.0% | TAg acc= 94.2%, forgtag=  0.0% <<<
+Save at ../ViT_results/test_VIT_food101_5/food101_freezing_freezing_food101_tasks_5_epochs_10
+avg_forg_taw: [0. 0. 0. 0. 0.]
+arrtaw [1. 1. 2. 3. 4.]
+np.sum(np.tril(forg_taw, k=-1), axis=1): [0. 0. 0. 0. 0.]
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 31.2s | Train: skip eval | Valid: time=  6.0s loss=3.767, TAw acc=  6.9% | *
+| Epoch   2, time= 30.9s | Train: skip eval | Valid: time=  5.9s loss=3.767, TAw acc=  6.9% |
+| Epoch   3, time= 30.9s | Train: skip eval | Valid: time=  5.8s loss=3.767, TAw acc=  6.9% |
+| Epoch   4, time= 30.5s | Train: skip eval | Valid: time=  6.0s loss=3.767, TAw acc=  6.9% |
+| Epoch   5, time= 30.9s | Train: skip eval | Valid: time=  5.9s loss=3.767, TAw acc=  6.9% |
+| Epoch   6, time= 30.6s | Train: skip eval | Valid: time=  6.0s loss=3.767, TAw acc=  6.9% | lr=1.0e-05
+| Epoch   7, time= 30.6s | Train: skip eval | Valid: time=  5.9s loss=3.767, TAw acc=  6.9% |
+| Epoch   8, time= 30.5s | Train: skip eval | Valid: time=  5.8s loss=3.767, TAw acc=  6.9% |
+| Epoch   9, time= 31.3s | Train: skip eval | Valid: time=  6.1s loss=3.767, TAw acc=  6.9% |
+| Epoch  10, time= 30.7s | Train: skip eval | Valid: time=  5.9s loss=3.767, TAw acc=  6.9% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.196 | TAw acc= 94.1%, forgtaw=  0.1% | TAg acc= 94.0%, forgtag=  0.2% <<<
+>>> Test on task  1 : loss=3.700 | TAw acc=  8.2%, forgtaw=  0.0% | TAg acc=  1.7%, forgtag=  0.0% <<<
+bwt_taw[t] -0.0011428571428571122
+bwt_tag[t] -0.0015238095238094829
+Save at ../ViT_results/test_VIT_food101_5/food101_freezing_freezing_food101_tasks_5_epochs_10
+avg_forg_taw: [0.         0.00114286 0.         0.         0.        ]
+arrtaw [1. 1. 2. 3. 4.]
+np.sum(np.tril(forg_taw, k=-1), axis=1): [0.         0.00114286 0.         0.         0.        ]
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time= 30.6s | Train: skip eval | Valid: time=  5.9s loss=4.244, TAw acc=  3.3% | *
+| Epoch   2, time= 30.8s | Train: skip eval | Valid: time=  5.9s loss=4.244, TAw acc=  3.3% |
+| Epoch   3, time= 30.6s | Train: skip eval | Valid: time=  5.9s loss=4.244, TAw acc=  3.3% |
+| Epoch   4, time= 30.5s | Train: skip eval | Valid: time=  5.9s loss=4.244, TAw acc=  3.3% |
+| Epoch   5, time= 32.1s | Train: skip eval | Valid: time=  5.8s loss=4.244, TAw acc=  3.3% |
+| Epoch   6, time= 30.9s | Train: skip eval | Valid: time=  5.9s loss=4.244, TAw acc=  3.3% | lr=1.0e-05
+| Epoch   7, time= 30.6s | Train: skip eval | Valid: time=  5.9s loss=4.244, TAw acc=  3.3% |
+| Epoch   8, time= 30.5s | Train: skip eval | Valid: time=  6.0s loss=4.244, TAw acc=  3.3% |
+| Epoch   9, time= 30.6s | Train: skip eval | Valid: time=  5.9s loss=4.244, TAw acc=  3.3% |
+| Epoch  10, time= 30.6s | Train: skip eval | Valid: time=  5.9s loss=4.244, TAw acc=  3.3% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.196 | TAw acc= 94.1%, forgtaw=  0.1% | TAg acc= 93.9%, forgtag=  0.2% <<<
+>>> Test on task  1 : loss=3.700 | TAw acc=  8.2%, forgtaw=  0.0% | TAg acc=  1.6%, forgtag=  0.1% <<<
+>>> Test on task  2 : loss=4.269 | TAw acc=  3.2%, forgtaw=  0.0% | TAg acc=  0.2%, forgtag=  0.0% <<<
+bwt_taw[t] 0.0
+bwt_tag[t] -0.0007761904761905188
+Save at ../ViT_results/test_VIT_food101_5/food101_freezing_freezing_food101_tasks_5_epochs_10
+avg_forg_taw: [0.         0.00114286 0.00057143 0.         0.        ]
+arrtaw [1. 1. 2. 3. 4.]
+np.sum(np.tril(forg_taw, k=-1), axis=1): [0.         0.00114286 0.00114286 0.         0.        ]
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 30.7s | Train: skip eval | Valid: time=  5.9s loss=4.072, TAw acc=  5.1% | *
+| Epoch   2, time= 31.3s | Train: skip eval | Valid: time=  6.0s loss=4.072, TAw acc=  5.1% |
+| Epoch   3, time= 30.9s | Train: skip eval | Valid: time=  6.0s loss=4.072, TAw acc=  5.1% |
+| Epoch   4, time= 31.2s | Train: skip eval | Valid: time=  5.9s loss=4.072, TAw acc=  5.1% |
+| Epoch   5, time= 30.7s | Train: skip eval | Valid: time=  5.9s loss=4.072, TAw acc=  5.1% |
+| Epoch   6, time= 30.5s | Train: skip eval | Valid: time=  5.9s loss=4.072, TAw acc=  5.1% | lr=1.0e-05
+| Epoch   7, time= 30.7s | Train: skip eval | Valid: time=  6.1s loss=4.072, TAw acc=  5.1% |
+| Epoch   8, time= 30.5s | Train: skip eval | Valid: time=  5.9s loss=4.072, TAw acc=  5.1% |
+| Epoch   9, time= 31.2s | Train: skip eval | Valid: time=  5.8s loss=4.072, TAw acc=  5.1% |
+| Epoch  10, time= 30.9s | Train: skip eval | Valid: time=  6.0s loss=4.072, TAw acc=  5.1% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.196 | TAw acc= 94.1%, forgtaw=  0.1% | TAg acc= 93.9%, forgtag=  0.2% <<<
+>>> Test on task  1 : loss=3.700 | TAw acc=  8.2%, forgtaw=  0.0% | TAg acc=  1.1%, forgtag=  0.6% <<<
+>>> Test on task  2 : loss=4.269 | TAw acc=  3.2%, forgtaw=  0.0% | TAg acc=  0.1%, forgtag=  0.0% <<<
+>>> Test on task  3 : loss=4.081 | TAw acc=  5.0%, forgtaw=  0.0% | TAg acc=  0.1%, forgtag=  0.0% <<<
+bwt_taw[t] 0.0
+bwt_tag[t] -0.0019333333333333331
+Save at ../ViT_results/test_VIT_food101_5/food101_freezing_freezing_food101_tasks_5_epochs_10
+avg_forg_taw: [0.         0.00114286 0.00057143 0.00038095 0.        ]
+arrtaw [1. 1. 2. 3. 4.]
+np.sum(np.tril(forg_taw, k=-1), axis=1): [0.         0.00114286 0.00114286 0.00114286 0.        ]
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+| Epoch   1, time= 30.6s | Train: skip eval | Valid: time=  5.9s loss=4.237, TAw acc=  3.1% | *
+| Epoch   2, time= 30.8s | Train: skip eval | Valid: time=  6.0s loss=4.237, TAw acc=  3.1% |
+| Epoch   3, time= 31.3s | Train: skip eval | Valid: time=  6.0s loss=4.237, TAw acc=  3.1% |
+| Epoch   4, time= 30.6s | Train: skip eval | Valid: time=  6.0s loss=4.237, TAw acc=  3.1% |
+| Epoch   5, time= 31.2s | Train: skip eval | Valid: time=  5.9s loss=4.237, TAw acc=  3.1% |
+| Epoch   6, time= 31.7s | Train: skip eval | Valid: time=  5.9s loss=4.237, TAw acc=  3.1% | lr=1.0e-05
+| Epoch   7, time= 31.1s | Train: skip eval | Valid: time=  6.0s loss=4.237, TAw acc=  3.1% |
+| Epoch   8, time= 30.6s | Train: skip eval | Valid: time=  5.9s loss=4.237, TAw acc=  3.1% |
+| Epoch   9, time= 31.0s | Train: skip eval | Valid: time=  5.9s loss=4.237, TAw acc=  3.1% |
+| Epoch  10, time= 30.7s | Train: skip eval | Valid: time=  5.9s loss=4.237, TAw acc=  3.1% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.196 | TAw acc= 94.1%, forgtaw=  0.1% | TAg acc= 93.9%, forgtag=  0.3% <<<
+>>> Test on task  1 : loss=3.700 | TAw acc=  8.2%, forgtaw=  0.0% | TAg acc=  1.0%, forgtag=  0.7% <<<
+>>> Test on task  2 : loss=4.269 | TAw acc=  3.2%, forgtaw=  0.0% | TAg acc=  0.1%, forgtag=  0.0% <<<
+>>> Test on task  3 : loss=4.081 | TAw acc=  5.0%, forgtaw=  0.0% | TAg acc=  0.1%, forgtag=  0.0% <<<
+>>> Test on task  4 : loss=4.289 | TAw acc=  3.1%, forgtaw=  0.0% | TAg acc=  0.0%, forgtag=  0.0% <<<
+bwt_taw[t] 0.0
+bwt_tag[t] -0.00029523809523809266
+Save at ../ViT_results/test_VIT_food101_5/food101_freezing_freezing_food101_tasks_5_epochs_10
+avg_forg_taw: [0.         0.00114286 0.00057143 0.00038095 0.00028571]
+arrtaw [1. 1. 2. 3. 4.]
+np.sum(np.tril(forg_taw, k=-1), axis=1): [0.         0.00114286 0.00114286 0.00114286 0.00114286]
+************************************************************************************************************
+TAw Acc
+	 94.2%   0.0%   0.0%   0.0%   0.0% 	Avg.: 94.2% 
+	 94.1%   8.2%   0.0%   0.0%   0.0% 	Avg.: 51.1% 
+	 94.1%   8.2%   3.2%   0.0%   0.0% 	Avg.: 35.1% 
+	 94.1%   8.2%   3.2%   5.0%   0.0% 	Avg.: 27.6% 
+	 94.1%   8.2%   3.2%   5.0%   3.1% 	Avg.: 22.7% 
+************************************************************************************************************
+TAg Acc
+	 94.2%   0.0%   0.0%   0.0%   0.0% 	Avg.: 94.2% 
+	 94.0%   1.7%   0.0%   0.0%   0.0% 	Avg.: 47.8% 
+	 93.9%   1.6%   0.2%   0.0%   0.0% 	Avg.: 31.9% 
+	 93.9%   1.1%   0.1%   0.1%   0.0% 	Avg.: 23.8% 
+	 93.9%   1.0%   0.1%   0.1%   0.0% 	Avg.: 19.0% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  0.1%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.1% 
+	  0.1%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.1% 
+	  0.1%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.0% 
+	  0.1%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.0% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  0.2%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.2% 
+	  0.2%   0.1%   0.0%   0.0%   0.0% 	Avg.:  0.2% 
+	  0.2%   0.6%   0.0%   0.0%   0.0% 	Avg.:  0.3% 
+	  0.3%   0.7%   0.0%   0.0%   0.0% 	Avg.:  0.3% 
+************************************************************************************************************
+[Elapsed time = 0.6 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: joint
+	batch_size: 32
+	clipping: 10000
+	datasets: ['food101']
+	eval_on_train: False
+	exp_name: joint_food101_tasks_5_epochs_10
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 10
+	network: OVit_tiny_16_augreg_224
+	no_cudnn_deterministic: False
+	num_tasks: 1
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../ViT_results/test_VIT_food101_5
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	freeze_after: -1
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+WARNING: ../ViT_results/test_VIT_food101_5/food101_joint_joint_food101_tasks_5_epochs_10 already exists!
+LLL_Net(
+  (model): OVit_tiny_16_augreg_224(
+    (ovit): OVisionTransformer(
+      (patch_embed): PatchEmbed(
+        (proj): Conv2d(3, 384, kernel_size=(16, 16), stride=(16, 16))
+        (norm): Identity()
+      )
+      (pos_drop): Dropout(p=0.0, inplace=False)
+      (blocks): Sequential(
+        (0): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (1): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (2): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (3): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (4): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (5): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (6): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (7): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (8): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (9): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (10): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (11): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+      (norm): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+      (pre_logits): Identity()
+      (head): Identity()
+    )
+    (fc): Sequential()
+  )
+  (heads): ModuleList()
+)
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 101)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time=243.9s | Train: skip eval | Valid: time= 14.0s loss=1.215, TAw acc= 70.2% | *
+| Epoch   2, time=241.9s | Train: skip eval | Valid: time= 13.9s loss=0.923, TAw acc= 75.9% | *
+| Epoch   3, time=238.4s | Train: skip eval | Valid: time= 13.7s loss=0.843, TAw acc= 77.3% | *
+| Epoch   4, time=245.1s | Train: skip eval | Valid: time= 14.0s loss=0.821, TAw acc= 78.5% | *
+| Epoch   5, time=243.6s | Train: skip eval | Valid: time= 13.8s loss=0.845, TAw acc= 78.1% |
+| Epoch   6, time=241.0s | Train: skip eval | Valid: time= 13.9s loss=0.867, TAw acc= 77.9% |
+| Epoch   7, time=244.2s | Train: skip eval | Valid: time= 14.2s loss=0.884, TAw acc= 77.8% |
+| Epoch   8, time=246.7s | Train: skip eval | Valid: time= 14.7s loss=0.909, TAw acc= 77.6% |
+| Epoch   9, time=247.1s | Train: skip eval | Valid: time= 14.5s loss=0.943, TAw acc= 77.4% | lr=1.0e-05
+| Epoch  10, time=247.4s | Train: skip eval | Valid: time= 14.3s loss=0.830, TAw acc= 78.1% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.601 | TAw acc= 83.7%, forgtaw=  0.0% | TAg acc= 83.7%, forgtag=  0.0% <<<
+Save at ../ViT_results/test_VIT_food101_5/food101_joint_joint_food101_tasks_5_epochs_10
+avg_forg_taw: [0.]
+arrtaw [1.]
+np.sum(np.tril(forg_taw, k=-1), axis=1): [0.]
+************************************************************************************************************
+TAw Acc
+	 83.7% 	Avg.: 83.7% 
+************************************************************************************************************
+TAg Acc
+	 83.7% 	Avg.: 83.7% 
+************************************************************************************************************
+TAw Forg
+	  0.0% 
+************************************************************************************************************
+TAg Forg
+	  0.0% 
+************************************************************************************************************
+[Elapsed time = 0.7 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: bic
+	batch_size: 32
+	clipping: 10000
+	datasets: ['food101']
+	eval_on_train: False
+	exp_name: bic
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 10
+	network: OVit_tiny_16_augreg_224
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../ViT_results/test_VIT_food101_5
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	T: 2
+	lamb: -1
+	num_bias_epochs: 200
+	val_exemplar_percentage: 0.1
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 200
+	num_exemplars_per_class: 0
+============================================================================================================
+WARNING: ../ViT_results/test_VIT_food101_5/food101_bic_bic already exists!
+LLL_Net(
+  (model): OVit_tiny_16_augreg_224(
+    (ovit): OVisionTransformer(
+      (patch_embed): PatchEmbed(
+        (proj): Conv2d(3, 384, kernel_size=(16, 16), stride=(16, 16))
+        (norm): Identity()
+      )
+      (pos_drop): Dropout(p=0.0, inplace=False)
+      (blocks): Sequential(
+        (0): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (1): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (2): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (3): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (4): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (5): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (6): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (7): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (8): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (9): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (10): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (11): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+      (norm): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+      (pre_logits): Identity()
+      (head): Identity()
+    )
+    (fc): Sequential()
+  )
+  (heads): ModuleList()
+)
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 21), (1, 20), (2, 20), (3, 20), (4, 20)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+Stage 0: Select exemplars from validation
+ > Selected 21 validation exemplars, time=  0.0s
+Stage 1: Training model with distillation
+| Epoch   1, time= 55.9s | Train: skip eval | Valid: time=  6.2s loss=0.502, TAw acc= 85.9% | *
+| Epoch   2, time= 55.2s | Train: skip eval | Valid: time=  6.2s loss=0.379, TAw acc= 89.3% | *
+| Epoch   3, time= 56.8s | Train: skip eval | Valid: time=  7.5s loss=0.351, TAw acc= 89.7% | *
+| Epoch   4, time= 54.3s | Train: skip eval | Valid: time=  7.1s loss=0.358, TAw acc= 89.6% |
+| Epoch   5, time= 55.5s | Train: skip eval | Valid: time=  7.4s loss=0.347, TAw acc= 90.0% | *
+| Epoch   6, time= 54.7s | Train: skip eval | Valid: time=  7.7s loss=0.358, TAw acc= 90.5% |
+| Epoch   7, time= 55.6s | Train: skip eval | Valid: time=  7.6s loss=0.368, TAw acc= 90.2% |
+| Epoch   8, time= 55.6s | Train: skip eval | Valid: time=  7.6s loss=0.376, TAw acc= 90.0% |
+| Epoch   9, time= 56.3s | Train: skip eval | Valid: time=  5.9s loss=0.384, TAw acc= 90.2% |
+| Epoch  10, time= 56.6s | Train: skip eval | Valid: time=  6.4s loss=0.394, TAw acc= 90.2% | lr=1.0e-05
+Stage 2: BiC training for Task 0: alpha=1.00000, beta=0.00000
+| Selected 168 train exemplars, time=  0.4s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.194 | TAw acc= 94.5%, forgtaw=  0.0% | TAg acc= 94.5%, forgtag=  0.0% <<<
+Save at ../ViT_results/test_VIT_food101_5/food101_bic_bic
+avg_forg_taw: [0. 0. 0. 0. 0.]
+arrtaw [1. 1. 2. 3. 4.]
+np.sum(np.tril(forg_taw, k=-1), axis=1): [0. 0. 0. 0. 0.]
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+Stage 0: Select exemplars from validation
+ > Selected 41 validation exemplars, time=  0.0s
+Stage 1: Training model with distillation
+| Epoch   1, time= 66.4s | Train: skip eval | Valid: time=  8.7s loss=1.725, TAw acc= 73.6% | *
+| Epoch   2, time= 67.8s | Train: skip eval | Valid: time=  8.8s loss=1.493, TAw acc= 83.1% | *
+| Epoch   3, time= 67.2s | Train: skip eval | Valid: time=  8.9s loss=1.411, TAw acc= 86.7% | *
+| Epoch   4, time= 66.8s | Train: skip eval | Valid: time=  8.8s loss=1.373, TAw acc= 88.1% | *
+| Epoch   5, time= 67.2s | Train: skip eval | Valid: time=  8.7s loss=1.349, TAw acc= 88.7% | *
+| Epoch   6, time= 66.9s | Train: skip eval | Valid: time=  8.8s loss=1.341, TAw acc= 88.9% | *
+| Epoch   7, time= 67.2s | Train: skip eval | Valid: time=  8.7s loss=1.328, TAw acc= 89.8% | *
+| Epoch   8, time= 67.2s | Train: skip eval | Valid: time=  8.8s loss=1.325, TAw acc= 89.2% | *
+| Epoch   9, time= 66.6s | Train: skip eval | Valid: time=  8.7s loss=1.321, TAw acc= 89.3% | *
+| Epoch  10, time= 67.2s | Train: skip eval | Valid: time=  8.8s loss=1.318, TAw acc= 89.4% | *
+Stage 2: Training bias correction layers
+| Epoch  50, time=  4.2s | Train: loss=0.970, TAg acc= 68.3% |
+| Epoch 100, time=  4.3s | Train: loss=0.902, TAg acc= 70.7% |
+| Epoch 150, time=  4.1s | Train: loss=0.850, TAg acc= 70.7% |
+| Epoch 200, time=  4.2s | Train: loss=0.809, TAg acc= 73.2% |
+Stage 2: BiC training for Task 0: alpha=1.00000, beta=0.00000
+Stage 2: BiC training for Task 1: alpha=0.83517, beta=-0.02326
+| Selected 123 train exemplars, time=  0.3s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.782 | TAw acc= 93.8%, forgtaw=  0.7% | TAg acc= 76.0%, forgtag= 18.5% <<<
+>>> Test on task  1 : loss=1.316 | TAw acc= 93.8%, forgtaw=  0.0% | TAg acc= 92.3%, forgtag=  0.0% <<<
+bwt_taw[t] -0.00704761904761908
+bwt_tag[t] -0.18514285714285716
+Save at ../ViT_results/test_VIT_food101_5/food101_bic_bic
+avg_forg_taw: [0.         0.00704762 0.         0.         0.        ]
+arrtaw [1. 1. 2. 3. 4.]
+np.sum(np.tril(forg_taw, k=-1), axis=1): [0.         0.00704762 0.         0.         0.        ]
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+Stage 0: Select exemplars from validation
+ > Selected 61 validation exemplars, time=  0.0s
+Stage 1: Training model with distillation
+| Epoch   1, time= 67.1s | Train: skip eval | Valid: time=  9.0s loss=2.483, TAw acc= 67.1% | *
+| Epoch   2, time= 67.1s | Train: skip eval | Valid: time=  9.1s loss=2.322, TAw acc= 78.7% | *
+| Epoch   3, time= 66.9s | Train: skip eval | Valid: time=  9.0s loss=2.256, TAw acc= 82.5% | *
+| Epoch   4, time= 67.3s | Train: skip eval | Valid: time=  8.9s loss=2.222, TAw acc= 83.6% | *
+| Epoch   5, time= 66.7s | Train: skip eval | Valid: time=  8.8s loss=2.202, TAw acc= 84.9% | *
+| Epoch   6, time= 67.2s | Train: skip eval | Valid: time=  8.9s loss=2.189, TAw acc= 84.9% | *
+| Epoch   7, time= 67.2s | Train: skip eval | Valid: time=  8.9s loss=2.180, TAw acc= 85.9% | *
+| Epoch   8, time= 67.0s | Train: skip eval | Valid: time=  8.8s loss=2.172, TAw acc= 86.8% | *
+| Epoch   9, time= 67.8s | Train: skip eval | Valid: time=  8.9s loss=2.169, TAw acc= 86.3% | *
+| Epoch  10, time= 67.1s | Train: skip eval | Valid: time=  9.2s loss=2.165, TAw acc= 87.2% | *
+Stage 2: Training bias correction layers
+| Epoch  50, time=  4.3s | Train: loss=1.559, TAg acc= 60.7% |
+| Epoch 100, time=  4.3s | Train: loss=1.420, TAg acc= 63.9% |
+| Epoch 150, time=  4.2s | Train: loss=1.327, TAg acc= 65.6% |
+| Epoch 200, time=  3.2s | Train: loss=1.265, TAg acc= 65.6% |
+Stage 2: BiC training for Task 0: alpha=1.00000, beta=0.00000
+Stage 2: BiC training for Task 1: alpha=0.83517, beta=-0.02326
+Stage 2: BiC training for Task 2: alpha=0.77158, beta=-0.03471
+| Selected 122 train exemplars, time=  0.2s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=1.559 | TAw acc= 92.1%, forgtaw=  2.4% | TAg acc= 54.2%, forgtag= 40.3% <<<
+>>> Test on task  1 : loss=1.399 | TAw acc= 92.9%, forgtaw=  0.9% | TAg acc= 75.5%, forgtag= 16.8% <<<
+>>> Test on task  2 : loss=2.272 | TAw acc= 88.7%, forgtaw=  0.0% | TAg acc= 84.8%, forgtag=  0.0% <<<
+bwt_taw[t] -0.012880952380952382
+bwt_tag[t] -0.19304285714285713
+Save at ../ViT_results/test_VIT_food101_5/food101_bic_bic
+avg_forg_taw: [0.         0.00704762 0.01640476 0.         0.        ]
+arrtaw [1. 1. 2. 3. 4.]
+np.sum(np.tril(forg_taw, k=-1), axis=1): [0.         0.00704762 0.03280952 0.         0.        ]
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+Stage 0: Select exemplars from validation
+ > Selected 81 validation exemplars, time=  0.0s
+Stage 1: Training model with distillation
+| Epoch   1, time= 67.2s | Train: skip eval | Valid: time=  7.8s loss=2.933, TAw acc= 72.9% | *
+| Epoch   2, time= 67.5s | Train: skip eval | Valid: time=  7.8s loss=2.834, TAw acc= 79.7% | *
+| Epoch   3, time= 66.0s | Train: skip eval | Valid: time=  7.7s loss=2.797, TAw acc= 82.3% | *
+| Epoch   4, time= 67.2s | Train: skip eval | Valid: time=  7.8s loss=2.778, TAw acc= 83.3% | *
+| Epoch   5, time= 66.7s | Train: skip eval | Valid: time=  7.9s loss=2.765, TAw acc= 83.9% | *
+| Epoch   6, time= 65.9s | Train: skip eval | Valid: time=  8.1s loss=2.755, TAw acc= 84.7% | *
+| Epoch   7, time= 65.6s | Train: skip eval | Valid: time=  7.9s loss=2.749, TAw acc= 84.3% | *
+| Epoch   8, time= 66.0s | Train: skip eval | Valid: time=  7.8s loss=2.745, TAw acc= 85.1% | *
+| Epoch   9, time= 65.4s | Train: skip eval | Valid: time=  7.7s loss=2.742, TAw acc= 84.8% | *
+| Epoch  10, time= 65.7s | Train: skip eval | Valid: time=  7.6s loss=2.740, TAw acc= 85.1% | *
+Stage 2: Training bias correction layers
+| Epoch  50, time=  3.3s | Train: loss=1.989, TAg acc= 55.6% |
+| Epoch 100, time=  3.2s | Train: loss=1.832, TAg acc= 58.0% |
+| Epoch 150, time=  4.3s | Train: loss=1.748, TAg acc= 60.5% |
+| Epoch 200, time=  3.5s | Train: loss=1.704, TAg acc= 61.7% |
+Stage 2: BiC training for Task 0: alpha=1.00000, beta=0.00000
+Stage 2: BiC training for Task 1: alpha=0.83517, beta=-0.02326
+Stage 2: BiC training for Task 2: alpha=0.77158, beta=-0.03471
+Stage 2: BiC training for Task 3: alpha=0.70907, beta=-0.04940
+| Selected 81 train exemplars, time=  0.2s
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.294 | TAw acc= 91.0%, forgtaw=  3.6% | TAg acc= 37.2%, forgtag= 57.3% <<<
+>>> Test on task  1 : loss=1.783 | TAw acc= 92.3%, forgtaw=  1.5% | TAg acc= 56.6%, forgtag= 35.7% <<<
+>>> Test on task  2 : loss=2.191 | TAw acc= 88.1%, forgtaw=  0.6% | TAg acc= 70.5%, forgtag= 14.3% <<<
+>>> Test on task  3 : loss=2.850 | TAw acc= 90.3%, forgtaw=  0.0% | TAg acc= 84.9%, forgtag=  0.0% <<<
+bwt_taw[t] -0.007803174603174627
+bwt_tag[t] -0.16736825396825397
+Save at ../ViT_results/test_VIT_food101_5/food101_bic_bic
+avg_forg_taw: [0.         0.00704762 0.01640476 0.01873968 0.        ]
+arrtaw [1. 1. 2. 3. 4.]
+np.sum(np.tril(forg_taw, k=-1), axis=1): [0.         0.00704762 0.03280952 0.05621905 0.        ]
+************************************************************************************************************
+Task  4
+************************************************************************************************************
+Stage 0: Select exemplars from validation
+ > Selected 101 validation exemplars, time=  0.0s
+Stage 1: Training model with distillation
+| Epoch   1, time= 65.8s | Train: skip eval | Valid: time=  7.9s loss=3.344, TAw acc= 73.1% | *
+| Epoch   2, time= 65.7s | Train: skip eval | Valid: time=  7.9s loss=3.264, TAw acc= 80.5% | *
+| Epoch   3, time= 66.2s | Train: skip eval | Valid: time=  7.8s loss=3.232, TAw acc= 82.7% | *
+| Epoch   4, time= 65.3s | Train: skip eval | Valid: time=  7.8s loss=3.217, TAw acc= 83.5% | *
+| Epoch   5, time= 66.6s | Train: skip eval | Valid: time=  7.7s loss=3.206, TAw acc= 84.8% | *
+| Epoch   6, time= 66.0s | Train: skip eval | Valid: time=  7.8s loss=3.199, TAw acc= 84.7% | *
+| Epoch   7, time= 65.5s | Train: skip eval | Valid: time=  7.7s loss=3.197, TAw acc= 84.8% | *
+| Epoch   8, time= 66.1s | Train: skip eval | Valid: time=  7.7s loss=3.192, TAw acc= 85.0% | *
+| Epoch   9, time= 65.5s | Train: skip eval | Valid: time=  7.8s loss=3.190, TAw acc= 85.4% | *
+| Epoch  10, time= 65.9s | Train: skip eval | Valid: time=  7.8s loss=3.188, TAw acc= 85.5% | *
+Stage 2: Training bias correction layers
+| Epoch  50, time=  3.5s | Train: loss=2.253, TAg acc= 42.6% |
+| Epoch 100, time=  3.4s | Train: loss=2.039, TAg acc= 51.5% |
+| Epoch 150, time=  3.6s | Train: loss=1.958, TAg acc= 53.5% |
+| Epoch 200, time=  3.3s | Train: loss=1.929, TAg acc= 55.4% |
+Stage 2: BiC training for Task 0: alpha=1.00000, beta=0.00000
+Stage 2: BiC training for Task 1: alpha=0.83517, beta=-0.02326
+Stage 2: BiC training for Task 2: alpha=0.77158, beta=-0.03471
+Stage 2: BiC training for Task 3: alpha=0.70907, beta=-0.04940
+Stage 2: BiC training for Task 4: alpha=0.61991, beta=-0.06913
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.940 | TAw acc= 89.7%, forgtaw=  4.8% | TAg acc= 24.7%, forgtag= 69.8% <<<
+>>> Test on task  1 : loss=2.195 | TAw acc= 91.2%, forgtaw=  2.5% | TAg acc= 41.1%, forgtag= 51.2% <<<
+>>> Test on task  2 : loss=2.308 | TAw acc= 86.4%, forgtaw=  2.2% | TAg acc= 60.3%, forgtag= 24.5% <<<
+>>> Test on task  3 : loss=2.625 | TAw acc= 89.5%, forgtaw=  0.8% | TAg acc= 77.2%, forgtag=  7.7% <<<
+>>> Test on task  4 : loss=3.351 | TAw acc= 88.6%, forgtaw=  0.0% | TAg acc= 78.3%, forgtag=  0.0% <<<
+bwt_taw[t] -0.011747619047619062
+bwt_tag[t] -0.11464047619047618
+Save at ../ViT_results/test_VIT_food101_5/food101_bic_bic
+avg_forg_taw: [0.         0.00704762 0.01640476 0.01873968 0.02580238]
+arrtaw [1. 1. 2. 3. 4.]
+np.sum(np.tril(forg_taw, k=-1), axis=1): [0.         0.00704762 0.03280952 0.05621905 0.10320952]
+************************************************************************************************************
+TAw Acc
+	 94.5%   0.0%   0.0%   0.0%   0.0% 	Avg.: 94.5% 
+	 93.8%  93.8%   0.0%   0.0%   0.0% 	Avg.: 93.8% 
+	 92.1%  92.9%  88.7%   0.0%   0.0% 	Avg.: 91.2% 
+	 91.0%  92.3%  88.1%  90.3%   0.0% 	Avg.: 90.4% 
+	 89.7%  91.2%  86.4%  89.5%  88.6% 	Avg.: 89.1% 
+************************************************************************************************************
+TAg Acc
+	 94.5%   0.0%   0.0%   0.0%   0.0% 	Avg.: 94.5% 
+	 76.0%  92.3%   0.0%   0.0%   0.0% 	Avg.: 84.1% 
+	 54.2%  75.5%  84.8%   0.0%   0.0% 	Avg.: 71.5% 
+	 37.2%  56.6%  70.5%  84.9%   0.0% 	Avg.: 62.3% 
+	 24.7%  41.1%  60.3%  77.2%  78.3% 	Avg.: 56.3% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	  0.7%   0.0%   0.0%   0.0%   0.0% 	Avg.:  0.7% 
+	  2.4%   0.9%   0.0%   0.0%   0.0% 	Avg.:  1.6% 
+	  3.6%   1.5%   0.6%   0.0%   0.0% 	Avg.:  1.9% 
+	  4.8%   2.5%   2.2%   0.8%   0.0% 	Avg.:  2.6% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0%   0.0% 
+	 18.5%   0.0%   0.0%   0.0%   0.0% 	Avg.: 18.5% 
+	 40.3%  16.8%   0.0%   0.0%   0.0% 	Avg.: 28.6% 
+	 57.3%  35.7%  14.3%   0.0%   0.0% 	Avg.: 35.8% 
+	 69.8%  51.2%  24.5%   7.7%   0.0% 	Avg.: 38.3% 
+************************************************************************************************************
+[Elapsed time = 1.9 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: il2m
+	batch_size: 32
+	clipping: 10000
+	datasets: ['food101']
+	eval_on_train: False
+	exp_name: il2m
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 10
+	network: OVit_tiny_16_augreg_224
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../ViT_results/test_VIT_food101_5
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 200
+	num_exemplars_per_class: 0
+============================================================================================================
+LLL_Net(
+  (model): OVit_tiny_16_augreg_224(
+    (ovit): OVisionTransformer(
+      (patch_embed): PatchEmbed(
+        (proj): Conv2d(3, 384, kernel_size=(16, 16), stride=(16, 16))
+        (norm): Identity()
+      )
+      (pos_drop): Dropout(p=0.0, inplace=False)
+      (blocks): Sequential(
+        (0): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (1): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (2): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (3): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (4): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (5): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (6): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (7): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (8): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (9): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (10): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (11): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+      (norm): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+      (pre_logits): Identity()
+      (head): Identity()
+    )
+    (fc): Sequential()
+  )
+  (heads): ModuleList()
+)Traceback (most recent call last):
+  File "main_incremental.py", line 355, in <module>
+    main()
+  File "main_incremental.py", line 273, in main
+    appr.train(t, trn_loader[t], val_loader[t])
+  File "/root/continual_learning_with_vit/src/approach/incremental_learning.py", line 62, in train
+    self.train_loop(t, trn_loader, val_loader)
+  File "/root/continual_learning_with_vit/src/approach/il2m.py", line 88, in train_loop
+    self.il2m(t, trn_loader)
+  File "/root/continual_learning_with_vit/src/approach/il2m.py", line 51, in il2m
+    scores = np.array(torch.cat(outputs, dim=1).data.cpu().numpy(), dtype=np.float)
+  File "/usr/local/miniconda3/lib/python3.8/site-packages/numpy/__init__.py", line 305, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+Adjusting learning rate of group 0 to 3.0000e-05.
+[(0, 21), (1, 20), (2, 20), (3, 20), (4, 20)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 56.4s | Train: skip eval | Valid: time=  6.7s loss=0.527, TAw acc= 85.2% | *
+| Epoch   2, time= 54.3s | Train: skip eval | Valid: time=  6.6s loss=0.381, TAw acc= 88.6% | *
+| Epoch   3, time= 54.3s | Train: skip eval | Valid: time=  6.6s loss=0.349, TAw acc= 90.0% | *
+| Epoch   4, time= 54.1s | Train: skip eval | Valid: time=  6.6s loss=0.344, TAw acc= 90.2% | *
+| Epoch   5, time= 54.3s | Train: skip eval | Valid: time=  6.6s loss=0.347, TAw acc= 90.1% |
+| Epoch   6, time= 53.9s | Train: skip eval | Valid: time=  6.7s loss=0.356, TAw acc= 90.0% |
+| Epoch   7, time= 54.3s | Train: skip eval | Valid: time=  6.6s loss=0.369, TAw acc= 90.1% |
+| Epoch   8, time= 54.0s | Train: skip eval | Valid: time=  6.5s loss=0.381, TAw acc= 89.6% |
+| Epoch   9, time= 53.8s | Train: skip eval | Valid: time=  6.5s loss=0.392, TAw acc= 90.0% | lr=1.0e-05
+| Epoch  10, time= 54.1s | Train: skip eval | Valid: time=  6.6s loss=0.339, TAw acc= 90.2% | *
+============================================================================================================
+Arguments =
+	approach: icarl
+	batch_size: 32
+	clipping: 10000
+	datasets: ['food101']
+	eval_on_train: False
+	exp_name: icarl
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 3e-05
+	lr_factor: 3
+	lr_min: 1e-08
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 10
+	network: OVit_tiny_16_augreg_224
+	no_cudnn_deterministic: False
+	num_tasks: 5
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../ViT_results/test_VIT_food101_5
+	save_models: False
+	seed: 0
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	lamb: 1.0
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 200
+	num_exemplars_per_class: 0
+============================================================================================================
+LLL_Net(
+  (model): OVit_tiny_16_augreg_224(
+    (ovit): OVisionTransformer(
+      (patch_embed): PatchEmbed(
+        (proj): Conv2d(3, 384, kernel_size=(16, 16), stride=(16, 16))
+        (norm): Identity()
+      )
+      (pos_drop): Dropout(p=0.0, inplace=False)
+      (blocks): Sequential(
+        (0): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (1): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (2): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (3): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (4): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (5): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (6): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (7): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (8): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (9): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (10): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (11): Block(
+          (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (attn): Attention(
+            (qkv): Linear(in_features=384, out_features=1152, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=384, out_features=384, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=384, out_features=1536, bias=True)
+            (act): GELU(approximate='none')
+            (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+      (norm): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+      (pre_logits): Identity()
+      (head): Identity()
+    )
+    (fc): Sequential()
+  )
+  (heads): ModuleList()
+)

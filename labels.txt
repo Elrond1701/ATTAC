@@ -1,0 +1,27 @@
+0 E-CNV
+1 E-DME
+2 E-DRUSEN
+3 E-NORMAL
+4 G-dyed-lifted-polyps
+5 G-dyed-resection-margins
+6 G-esophagitis
+7 G-normal-cecum
+8 G-normal-pylorus
+9 G-normal-z-line
+10 G-polyps
+11 G-ulcerative-colitis
+12 K-Doubtful
+13 K-Mild
+14 K-Moderate
+15 K-Normal
+16 K-Severe
+17 L-COVID-19
+18 L-Normal
+19 L-Viral or Bacterial Pneumonia
+20 S-Actinic keratosis
+21 S-Basal cell carcinoma
+22 S-Benign keratosis
+23 S-Dermatofibroma
+24 S-Melanocytic nevus
+25 S-Melanoma
+26 S-Vascular lesion

@@ -1,0 +1,1217 @@
+nohup: ignoring input
+============================================================================================================
+Arguments =
+	approach: oewc
+	batch_size: 128
+	clipping: 10000
+	datasets: ['cifar100']
+	eval_on_train: False
+	exp_name: dummy_attentional_exp
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 0.01
+	lr_factor: 3
+	lr_min: 0.0001
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 10
+	network: Early_conv_vit
+	no_cudnn_deterministic: False
+	num_tasks: 4
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results
+	save_models: False
+	seed: 42
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	alpha: 0.5
+	fi_num_samples: -1
+	fi_sampling_type: max_pred
+	lamb: 5000
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+WARNING: ../results/cifar100_oewc_dummy_attentional_exp already exists!
+Files already downloaded and verified
+Files already downloaded and verified
+0 11250
+1 11250
+2 11250
+3 11250
+[(0, 25), (1, 25), (2, 25), (3, 25)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time=  7.9s | Train: skip eval | Valid: time=  2.9s loss=3.361, TAw acc=  5.5% | *
+| Epoch   2, time=  7.1s | Train: skip eval | Valid: time=  4.1s loss=2.871, TAw acc= 12.8% | *
+| Epoch   3, time= 10.1s | Train: skip eval | Valid: time=  3.0s loss=2.778, TAw acc= 15.1% | *
+| Epoch   4, time=  9.0s | Train: skip eval | Valid: time=  4.9s loss=2.736, TAw acc= 18.5% | *
+| Epoch   5, time=  8.1s | Train: skip eval | Valid: time=  2.9s loss=2.670, TAw acc= 15.6% | *
+| Epoch   6, time=  7.2s | Train: skip eval | Valid: time=  3.0s loss=2.630, TAw acc= 19.4% | *
+| Epoch   7, time=  6.9s | Train: skip eval | Valid: time=  2.9s loss=2.596, TAw acc= 20.2% | *
+| Epoch   8, time=  7.7s | Train: skip eval | Valid: time=  2.9s loss=2.461, TAw acc= 25.0% | *
+| Epoch   9, time=  6.9s | Train: skip eval | Valid: time=  3.0s loss=2.425, TAw acc= 25.7% | *
+| Epoch  10, time=  7.2s | Train: skip eval | Valid: time=  3.0s loss=2.410, TAw acc= 23.3% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.439 | TAw acc= 23.3%, forg=  0.0%| TAg acc= 23.3%, forg=  0.0% <<<
+Save at ../results/cifar100_oewc_dummy_attentional_exp
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time=  8.5s | Train: skip eval | Valid: time=  2.9s loss=2.698, TAw acc= 21.0% | *
+| Epoch   2, time=  8.7s | Train: skip eval | Valid: time=  2.2s loss=2.622, TAw acc= 23.4% | *
+| Epoch   3, time=  7.5s | Train: skip eval | Valid: time=  1.9s loss=2.576, TAw acc= 23.8% | *
+| Epoch   4, time=  8.8s | Train: skip eval | Valid: time=  3.1s loss=2.536, TAw acc= 24.6% | *
+| Epoch   5, time=  8.9s | Train: skip eval | Valid: time=  2.9s loss=2.468, TAw acc= 26.8% | *
+| Epoch   6, time=  9.1s | Train: skip eval | Valid: time=  2.9s loss=2.484, TAw acc= 26.7% |
+| Epoch   7, time=  9.6s | Train: skip eval | Valid: time=  5.1s loss=2.424, TAw acc= 28.6% | *
+| Epoch   8, time= 11.4s | Train: skip eval | Valid: time=  3.3s loss=2.471, TAw acc= 27.8% |
+| Epoch   9, time= 13.2s | Train: skip eval | Valid: time=  3.4s loss=2.403, TAw acc= 29.0% | *
+| Epoch  10, time= 14.8s | Train: skip eval | Valid: time=  5.9s loss=2.454, TAw acc= 28.8% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.432 | TAw acc= 25.5%, forg= -2.2%| TAg acc= 17.6%, forg=  5.6% <<<
+>>> Test on task  1 : loss=2.422 | TAw acc= 28.6%, forg=  0.0%| TAg acc= 18.2%, forg=  0.0% <<<
+Save at ../results/cifar100_oewc_dummy_attentional_exp
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time= 13.7s | Train: skip eval | Valid: time=  3.1s loss=2.555, TAw acc= 26.9% | *
+| Epoch   2, time= 12.5s | Train: skip eval | Valid: time=  2.1s loss=2.522, TAw acc= 27.8% | *
+| Epoch   3, time= 13.5s | Train: skip eval | Valid: time=  4.5s loss=2.436, TAw acc= 28.7% | *
+| Epoch   4, time= 13.6s | Train: skip eval | Valid: time=  5.2s loss=2.377, TAw acc= 30.9% | *
+| Epoch   5, time= 14.7s | Train: skip eval | Valid: time=  3.8s loss=2.335, TAw acc= 30.6% | *
+| Epoch   6, time= 12.2s | Train: skip eval | Valid: time=  3.2s loss=2.379, TAw acc= 30.4% |
+| Epoch   7, time= 12.7s | Train: skip eval | Valid: time=  3.1s loss=2.334, TAw acc= 31.6% | *
+| Epoch   8, time= 12.8s | Train: skip eval | Valid: time=  3.2s loss=2.268, TAw acc= 34.6% | *
+| Epoch   9, time= 12.7s | Train: skip eval | Valid: time=  2.6s loss=2.271, TAw acc= 33.4% |
+| Epoch  10, time= 12.6s | Train: skip eval | Valid: time=  3.1s loss=2.260, TAw acc= 33.9% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.509 | TAw acc= 24.9%, forg=  0.6%| TAg acc=  6.8%, forg= 16.4% <<<
+>>> Test on task  1 : loss=2.450 | TAw acc= 27.8%, forg=  0.9%| TAg acc=  7.8%, forg= 10.3% <<<
+>>> Test on task  2 : loss=2.180 | TAw acc= 35.8%, forg=  0.0%| TAg acc= 29.6%, forg=  0.0% <<<
+Save at ../results/cifar100_oewc_dummy_attentional_exp
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 11.8s | Train: skip eval | Valid: time=  2.7s loss=2.215, TAw acc= 32.3% | *
+| Epoch   2, time= 11.1s | Train: skip eval | Valid: time=  3.3s loss=2.102, TAw acc= 37.5% | *
+| Epoch   3, time= 11.8s | Train: skip eval | Valid: time=  3.8s loss=2.054, TAw acc= 38.3% | *
+| Epoch   4, time= 13.0s | Train: skip eval | Valid: time=  3.3s loss=2.002, TAw acc= 40.4% | *
+| Epoch   5, time= 13.1s | Train: skip eval | Valid: time=  3.3s loss=2.073, TAw acc= 37.2% |
+| Epoch   6, time= 11.1s | Train: skip eval | Valid: time=  5.2s loss=1.985, TAw acc= 41.0% | *
+| Epoch   7, time= 10.4s | Train: skip eval | Valid: time=  5.3s loss=1.992, TAw acc= 40.2% |
+| Epoch   8, time= 12.2s | Train: skip eval | Valid: time=  5.6s loss=1.929, TAw acc= 42.2% | *
+| Epoch   9, time= 12.9s | Train: skip eval | Valid: time=  5.5s loss=1.929, TAw acc= 42.2% | *
+| Epoch  10, time= 12.4s | Train: skip eval | Valid: time=  4.9s loss=1.917, TAw acc= 43.3% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.541 | TAw acc= 23.4%, forg=  2.1%| TAg acc=  2.0%, forg= 21.3% <<<
+>>> Test on task  1 : loss=2.491 | TAw acc= 27.0%, forg=  1.7%| TAg acc=  1.9%, forg= 16.2% <<<
+>>> Test on task  2 : loss=2.270 | TAw acc= 32.0%, forg=  3.8%| TAg acc= 10.2%, forg= 19.4% <<<
+>>> Test on task  3 : loss=1.894 | TAw acc= 42.7%, forg=  0.0%| TAg acc= 39.0%, forg=  0.0% <<<
+Save at ../results/cifar100_oewc_dummy_attentional_exp
+************************************************************************************************************
+TAw Acc
+	 23.3%   0.0%   0.0%   0.0% 	Avg.: 23.3% 
+	 25.5%  28.6%   0.0%   0.0% 	Avg.: 27.1% 
+	 24.9%  27.8%  35.8%   0.0% 	Avg.: 29.5% 
+	 23.4%  27.0%  32.0%  42.7% 	Avg.: 31.3% 
+************************************************************************************************************
+TAg Acc
+	 23.3%   0.0%   0.0%   0.0% 	Avg.: 23.3% 
+	 17.6%  18.2%   0.0%   0.0% 	Avg.: 17.9% 
+	  6.8%   7.8%  29.6%   0.0% 	Avg.: 14.8% 
+	  2.0%   1.9%  10.2%  39.0% 	Avg.: 13.3% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0% 
+	 -2.2%   0.0%   0.0%   0.0% 	Avg.: -2.2% 
+	  0.6%   0.9%   0.0%   0.0% 	Avg.:  0.7% 
+	  2.1%   1.7%   3.8%   0.0% 	Avg.:  2.5% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0% 
+	  5.6%   0.0%   0.0%   0.0% 	Avg.:  5.6% 
+	 16.4%  10.3%   0.0%   0.0% 	Avg.: 13.4% 
+	 21.3%  16.2%  19.4%   0.0% 	Avg.: 19.0% 
+************************************************************************************************************
+[Elapsed time = 0.2 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: finetuning
+	batch_size: 128
+	clipping: 10000
+	datasets: ['cifar100']
+	eval_on_train: False
+	exp_name: dummy_attentional_exp
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 0.01
+	lr_factor: 3
+	lr_min: 0.0001
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 10
+	network: Early_conv_vit
+	no_cudnn_deterministic: False
+	num_tasks: 4
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results
+	save_models: False
+	seed: 42
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	all_outputs: False
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+WARNING: ../results/cifar100_finetuning_dummy_attentional_exp already exists!
+Files already downloaded and verified
+Files already downloaded and verified
+0 11250
+1 11250
+2 11250
+3 11250
+[(0, 25), (1, 25), (2, 25), (3, 25)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 11.4s | Train: skip eval | Valid: time=  3.0s loss=3.361, TAw acc=  5.5% | *
+| Epoch   2, time= 10.9s | Train: skip eval | Valid: time=  3.0s loss=2.871, TAw acc= 12.8% | *
+| Epoch   3, time=  7.9s | Train: skip eval | Valid: time=  5.7s loss=2.778, TAw acc= 15.1% | *
+| Epoch   4, time=  8.0s | Train: skip eval | Valid: time=  4.3s loss=2.736, TAw acc= 18.5% | *
+| Epoch   5, time= 11.4s | Train: skip eval | Valid: time=  3.3s loss=2.670, TAw acc= 15.6% | *
+| Epoch   6, time= 10.4s | Train: skip eval | Valid: time=  5.0s loss=2.630, TAw acc= 19.4% | *
+| Epoch   7, time=  9.4s | Train: skip eval | Valid: time=  5.5s loss=2.596, TAw acc= 20.2% | *
+| Epoch   8, time= 11.9s | Train: skip eval | Valid: time=  3.1s loss=2.461, TAw acc= 25.0% | *
+| Epoch   9, time=  9.4s | Train: skip eval | Valid: time=  5.4s loss=2.425, TAw acc= 25.7% | *
+| Epoch  10, time=  7.9s | Train: skip eval | Valid: time=  5.0s loss=2.410, TAw acc= 23.3% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.439 | TAw acc= 23.3%, forg=  0.0%| TAg acc= 23.3%, forg=  0.0% <<<
+Save at ../results/cifar100_finetuning_dummy_attentional_exp
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 10.2s | Train: skip eval | Valid: time=  3.4s loss=2.702, TAw acc= 19.7% | *
+| Epoch   2, time= 11.9s | Train: skip eval | Valid: time=  3.1s loss=2.618, TAw acc= 22.5% | *
+| Epoch   3, time=  9.2s | Train: skip eval | Valid: time=  5.2s loss=2.540, TAw acc= 24.1% | *
+| Epoch   4, time=  7.9s | Train: skip eval | Valid: time=  5.4s loss=2.542, TAw acc= 25.8% |
+| Epoch   5, time= 10.4s | Train: skip eval | Valid: time=  2.1s loss=2.474, TAw acc= 27.4% | *
+| Epoch   6, time= 10.4s | Train: skip eval | Valid: time=  2.4s loss=2.464, TAw acc= 27.2% | *
+| Epoch   7, time=  8.4s | Train: skip eval | Valid: time=  5.3s loss=2.420, TAw acc= 28.4% | *
+| Epoch   8, time= 11.0s | Train: skip eval | Valid: time=  2.9s loss=2.402, TAw acc= 28.8% | *
+| Epoch   9, time= 11.0s | Train: skip eval | Valid: time=  2.4s loss=2.380, TAw acc= 28.6% | *
+| Epoch  10, time=  8.0s | Train: skip eval | Valid: time=  4.8s loss=2.352, TAw acc= 29.4% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.445 | TAw acc= 25.7%, forg= -2.4%| TAg acc= 13.5%, forg=  9.8% <<<
+>>> Test on task  1 : loss=2.399 | TAw acc= 29.3%, forg=  0.0%| TAg acc= 22.6%, forg=  0.0% <<<
+Save at ../results/cifar100_finetuning_dummy_attentional_exp
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time=  9.2s | Train: skip eval | Valid: time=  5.7s loss=2.524, TAw acc= 27.8% | *
+| Epoch   2, time=  9.4s | Train: skip eval | Valid: time=  5.2s loss=2.477, TAw acc= 28.3% | *
+| Epoch   3, time= 11.6s | Train: skip eval | Valid: time=  3.3s loss=2.432, TAw acc= 28.6% | *
+| Epoch   4, time=  7.0s | Train: skip eval | Valid: time=  4.2s loss=2.335, TAw acc= 31.3% | *
+| Epoch   5, time=  8.5s | Train: skip eval | Valid: time=  3.1s loss=2.299, TAw acc= 31.8% | *
+| Epoch   6, time= 11.1s | Train: skip eval | Valid: time=  3.1s loss=2.294, TAw acc= 32.5% | *
+| Epoch   7, time= 10.2s | Train: skip eval | Valid: time=  3.1s loss=2.252, TAw acc= 34.0% | *
+| Epoch   8, time=  9.5s | Train: skip eval | Valid: time=  4.7s loss=2.266, TAw acc= 33.3% |
+| Epoch   9, time=  8.5s | Train: skip eval | Valid: time=  5.1s loss=2.238, TAw acc= 35.5% | *
+| Epoch  10, time=  8.5s | Train: skip eval | Valid: time=  4.3s loss=2.251, TAw acc= 34.3% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.501 | TAw acc= 23.3%, forg=  2.4%| TAg acc=  4.0%, forg= 19.3% <<<
+>>> Test on task  1 : loss=2.422 | TAw acc= 28.8%, forg=  0.5%| TAg acc=  9.7%, forg= 12.8% <<<
+>>> Test on task  2 : loss=2.143 | TAw acc= 38.1%, forg=  0.0%| TAg acc= 33.4%, forg=  0.0% <<<
+Save at ../results/cifar100_finetuning_dummy_attentional_exp
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 11.9s | Train: skip eval | Valid: time=  1.9s loss=2.177, TAw acc= 35.8% | *
+| Epoch   2, time= 10.5s | Train: skip eval | Valid: time=  3.1s loss=2.100, TAw acc= 36.6% | *
+| Epoch   3, time=  9.5s | Train: skip eval | Valid: time=  1.9s loss=2.062, TAw acc= 36.8% | *
+| Epoch   4, time=  8.8s | Train: skip eval | Valid: time=  4.2s loss=1.985, TAw acc= 40.2% | *
+| Epoch   5, time=  8.4s | Train: skip eval | Valid: time=  5.3s loss=1.961, TAw acc= 40.6% | *
+| Epoch   6, time=  9.8s | Train: skip eval | Valid: time=  2.0s loss=1.910, TAw acc= 42.3% | *
+| Epoch   7, time= 11.6s | Train: skip eval | Valid: time=  2.3s loss=1.969, TAw acc= 40.0% |
+| Epoch   8, time= 10.8s | Train: skip eval | Valid: time=  3.4s loss=1.915, TAw acc= 42.2% |
+| Epoch   9, time= 10.5s | Train: skip eval | Valid: time=  2.5s loss=1.920, TAw acc= 42.6% |
+| Epoch  10, time=  7.6s | Train: skip eval | Valid: time=  5.4s loss=1.859, TAw acc= 43.1% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.615 | TAw acc= 21.0%, forg=  4.8%| TAg acc=  0.5%, forg= 22.8% <<<
+>>> Test on task  1 : loss=2.530 | TAw acc= 27.2%, forg=  2.1%| TAg acc=  2.2%, forg= 20.3% <<<
+>>> Test on task  2 : loss=2.250 | TAw acc= 34.4%, forg=  3.6%| TAg acc= 12.1%, forg= 21.3% <<<
+>>> Test on task  3 : loss=1.848 | TAw acc= 44.6%, forg=  0.0%| TAg acc= 40.7%, forg=  0.0% <<<
+Save at ../results/cifar100_finetuning_dummy_attentional_exp
+************************************************************************************************************
+TAw Acc
+	 23.3%   0.0%   0.0%   0.0% 	Avg.: 23.3% 
+	 25.7%  29.3%   0.0%   0.0% 	Avg.: 27.5% 
+	 23.3%  28.8%  38.1%   0.0% 	Avg.: 30.0% 
+	 21.0%  27.2%  34.4%  44.6% 	Avg.: 31.8% 
+************************************************************************************************************
+TAg Acc
+	 23.3%   0.0%   0.0%   0.0% 	Avg.: 23.3% 
+	 13.5%  22.6%   0.0%   0.0% 	Avg.: 18.0% 
+	  4.0%   9.7%  33.4%   0.0% 	Avg.: 15.7% 
+	  0.5%   2.2%  12.1%  40.7% 	Avg.: 13.9% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0% 
+	 -2.4%   0.0%   0.0%   0.0% 	Avg.: -2.4% 
+	  2.4%   0.5%   0.0%   0.0% 	Avg.:  1.5% 
+	  4.8%   2.1%   3.6%   0.0% 	Avg.:  3.5% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0% 
+	  9.8%   0.0%   0.0%   0.0% 	Avg.:  9.8% 
+	 19.3%  12.8%   0.0%   0.0% 	Avg.: 16.1% 
+	 22.8%  20.3%  21.3%   0.0% 	Avg.: 21.5% 
+************************************************************************************************************
+[Elapsed time = 0.2 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: freezing
+	batch_size: 128
+	clipping: 10000
+	datasets: ['cifar100']
+	eval_on_train: False
+	exp_name: dummy_attentional_exp
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 0.01
+	lr_factor: 3
+	lr_min: 0.0001
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 10
+	network: Early_conv_vit
+	no_cudnn_deterministic: False
+	num_tasks: 4
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results
+	save_models: False
+	seed: 42
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	all_outputs: False
+	freeze_after: 0
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+Files already downloaded and verified
+Files already downloaded and verified
+0 11250
+1 11250
+2 11250
+3 11250
+[(0, 25), (1, 25), (2, 25), (3, 25)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 13.8s | Train: skip eval | Valid: time=  5.2s loss=3.361, TAw acc=  5.5% | *
+| Epoch   2, time=  9.7s | Train: skip eval | Valid: time=  5.0s loss=2.871, TAw acc= 12.8% | *
+| Epoch   3, time= 10.7s | Train: skip eval | Valid: time=  5.0s loss=2.778, TAw acc= 15.1% | *
+| Epoch   4, time= 10.8s | Train: skip eval | Valid: time=  4.3s loss=2.736, TAw acc= 18.5% | *
+| Epoch   5, time= 11.7s | Train: skip eval | Valid: time=  5.4s loss=2.670, TAw acc= 15.6% | *
+| Epoch   6, time=  9.8s | Train: skip eval | Valid: time=  5.0s loss=2.630, TAw acc= 19.4% | *
+| Epoch   7, time= 10.6s | Train: skip eval | Valid: time=  5.4s loss=2.596, TAw acc= 20.2% | *
+| Epoch   8, time= 10.6s | Train: skip eval | Valid: time=  4.4s loss=2.461, TAw acc= 25.0% | *
+| Epoch   9, time= 10.9s | Train: skip eval | Valid: time=  3.2s loss=2.425, TAw acc= 25.7% | *
+| Epoch  10, time= 10.7s | Train: skip eval | Valid: time=  2.2s loss=2.410, TAw acc= 23.3% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.439 | TAw acc= 23.3%, forg=  0.0%| TAg acc= 23.3%, forg=  0.0% <<<
+Save at ../results/cifar100_freezing_dummy_attentional_exp
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time=  6.8s | Train: skip eval | Valid: time=  3.3s loss=2.720, TAw acc= 20.2% | *
+| Epoch   2, time=  3.9s | Train: skip eval | Valid: time=  5.6s loss=2.655, TAw acc= 22.6% | *
+| Epoch   3, time=  7.5s | Train: skip eval | Valid: time=  3.0s loss=2.633, TAw acc= 22.8% | *
+| Epoch   4, time=  4.9s | Train: skip eval | Valid: time=  4.9s loss=2.608, TAw acc= 23.8% | *
+| Epoch   5, time=  7.5s | Train: skip eval | Valid: time=  3.1s loss=2.595, TAw acc= 24.5% | *
+| Epoch   6, time=  5.5s | Train: skip eval | Valid: time=  4.7s loss=2.587, TAw acc= 23.7% | *
+| Epoch   7, time=  6.8s | Train: skip eval | Valid: time=  3.1s loss=2.585, TAw acc= 24.2% | *
+| Epoch   8, time=  6.1s | Train: skip eval | Valid: time=  5.3s loss=2.571, TAw acc= 24.4% | *
+| Epoch   9, time=  4.6s | Train: skip eval | Valid: time=  2.3s loss=2.569, TAw acc= 24.3% | *
+| Epoch  10, time=  6.9s | Train: skip eval | Valid: time=  5.4s loss=2.560, TAw acc= 25.6% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.439 | TAw acc= 23.3%, forg=  0.0%| TAg acc= 19.1%, forg=  4.2% <<<
+>>> Test on task  1 : loss=2.588 | TAw acc= 24.0%, forg=  0.0%| TAg acc=  8.5%, forg=  0.0% <<<
+Save at ../results/cifar100_freezing_dummy_attentional_exp
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time=  6.5s | Train: skip eval | Valid: time=  5.2s loss=2.767, TAw acc= 21.1% | *
+| Epoch   2, time=  4.4s | Train: skip eval | Valid: time=  2.7s loss=2.694, TAw acc= 22.7% | *
+| Epoch   3, time=  7.7s | Train: skip eval | Valid: time=  5.0s loss=2.664, TAw acc= 24.7% | *
+| Epoch   4, time=  4.5s | Train: skip eval | Valid: time=  3.5s loss=2.640, TAw acc= 24.9% | *
+| Epoch   5, time=  6.7s | Train: skip eval | Valid: time=  4.3s loss=2.627, TAw acc= 24.2% | *
+| Epoch   6, time=  5.0s | Train: skip eval | Valid: time=  3.8s loss=2.619, TAw acc= 25.6% | *
+| Epoch   7, time=  7.1s | Train: skip eval | Valid: time=  3.9s loss=2.601, TAw acc= 25.4% | *
+| Epoch   8, time=  4.1s | Train: skip eval | Valid: time=  4.3s loss=2.600, TAw acc= 23.8% | *
+| Epoch   9, time=  6.5s | Train: skip eval | Valid: time=  3.1s loss=2.585, TAw acc= 25.7% | *
+| Epoch  10, time=  4.1s | Train: skip eval | Valid: time=  4.6s loss=2.581, TAw acc= 26.2% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.439 | TAw acc= 23.3%, forg=  0.0%| TAg acc= 14.4%, forg=  8.9% <<<
+>>> Test on task  1 : loss=2.588 | TAw acc= 24.0%, forg=  0.0%| TAg acc=  6.8%, forg=  1.8% <<<
+>>> Test on task  2 : loss=2.542 | TAw acc= 27.4%, forg=  0.0%| TAg acc= 14.3%, forg=  0.0% <<<
+Save at ../results/cifar100_freezing_dummy_attentional_exp
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time=  4.0s | Train: skip eval | Valid: time=  4.3s loss=2.558, TAw acc= 24.5% | *
+| Epoch   2, time=  7.6s | Train: skip eval | Valid: time=  3.1s loss=2.462, TAw acc= 27.5% | *
+| Epoch   3, time=  5.4s | Train: skip eval | Valid: time=  4.9s loss=2.424, TAw acc= 28.6% | *
+| Epoch   4, time=  7.0s | Train: skip eval | Valid: time=  3.1s loss=2.397, TAw acc= 29.1% | *
+| Epoch   5, time=  6.0s | Train: skip eval | Valid: time=  4.4s loss=2.381, TAw acc= 30.1% | *
+| Epoch   6, time=  5.6s | Train: skip eval | Valid: time=  2.9s loss=2.369, TAw acc= 29.9% | *
+| Epoch   7, time=  5.5s | Train: skip eval | Valid: time=  5.0s loss=2.364, TAw acc= 29.2% | *
+| Epoch   8, time=  6.0s | Train: skip eval | Valid: time=  2.9s loss=2.350, TAw acc= 30.3% | *
+| Epoch   9, time=  7.1s | Train: skip eval | Valid: time=  5.4s loss=2.344, TAw acc= 30.6% | *
+| Epoch  10, time=  7.3s | Train: skip eval | Valid: time=  4.9s loss=2.333, TAw acc= 30.6% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.439 | TAw acc= 23.3%, forg=  0.0%| TAg acc= 11.4%, forg= 11.8% <<<
+>>> Test on task  1 : loss=2.588 | TAw acc= 24.0%, forg=  0.0%| TAg acc=  4.0%, forg=  4.5% <<<
+>>> Test on task  2 : loss=2.542 | TAw acc= 27.4%, forg=  0.0%| TAg acc= 10.5%, forg=  3.8% <<<
+>>> Test on task  3 : loss=2.349 | TAw acc= 30.1%, forg=  0.0%| TAg acc= 17.6%, forg=  0.0% <<<
+Save at ../results/cifar100_freezing_dummy_attentional_exp
+************************************************************************************************************
+TAw Acc
+	 23.3%   0.0%   0.0%   0.0% 	Avg.: 23.3% 
+	 23.3%  24.0%   0.0%   0.0% 	Avg.: 23.6% 
+	 23.3%  24.0%  27.4%   0.0% 	Avg.: 24.9% 
+	 23.3%  24.0%  27.4%  30.1% 	Avg.: 26.2% 
+************************************************************************************************************
+TAg Acc
+	 23.3%   0.0%   0.0%   0.0% 	Avg.: 23.3% 
+	 19.1%   8.5%   0.0%   0.0% 	Avg.: 13.8% 
+	 14.4%   6.8%  14.3%   0.0% 	Avg.: 11.8% 
+	 11.4%   4.0%  10.5%  17.6% 	Avg.: 10.9% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0% 
+	  0.0%   0.0%   0.0%   0.0% 	Avg.:  0.0% 
+	  0.0%   0.0%   0.0%   0.0% 	Avg.:  0.0% 
+	  0.0%   0.0%   0.0%   0.0% 	Avg.:  0.0% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0% 
+	  4.2%   0.0%   0.0%   0.0% 	Avg.:  4.2% 
+	  8.9%   1.8%   0.0%   0.0% 	Avg.:  5.3% 
+	 11.8%   4.5%   3.8%   0.0% 	Avg.:  6.7% 
+************************************************************************************************************
+[Elapsed time = 0.1 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: joint
+	batch_size: 128
+	clipping: 10000
+	datasets: ['cifar100']
+	eval_on_train: False
+	exp_name: dummy_attentional_exp
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 0.01
+	lr_factor: 3
+	lr_min: 0.0001
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 10
+	network: Early_conv_vit
+	no_cudnn_deterministic: False
+	num_tasks: 4
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results
+	save_models: False
+	seed: 42
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	freeze_after: -1
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+Files already downloaded and verified
+Files already downloaded and verified
+0 11250
+1 11250
+2 11250
+3 11250
+[(0, 25), (1, 25), (2, 25), (3, 25)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 11.1s | Train: skip eval | Valid: time=  4.1s loss=3.361, TAw acc=  5.5% | *
+| Epoch   2, time=  8.6s | Train: skip eval | Valid: time=  4.8s loss=2.871, TAw acc= 12.8% | *
+| Epoch   3, time=  9.2s | Train: skip eval | Valid: time=  4.6s loss=2.778, TAw acc= 15.1% | *
+| Epoch   4, time= 10.3s | Train: skip eval | Valid: time=  4.4s loss=2.736, TAw acc= 18.5% | *
+| Epoch   5, time= 10.5s | Train: skip eval | Valid: time=  2.5s loss=2.670, TAw acc= 15.6% | *
+| Epoch   6, time= 10.5s | Train: skip eval | Valid: time=  3.2s loss=2.630, TAw acc= 19.4% | *
+| Epoch   7, time=  8.0s | Train: skip eval | Valid: time=  4.1s loss=2.596, TAw acc= 20.2% | *
+| Epoch   8, time=  8.0s | Train: skip eval | Valid: time=  4.8s loss=2.461, TAw acc= 25.0% | *
+| Epoch   9, time=  9.7s | Train: skip eval | Valid: time=  4.6s loss=2.425, TAw acc= 25.7% | *
+| Epoch  10, time= 10.1s | Train: skip eval | Valid: time=  4.2s loss=2.410, TAw acc= 23.3% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.439 | TAw acc= 23.3%, forg=  0.0%| TAg acc= 23.3%, forg=  0.0% <<<
+Save at ../results/cifar100_joint_dummy_attentional_exp
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 16.3s | Train: skip eval | Valid: time=  5.7s loss=3.166, TAw acc= 24.4% | *
+| Epoch   2, time= 18.7s | Train: skip eval | Valid: time=  5.3s loss=3.133, TAw acc= 25.5% | *
+| Epoch   3, time= 18.2s | Train: skip eval | Valid: time=  6.3s loss=3.090, TAw acc= 27.0% | *
+| Epoch   4, time= 18.8s | Train: skip eval | Valid: time=  6.2s loss=3.055, TAw acc= 28.5% | *
+| Epoch   5, time= 17.4s | Train: skip eval | Valid: time=  6.3s loss=3.016, TAw acc= 28.4% | *
+| Epoch   6, time= 18.8s | Train: skip eval | Valid: time=  5.7s loss=2.971, TAw acc= 29.4% | *
+| Epoch   7, time= 17.9s | Train: skip eval | Valid: time=  5.8s loss=2.905, TAw acc= 31.3% | *
+| Epoch   8, time= 18.9s | Train: skip eval | Valid: time=  5.7s loss=2.897, TAw acc= 32.7% | *
+| Epoch   9, time= 18.7s | Train: skip eval | Valid: time=  6.4s loss=2.849, TAw acc= 33.3% | *
+| Epoch  10, time= 18.7s | Train: skip eval | Valid: time=  4.4s loss=2.834, TAw acc= 34.1% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.852 | TAw acc= 32.6%, forg= -9.3%| TAg acc= 23.0%, forg=  0.3% <<<
+>>> Test on task  1 : loss=2.876 | TAw acc= 32.7%, forg=  0.0%| TAg acc= 23.9%, forg=  0.0% <<<
+Save at ../results/cifar100_joint_dummy_attentional_exp
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time= 24.4s | Train: skip eval | Valid: time=  6.4s loss=3.307, TAw acc= 32.3% | *
+| Epoch   2, time= 22.7s | Train: skip eval | Valid: time=  6.0s loss=3.265, TAw acc= 32.1% | *
+| Epoch   3, time= 25.0s | Train: skip eval | Valid: time=  5.9s loss=3.203, TAw acc= 34.6% | *
+| Epoch   4, time= 25.2s | Train: skip eval | Valid: time=  5.5s loss=3.175, TAw acc= 35.5% | *
+| Epoch   5, time= 21.5s | Train: skip eval | Valid: time=  3.9s loss=3.135, TAw acc= 36.5% | *
+| Epoch   6, time= 23.1s | Train: skip eval | Valid: time=  4.0s loss=3.122, TAw acc= 36.5% | *
+| Epoch   7, time= 26.5s | Train: skip eval | Valid: time=  7.5s loss=3.103, TAw acc= 37.9% | *
+| Epoch   8, time= 24.4s | Train: skip eval | Valid: time=  6.7s loss=3.056, TAw acc= 38.2% | *
+| Epoch   9, time= 22.2s | Train: skip eval | Valid: time=  3.9s loss=3.074, TAw acc= 38.1% |
+| Epoch  10, time= 24.5s | Train: skip eval | Valid: time=  6.7s loss=3.045, TAw acc= 38.3% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.996 | TAw acc= 36.8%, forg= -4.2%| TAg acc= 23.2%, forg=  0.0% <<<
+>>> Test on task  1 : loss=3.143 | TAw acc= 37.5%, forg= -4.8%| TAg acc= 19.5%, forg=  4.4% <<<
+>>> Test on task  2 : loss=2.961 | TAw acc= 41.2%, forg=  0.0%| TAg acc= 29.0%, forg=  0.0% <<<
+Save at ../results/cifar100_joint_dummy_attentional_exp
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 29.3s | Train: skip eval | Valid: time=  4.8s loss=3.320, TAw acc= 38.9% | *
+| Epoch   2, time= 29.6s | Train: skip eval | Valid: time=  5.9s loss=3.259, TAw acc= 40.7% | *
+| Epoch   3, time= 28.5s | Train: skip eval | Valid: time=  7.5s loss=3.235, TAw acc= 41.5% | *
+| Epoch   4, time= 27.6s | Train: skip eval | Valid: time=  7.0s loss=3.238, TAw acc= 40.5% |
+| Epoch   5, time= 32.2s | Train: skip eval | Valid: time=  4.6s loss=3.212, TAw acc= 41.2% | *
+| Epoch   6, time= 27.7s | Train: skip eval | Valid: time=  4.7s loss=3.185, TAw acc= 41.8% | *
+| Epoch   7, time= 26.8s | Train: skip eval | Valid: time=  7.3s loss=3.149, TAw acc= 42.9% | *
+| Epoch   8, time= 30.4s | Train: skip eval | Valid: time=  4.5s loss=3.136, TAw acc= 43.0% | *
+| Epoch   9, time= 27.5s | Train: skip eval | Valid: time=  4.5s loss=3.126, TAw acc= 42.9% | *
+| Epoch  10, time= 27.8s | Train: skip eval | Valid: time=  7.3s loss=3.076, TAw acc= 44.1% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=3.178 | TAw acc= 40.2%, forg= -3.4%| TAg acc= 21.2%, forg=  2.0% <<<
+>>> Test on task  1 : loss=3.221 | TAw acc= 40.4%, forg= -2.9%| TAg acc= 20.3%, forg=  3.6% <<<
+>>> Test on task  2 : loss=3.042 | TAw acc= 44.2%, forg= -3.0%| TAg acc= 27.5%, forg=  1.5% <<<
+>>> Test on task  3 : loss=2.860 | TAw acc= 49.0%, forg=  0.0%| TAg acc= 30.4%, forg=  0.0% <<<
+Save at ../results/cifar100_joint_dummy_attentional_exp
+************************************************************************************************************
+TAw Acc
+	 23.3%   0.0%   0.0%   0.0% 	Avg.: 23.3% 
+	 32.6%  32.7%   0.0%   0.0% 	Avg.: 32.7% 
+	 36.8%  37.5%  41.2%   0.0% 	Avg.: 38.5% 
+	 40.2%  40.4%  44.2%  49.0% 	Avg.: 43.4% 
+************************************************************************************************************
+TAg Acc
+	 23.3%   0.0%   0.0%   0.0% 	Avg.: 23.3% 
+	 23.0%  23.9%   0.0%   0.0% 	Avg.: 23.4% 
+	 23.2%  19.5%  29.0%   0.0% 	Avg.: 23.9% 
+	 21.2%  20.3%  27.5%  30.4% 	Avg.: 24.9% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0% 
+	 -9.3%   0.0%   0.0%   0.0% 	Avg.: -9.3% 
+	 -4.2%  -4.8%   0.0%   0.0% 	Avg.: -4.5% 
+	 -3.4%  -2.9%  -3.0%   0.0% 	Avg.: -3.1% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0% 
+	  0.3%   0.0%   0.0%   0.0% 	Avg.:  0.3% 
+	  0.0%   4.4%   0.0%   0.0% 	Avg.:  2.2% 
+	  2.0%   3.6%   1.5%   0.0% 	Avg.:  2.4% 
+************************************************************************************************************
+[Elapsed time = 0.3 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: ewc
+	batch_size: 128
+	clipping: 10000
+	datasets: ['cifar100']
+	eval_on_train: False
+	exp_name: dummy_attentional_exp
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 0.01
+	lr_factor: 3
+	lr_min: 0.0001
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 10
+	network: resnet32
+	no_cudnn_deterministic: False
+	num_tasks: 4
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results
+	save_models: False
+	seed: 42
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	alpha: 0.5
+	fi_num_samples: -1
+	fi_sampling_type: max_pred
+	lamb: 5000
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+WARNING: ../results/cifar100_ewc_dummy_attentional_exp already exists!
+Files already downloaded and verified
+Files already downloaded and verified
+0 11250
+1 11250
+2 11250
+3 11250
+[(0, 25), (1, 25), (2, 25), (3, 25)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 11.8s | Train: skip eval | Valid: time=  3.5s loss=2.982, TAw acc= 11.2% | *
+| Epoch   2, time= 10.6s | Train: skip eval | Valid: time=  3.2s loss=2.754, TAw acc= 16.8% | *
+| Epoch   3, time=  7.6s | Train: skip eval | Valid: time=  3.3s loss=2.636, TAw acc= 19.3% | *
+| Epoch   4, time= 10.1s | Train: skip eval | Valid: time=  6.4s loss=2.593, TAw acc= 19.4% | *
+| Epoch   5, time= 10.7s | Train: skip eval | Valid: time=  3.5s loss=2.552, TAw acc= 22.1% | *
+| Epoch   6, time=  7.5s | Train: skip eval | Valid: time=  3.3s loss=2.507, TAw acc= 22.8% | *
+| Epoch   7, time=  8.6s | Train: skip eval | Valid: time=  5.2s loss=2.501, TAw acc= 22.4% | *
+| Epoch   8, time=  8.7s | Train: skip eval | Valid: time=  3.5s loss=2.469, TAw acc= 23.1% | *
+| Epoch   9, time=  7.3s | Train: skip eval | Valid: time=  3.4s loss=2.460, TAw acc= 22.4% | *
+| Epoch  10, time= 10.2s | Train: skip eval | Valid: time=  3.5s loss=2.444, TAw acc= 23.4% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.441 | TAw acc= 24.4%, forg=  0.0%| TAg acc= 24.4%, forg=  0.0% <<<
+Save at ../results/cifar100_ewc_dummy_attentional_exp
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time=  8.3s | Train: skip eval | Valid: time=  6.3s loss=2.922, TAw acc= 15.4% | *
+| Epoch   2, time= 12.2s | Train: skip eval | Valid: time=  3.5s loss=2.822, TAw acc= 18.0% | *
+| Epoch   3, time=  9.0s | Train: skip eval | Valid: time=  4.3s loss=2.786, TAw acc= 18.3% | *
+| Epoch   4, time= 12.6s | Train: skip eval | Valid: time=  3.8s loss=2.748, TAw acc= 19.6% | *
+| Epoch   5, time=  9.1s | Train: skip eval | Valid: time=  3.3s loss=2.686, TAw acc= 21.5% | *
+| Epoch   6, time= 12.7s | Train: skip eval | Valid: time=  3.6s loss=2.659, TAw acc= 22.3% | *
+| Epoch   7, time=  8.2s | Train: skip eval | Valid: time=  3.6s loss=2.627, TAw acc= 23.2% | *
+| Epoch   8, time= 12.1s | Train: skip eval | Valid: time=  3.8s loss=2.588, TAw acc= 23.9% | *
+| Epoch   9, time=  8.3s | Train: skip eval | Valid: time=  3.7s loss=2.569, TAw acc= 23.9% | *
+| Epoch  10, time=  9.4s | Train: skip eval | Valid: time=  5.9s loss=2.532, TAw acc= 25.2% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.642 | TAw acc= 16.4%, forg=  8.0%| TAg acc=  4.5%, forg= 19.9% <<<
+>>> Test on task  1 : loss=2.527 | TAw acc= 24.5%, forg=  0.0%| TAg acc= 19.2%, forg=  0.0% <<<
+Save at ../results/cifar100_ewc_dummy_attentional_exp
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time=  8.3s | Train: skip eval | Valid: time=  3.6s loss=2.831, TAw acc= 17.1% | *
+| Epoch   2, time= 13.4s | Train: skip eval | Valid: time=  3.5s loss=2.746, TAw acc= 19.9% | *
+| Epoch   3, time=  8.4s | Train: skip eval | Valid: time=  3.5s loss=2.668, TAw acc= 21.4% | *
+| Epoch   4, time= 12.7s | Train: skip eval | Valid: time=  3.4s loss=2.636, TAw acc= 22.2% | *
+| Epoch   5, time=  9.1s | Train: skip eval | Valid: time=  3.6s loss=2.614, TAw acc= 22.8% | *
+| Epoch   6, time= 11.1s | Train: skip eval | Valid: time=  6.4s loss=2.592, TAw acc= 24.5% | *
+| Epoch   7, time= 13.2s | Train: skip eval | Valid: time=  2.9s loss=2.556, TAw acc= 25.5% | *
+| Epoch   8, time= 10.8s | Train: skip eval | Valid: time=  3.8s loss=2.526, TAw acc= 25.8% | *
+| Epoch   9, time= 13.1s | Train: skip eval | Valid: time=  7.1s loss=2.503, TAw acc= 25.8% | *
+| Epoch  10, time= 12.3s | Train: skip eval | Valid: time=  5.3s loss=2.488, TAw acc= 27.0% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.837 | TAw acc= 14.4%, forg= 10.0%| TAg acc=  2.3%, forg= 22.2% <<<
+>>> Test on task  1 : loss=2.684 | TAw acc= 20.0%, forg=  4.6%| TAg acc=  8.8%, forg= 10.4% <<<
+>>> Test on task  2 : loss=2.424 | TAw acc= 28.6%, forg=  0.0%| TAg acc= 18.1%, forg=  0.0% <<<
+Save at ../results/cifar100_ewc_dummy_attentional_exp
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 11.5s | Train: skip eval | Valid: time=  5.0s loss=2.594, TAw acc= 24.1% | *
+| Epoch   2, time= 11.4s | Train: skip eval | Valid: time=  3.4s loss=2.456, TAw acc= 28.0% | *
+| Epoch   3, time= 13.8s | Train: skip eval | Valid: time=  6.4s loss=2.379, TAw acc= 30.3% | *
+| Epoch   4, time= 13.7s | Train: skip eval | Valid: time=  3.9s loss=2.349, TAw acc= 30.1% | *
+| Epoch   5, time= 11.6s | Train: skip eval | Valid: time=  3.5s loss=2.309, TAw acc= 31.2% | *
+| Epoch   6, time= 12.4s | Train: skip eval | Valid: time=  3.0s loss=2.306, TAw acc= 31.5% | *
+| Epoch   7, time= 12.9s | Train: skip eval | Valid: time=  4.9s loss=2.286, TAw acc= 32.5% | *
+| Epoch   8, time= 11.9s | Train: skip eval | Valid: time=  6.2s loss=2.268, TAw acc= 32.5% | *
+| Epoch   9, time= 12.1s | Train: skip eval | Valid: time=  6.6s loss=2.246, TAw acc= 33.1% | *
+| Epoch  10, time= 11.5s | Train: skip eval | Valid: time=  6.5s loss=2.258, TAw acc= 31.7% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.977 | TAw acc= 10.4%, forg= 14.0%| TAg acc=  0.5%, forg= 23.9% <<<
+>>> Test on task  1 : loss=2.785 | TAw acc= 18.4%, forg=  6.2%| TAg acc=  2.0%, forg= 17.2% <<<
+>>> Test on task  2 : loss=2.594 | TAw acc= 22.0%, forg=  6.5%| TAg acc=  3.2%, forg= 15.0% <<<
+>>> Test on task  3 : loss=2.171 | TAw acc= 33.5%, forg=  0.0%| TAg acc= 30.4%, forg=  0.0% <<<
+Save at ../results/cifar100_ewc_dummy_attentional_exp
+************************************************************************************************************
+TAw Acc
+	 24.4%   0.0%   0.0%   0.0% 	Avg.: 24.4% 
+	 16.4%  24.5%   0.0%   0.0% 	Avg.: 20.5% 
+	 14.4%  20.0%  28.6%   0.0% 	Avg.: 21.0% 
+	 10.4%  18.4%  22.0%  33.5% 	Avg.: 21.1% 
+************************************************************************************************************
+TAg Acc
+	 24.4%   0.0%   0.0%   0.0% 	Avg.: 24.4% 
+	  4.5%  19.2%   0.0%   0.0% 	Avg.: 11.8% 
+	  2.3%   8.8%  18.1%   0.0% 	Avg.:  9.7% 
+	  0.5%   2.0%   3.2%  30.4% 	Avg.:  9.0% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0% 
+	  8.0%   0.0%   0.0%   0.0% 	Avg.:  8.0% 
+	 10.0%   4.6%   0.0%   0.0% 	Avg.:  7.3% 
+	 14.0%   6.2%   6.5%   0.0% 	Avg.:  8.9% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0% 
+	 19.9%   0.0%   0.0%   0.0% 	Avg.: 19.9% 
+	 22.2%  10.4%   0.0%   0.0% 	Avg.: 16.3% 
+	 23.9%  17.2%  15.0%   0.0% 	Avg.: 18.7% 
+************************************************************************************************************
+[Elapsed time = 0.2 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: ewc
+	batch_size: 128
+	clipping: 10000
+	datasets: ['cifar100']
+	eval_on_train: False
+	exp_name: dummy_attentional_exp
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 0.01
+	lr_factor: 3
+	lr_min: 0.0001
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 10
+	network: Efficient_net
+	no_cudnn_deterministic: False
+	num_tasks: 4
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results
+	save_models: False
+	seed: 42
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	alpha: 0.5
+	fi_num_samples: -1
+	fi_sampling_type: max_pred
+	lamb: 5000
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+WARNING: ../results/cifar100_ewc_dummy_attentional_exp already exists!
+Files already downloaded and verified
+Files already downloaded and verified
+0 11250
+1 11250
+2 11250
+3 11250
+[(0, 25), (1, 25), (2, 25), (3, 25)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 15.1s | Train: skip eval | Valid: time=  6.1s loss=3.431, TAw acc=  4.6% | *
+| Epoch   2, time= 12.8s | Train: skip eval | Valid: time=  4.5s loss=3.295, TAw acc=  5.4% | *
+| Epoch   3, time= 11.5s | Train: skip eval | Valid: time=  3.4s loss=3.285, TAw acc=  6.6% | *
+| Epoch   4, time= 13.1s | Train: skip eval | Valid: time=  4.0s loss=3.168, TAw acc=  8.0% | *
+| Epoch   5, time= 14.0s | Train: skip eval | Valid: time=  6.8s loss=3.061, TAw acc=  9.0% | *
+| Epoch   6, time= 12.4s | Train: skip eval | Valid: time=  6.6s loss=3.051, TAw acc=  9.4% | *
+| Epoch   7, time= 11.1s | Train: skip eval | Valid: time=  4.0s loss=2.959, TAw acc= 11.0% | *
+| Epoch   8, time= 11.4s | Train: skip eval | Valid: time=  3.4s loss=2.894, TAw acc= 13.4% | *
+| Epoch   9, time= 13.1s | Train: skip eval | Valid: time=  3.7s loss=2.879, TAw acc= 13.4% | *
+| Epoch  10, time= 13.6s | Train: skip eval | Valid: time=  5.4s loss=2.924, TAw acc= 14.4% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.897 | TAw acc= 12.8%, forg=  0.0%| TAg acc= 12.8%, forg=  0.0% <<<
+Save at ../results/cifar100_ewc_dummy_attentional_exp
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 16.8s | Train: skip eval | Valid: time=  5.5s loss=468185.520, TAw acc= 11.5% | *
+| Epoch   2, time= 16.1s | Train: skip eval | Valid: time=  6.7s loss=468185.501, TAw acc= 11.5% | *
+| Epoch   3, time= 17.1s | Train: skip eval | Valid: time=  3.6s loss=468187.285, TAw acc= 11.7% |
+| Epoch   4, time= 14.5s | Train: skip eval | Valid: time=  6.0s loss=468187.258, TAw acc= 12.2% |
+| Epoch   5, time= 16.4s | Train: skip eval | Valid: time=  3.7s loss=468188.235, TAw acc= 12.4% |
+| Epoch   6, time= 14.4s | Train: skip eval | Valid: time=  6.7s loss=468188.181, TAw acc= 11.9% |
+| Epoch   7, time= 17.2s | Train: skip eval | Valid: time=  4.4s loss=468189.066, TAw acc= 12.9% | lr=3.3e-03
+| Epoch   8, time= 18.0s | Train: skip eval | Valid: time=  3.6s loss=3.208, TAw acc= 11.8% | *
+| Epoch   9, time= 12.3s | Train: skip eval | Valid: time=  3.5s loss=3.266, TAw acc= 11.8% |
+| Epoch  10, time= 11.0s | Train: skip eval | Valid: time=  3.1s loss=3.168, TAw acc= 11.8% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.955 | TAw acc= 14.9%, forg= -2.2%| TAg acc= 14.4%, forg= -1.7% <<<
+>>> Test on task  1 : loss=3.066 | TAw acc= 11.4%, forg=  0.0%| TAg acc=  0.4%, forg=  0.0% <<<
+Save at ../results/cifar100_ewc_dummy_attentional_exp
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time= 12.2s | Train: skip eval | Valid: time=  3.8s loss=1294043.484, TAw acc= 11.7% | *
+| Epoch   2, time= 11.8s | Train: skip eval | Valid: time=  3.9s loss=1293974.449, TAw acc= 12.3% | *
+| Epoch   3, time= 12.8s | Train: skip eval | Valid: time=  4.4s loss=1293909.785, TAw acc= 11.3% | *
+| Epoch   4, time= 14.0s | Train: skip eval | Valid: time=  4.7s loss=1293853.407, TAw acc= 12.6% | *
+| Epoch   5, time= 13.7s | Train: skip eval | Valid: time=  3.2s loss=1293798.471, TAw acc= 13.0% | *
+| Epoch   6, time= 12.6s | Train: skip eval | Valid: time=  3.2s loss=1293742.879, TAw acc= 12.6% | *
+| Epoch   7, time= 11.0s | Train: skip eval | Valid: time=  3.0s loss=1293686.744, TAw acc= 12.8% | *
+| Epoch   8, time= 10.7s | Train: skip eval | Valid: time=  3.1s loss=1293633.382, TAw acc= 13.9% | *
+| Epoch   9, time= 11.5s | Train: skip eval | Valid: time=  3.1s loss=1293577.337, TAw acc= 13.0% | *
+| Epoch  10, time= 12.4s | Train: skip eval | Valid: time=  3.1s loss=1293522.535, TAw acc= 13.1% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.930 | TAw acc= 14.3%, forg=  0.6%| TAg acc= 12.9%, forg=  1.5% <<<
+>>> Test on task  1 : loss=3.030 | TAw acc= 12.8%, forg= -1.3%| TAg acc=  0.8%, forg= -0.4% <<<
+>>> Test on task  2 : loss=2.976 | TAw acc= 13.0%, forg=  0.0%| TAg acc=  2.8%, forg=  0.0% <<<
+Save at ../results/cifar100_ewc_dummy_attentional_exp
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 16.3s | Train: skip eval | Valid: time=  6.4s loss=386976.017, TAw acc= 14.7% | *
+| Epoch   2, time= 15.4s | Train: skip eval | Valid: time=  3.3s loss=387048.834, TAw acc= 14.3% |
+| Epoch   3, time= 17.2s | Train: skip eval | Valid: time=  6.3s loss=387053.998, TAw acc= 14.8% |
+| Epoch   4, time= 13.5s | Train: skip eval | Valid: time=  3.6s loss=387054.530, TAw acc= 15.6% |
+| Epoch   5, time= 18.9s | Train: skip eval | Valid: time=  4.8s loss=387054.690, TAw acc= 17.3% |
+| Epoch   6, time= 15.4s | Train: skip eval | Valid: time=  3.6s loss=387048.478, TAw acc= 17.3% | lr=3.3e-03
+| Epoch   7, time= 16.2s | Train: skip eval | Valid: time=  5.8s loss=3.035, TAw acc= 15.7% | *
+| Epoch   8, time= 14.6s | Train: skip eval | Valid: time=  5.6s loss=3.016, TAw acc= 15.0% | *
+| Epoch   9, time= 13.7s | Train: skip eval | Valid: time=  5.8s loss=2.997, TAw acc= 16.0% | *
+| Epoch  10, time= 12.6s | Train: skip eval | Valid: time=  5.6s loss=3.004, TAw acc= 16.0% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.941 | TAw acc= 15.0%, forg= -0.1%| TAg acc= 12.6%, forg=  1.8% <<<
+>>> Test on task  1 : loss=3.116 | TAw acc= 12.4%, forg=  0.3%| TAg acc=  0.7%, forg=  0.1% <<<
+>>> Test on task  2 : loss=3.077 | TAw acc= 12.4%, forg=  0.6%| TAg acc=  2.9%, forg= -0.0% <<<
+>>> Test on task  3 : loss=2.912 | TAw acc= 15.1%, forg=  0.0%| TAg acc=  0.3%, forg=  0.0% <<<
+Save at ../results/cifar100_ewc_dummy_attentional_exp
+************************************************************************************************************
+TAw Acc
+	 12.8%   0.0%   0.0%   0.0% 	Avg.: 12.8% 
+	 14.9%  11.4%   0.0%   0.0% 	Avg.: 13.2% 
+Using cache found in /root/.cache/torch/hub/szq0214_MEAL-V2_master
+	 14.3%  12.8%  13.0%   0.0% 	Avg.: 13.4% 
+	 15.0%  12.4%  12.4%  15.1% 	Avg.: 13.7% 
+************************************************************************************************************
+TAg Acc
+	 12.8%   0.0%   0.0%   0.0% 	Avg.: 12.8% 
+	 14.4%   0.4%   0.0%   0.0% 	Avg.:  7.4% 
+	 12.9%   0.8%   2.8%   0.0% 	Avg.:  5.5% 
+	 12.6%   0.7%   2.9%   0.3% 	Avg.:  4.1% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0% 
+	 -2.2%   0.0%   0.0%   0.0% 	Avg.: -2.2% 
+	  0.6%  -1.3%   0.0%   0.0% 	Avg.: -0.3% 
+	 -0.1%   0.3%   0.6%   0.0% 	Avg.:  0.3% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0% 
+	 -1.7%   0.0%   0.0%   0.0% 	Avg.: -1.7% 
+	  1.5%  -0.4%   0.0%   0.0% 	Avg.:  0.5% 
+	  1.8%   0.1%  -0.0%   0.0% 	Avg.:  0.6% 
+************************************************************************************************************
+[Elapsed time = 0.2 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: ewc
+	batch_size: 128
+	clipping: 10000
+	datasets: ['cifar100']
+	eval_on_train: False
+	exp_name: dummy_attentional_exp
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 0.01
+	lr_factor: 3
+	lr_min: 0.0001
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 10
+	network: Mobile_net
+	no_cudnn_deterministic: False
+	num_tasks: 4
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results
+	save_models: False
+	seed: 42
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	alpha: 0.5
+	fi_num_samples: -1
+	fi_sampling_type: max_pred
+	lamb: 5000
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+WARNING: ../results/cifar100_ewc_dummy_attentional_exp already exists!
+Files already downloaded and verified
+Files already downloaded and verified
+0 11250
+1 11250
+2 11250
+3 11250
+[(0, 25), (1, 25), (2, 25), (3, 25)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 11.1s | Train: skip eval | Valid: time=  5.2s loss=3.299, TAw acc=  5.8% | *
+| Epoch   2, time=  8.2s | Train: skip eval | Valid: time=  5.5s loss=3.319, TAw acc=  7.4% |
+| Epoch   3, time=  9.9s | Train: skip eval | Valid: time=  3.4s loss=3.214, TAw acc=  6.5% | *
+| Epoch   4, time= 11.3s | Train: skip eval | Valid: time=  3.2s loss=3.174, TAw acc=  7.5% | *
+| Epoch   5, time= 11.8s | Train: skip eval | Valid: time=  3.5s loss=3.171, TAw acc=  8.2% | *
+| Epoch   6, time=  8.5s | Train: skip eval | Valid: time=  6.4s loss=3.120, TAw acc=  8.6% | *
+| Epoch   7, time=  8.4s | Train: skip eval | Valid: time=  5.7s loss=3.083, TAw acc=  8.6% | *
+| Epoch   8, time= 10.9s | Train: skip eval | Valid: time=  3.6s loss=3.085, TAw acc=  8.5% |
+| Epoch   9, time= 11.0s | Train: skip eval | Valid: time=  3.2s loss=3.018, TAw acc=  9.8% | *
+| Epoch  10, time= 10.5s | Train: skip eval | Valid: time=  3.4s loss=2.992, TAw acc= 10.8% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=3.014 | TAw acc= 11.0%, forg=  0.0%| TAg acc= 11.0%, forg=  0.0% <<<
+Save at ../results/cifar100_ewc_dummy_attentional_exp
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 11.3s | Train: skip eval | Valid: time=  5.7s loss=3.213, TAw acc=  9.2% | *
+| Epoch   2, time= 11.8s | Train: skip eval | Valid: time=  5.0s loss=3.169, TAw acc= 10.1% | *
+| Epoch   3, time= 11.2s | Train: skip eval | Valid: time=  5.3s loss=3.187, TAw acc=  9.9% |
+| Epoch   4, time= 11.4s | Train: skip eval | Valid: time=  5.7s loss=3.180, TAw acc= 10.7% |
+| Epoch   5, time= 11.5s | Train: skip eval | Valid: time=  6.2s loss=3.132, TAw acc= 11.1% | *
+| Epoch   6, time= 12.1s | Train: skip eval | Valid: time=  5.1s loss=3.136, TAw acc= 10.8% |
+| Epoch   7, time= 12.7s | Train: skip eval | Valid: time=  4.1s loss=3.137, TAw acc= 11.2% |
+| Epoch   8, time= 13.6s | Train: skip eval | Valid: time=  4.6s loss=3.123, TAw acc= 12.6% | *
+| Epoch   9, time= 13.2s | Train: skip eval | Valid: time=  3.7s loss=3.155, TAw acc= 11.3% |
+| Epoch  10, time= 13.6s | Train: skip eval | Valid: time=  4.3s loss=3.138, TAw acc= 12.3% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.972 | TAw acc= 10.7%, forg=  0.2%| TAg acc=  7.9%, forg=  3.0% <<<
+>>> Test on task  1 : loss=3.054 | TAw acc= 11.0%, forg=  0.0%| TAg acc=  3.7%, forg=  0.0% <<<
+Save at ../results/cifar100_ewc_dummy_attentional_exp
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time= 12.5s | Train: skip eval | Valid: time=  5.0s loss=359544.294, TAw acc= 12.2% | *
+| Epoch   2, time= 13.2s | Train: skip eval | Valid: time=  4.9s loss=359541.890, TAw acc= 10.8% | *
+| Epoch   3, time= 12.8s | Train: skip eval | Valid: time=  5.3s loss=359539.557, TAw acc= 12.2% | *
+| Epoch   4, time= 13.1s | Train: skip eval | Valid: time=  5.7s loss=359538.031, TAw acc= 12.1% | *
+| Epoch   5, time= 12.8s | Train: skip eval | Valid: time=  5.7s loss=359534.735, TAw acc= 11.4% | *
+| Epoch   6, time= 13.9s | Train: skip eval | Valid: time=  6.1s loss=359531.141, TAw acc= 12.4% | *
+| Epoch   7, time= 14.0s | Train: skip eval | Valid: time=  5.7s loss=359529.765, TAw acc= 13.0% | *
+| Epoch   8, time= 13.3s | Train: skip eval | Valid: time=  4.1s loss=359526.839, TAw acc= 13.8% | *
+| Epoch   9, time= 10.7s | Train: skip eval | Valid: time=  7.2s loss=359524.662, TAw acc= 13.9% | *
+| Epoch  10, time= 11.5s | Train: skip eval | Valid: time=  3.2s loss=359521.864, TAw acc= 12.7% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.980 | TAw acc= 10.5%, forg=  0.5%| TAg acc=  6.0%, forg=  5.0% <<<
+>>> Test on task  1 : loss=3.049 | TAw acc= 11.0%, forg=  0.0%| TAg acc=  2.3%, forg=  1.4% <<<
+>>> Test on task  2 : loss=3.022 | TAw acc= 13.4%, forg=  0.0%| TAg acc=  6.1%, forg=  0.0% <<<
+Save at ../results/cifar100_ewc_dummy_attentional_exp
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 15.0s | Train: skip eval | Valid: time=  4.0s loss=261634.834, TAw acc= 13.0% | *
+| Epoch   2, time= 12.7s | Train: skip eval | Valid: time=  6.3s loss=261635.970, TAw acc= 13.2% |
+| Epoch   3, time= 11.0s | Train: skip eval | Valid: time=  5.0s loss=261637.932, TAw acc= 14.9% |
+| Epoch   4, time= 14.2s | Train: skip eval | Valid: time=  3.8s loss=261638.435, TAw acc= 14.4% |
+| Epoch   5, time= 11.1s | Train: skip eval | Valid: time=  6.4s loss=261638.037, TAw acc= 15.6% |
+| Epoch   6, time= 10.7s | Train: skip eval | Valid: time=  5.4s loss=261638.024, TAw acc= 15.3% | lr=3.3e-03
+| Epoch   7, time= 14.5s | Train: skip eval | Valid: time=  3.4s loss=3.050, TAw acc= 12.3% | *
+| Epoch   8, time= 12.3s | Train: skip eval | Valid: time=  5.6s loss=3.053, TAw acc= 13.7% |
+| Epoch   9, time= 11.5s | Train: skip eval | Valid: time=  5.8s loss=3.007, TAw acc= 14.4% | *
+| Epoch  10, time= 14.0s | Train: skip eval | Valid: time=  3.3s loss=3.010, TAw acc= 14.7% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=3.005 | TAw acc= 10.2%, forg=  0.8%| TAg acc=  5.8%, forg=  5.2% <<<
+>>> Test on task  1 : loss=3.047 | TAw acc= 11.2%, forg= -0.2%| TAg acc=  1.9%, forg=  1.8% <<<
+>>> Test on task  2 : loss=3.006 | TAw acc= 14.0%, forg= -0.6%| TAg acc=  5.8%, forg=  0.3% <<<
+>>> Test on task  3 : loss=2.977 | TAw acc= 14.1%, forg=  0.0%| TAg acc=  0.7%, forg=  0.0% <<<
+Save at ../results/cifar100_ewc_dummy_attentional_exp
+************************************************************************************************************
+TAw Acc
+	 11.0%   0.0%   0.0%   0.0% 	Avg.: 11.0% 
+	 10.7%  11.0%   0.0%   0.0% 	Avg.: 10.9% 
+	 10.5%  11.0%  13.4%   0.0% 	Avg.: 11.6% 
+	 10.2%  11.2% Using cache found in /root/.cache/torch/hub/szq0214_MEAL-V2_master
+ 14.0%  14.1% 	Avg.: 12.4% 
+************************************************************************************************************
+TAg Acc
+	 11.0%   0.0%   0.0%   0.0% 	Avg.: 11.0% 
+	  7.9%   3.7%   0.0%   0.0% 	Avg.:  5.8% 
+	  6.0%   2.3%   6.1%   0.0% 	Avg.:  4.8% 
+	  5.8%   1.9%   5.8%   0.7% 	Avg.:  3.6% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0% 
+	  0.2%   0.0%   0.0%   0.0% 	Avg.:  0.2% 
+	  0.5%   0.0%   0.0%   0.0% 	Avg.:  0.3% 
+	  0.8%  -0.2%  -0.6%   0.0% 	Avg.: -0.0% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0% 
+	  3.0%   0.0%   0.0%   0.0% 	Avg.:  3.0% 
+	  5.0%   1.4%   0.0%   0.0% 	Avg.:  3.2% 
+	  5.2%   1.8%   0.3%   0.0% 	Avg.:  2.4% 
+************************************************************************************************************
+[Elapsed time = 0.2 h]
+Done!
+============================================================================================================
+Arguments =
+	approach: oewc
+	batch_size: 128
+	clipping: 10000
+	datasets: ['cifar100_224']
+	eval_on_train: False
+	exp_name: dummy_attentional_exp
+	fix_bn: False
+	gpu: 0
+	gridsearch_tasks: -1
+	keep_existing_head: False
+	last_layer_analysis: False
+	log: ['disk']
+	lr: 0.01
+	lr_factor: 3
+	lr_min: 0.0001
+	lr_patience: 5
+	momentum: 0.0
+	multi_softmax: False
+	nc_first_task: None
+	nepochs: 10
+	network: OVit_tiny_16_augreg_224
+	no_cudnn_deterministic: False
+	num_tasks: 4
+	num_workers: 24
+	pin_memory: False
+	pretrained: False
+	results_path: ../results
+	save_models: False
+	seed: 42
+	stop_at_task: 0
+	use_valid_only: False
+	warmup_lr_factor: 1.0
+	warmup_nepochs: 0
+	weight_decay: 0.0
+============================================================================================================
+Approach arguments =
+	alpha: 0.5
+	fi_num_samples: -1
+	fi_sampling_type: max_pred
+	lamb: 5000
+============================================================================================================
+Exemplars dataset arguments =
+	exemplar_selection: random
+	num_exemplars: 0
+	num_exemplars_per_class: 0
+============================================================================================================
+WARNING: ../results/cifar100_224_oewc_dummy_attentional_exp already exists!
+Files already downloaded and verified
+Files already downloaded and verified
+0 11250
+1 11250
+2 11250
+3 11250
+[(0, 25), (1, 25), (2, 25), (3, 25)]
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time= 27.4s | Train: skip eval | Valid: time=  5.0s loss=2.710, TAw acc= 18.6% | *
+| Epoch   2, time= 22.3s | Train: skip eval | Valid: time=  5.5s loss=2.551, TAw acc= 22.4% | *
+| Epoch   3, time= 23.3s | Train: skip eval | Valid: time=  7.1s loss=2.450, TAw acc= 25.4% | *
+| Epoch   4, time= 23.8s | Train: skip eval | Valid: time=  8.1s loss=2.408, TAw acc= 26.8% | *
+| Epoch   5, time= 24.7s | Train: skip eval | Valid: time=  8.5s loss=2.333, TAw acc= 30.3% | *
+| Epoch   6, time= 24.9s | Train: skip eval | Valid: time=  7.0s loss=2.288, TAw acc= 31.8% | *
+| Epoch   7, time= 27.2s | Train: skip eval | Valid: time=  6.2s loss=2.314, TAw acc= 30.6% |
+| Epoch   8, time= 29.4s | Train: skip eval | Valid: time=  6.3s loss=2.294, TAw acc= 29.6% |
+| Epoch   9, time= 31.6s | Train: skip eval | Valid: time=  6.0s loss=2.200, TAw acc= 32.6% | *
+| Epoch  10, time= 29.7s | Train: skip eval | Valid: time=  4.5s loss=2.194, TAw acc= 31.8% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.250 | TAw acc= 32.7%, forg=  0.0%| TAg acc= 32.7%, forg=  0.0% <<<
+Save at ../results/cifar100_224_oewc_dummy_attentional_exp
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time= 30.5s | Train: skip eval | Valid: time=  4.5s loss=2.566, TAw acc= 25.2% | *
+| Epoch   2, time= 27.8s | Train: skip eval | Valid: time=  4.4s loss=2.483, TAw acc= 27.8% | *
+| Epoch   3, time= 28.3s | Train: skip eval | Valid: time=  4.5s loss=2.466, TAw acc= 27.2% | *
+| Epoch   4, time= 27.2s | Train: skip eval | Valid: time=  4.5s loss=2.416, TAw acc= 28.2% | *
+| Epoch   5, time= 30.2s | Train: skip eval | Valid: time=  4.5s loss=2.408, TAw acc= 26.6% | *
+| Epoch   6, time= 30.0s | Train: skip eval | Valid: time=  4.3s loss=2.380, TAw acc= 30.1% | *
+| Epoch   7, time= 30.5s | Train: skip eval | Valid: time=  4.4s loss=2.341, TAw acc= 31.0% | *
+| Epoch   8, time= 31.7s | Train: skip eval | Valid: time=  4.7s loss=2.316, TAw acc= 31.7% | *
+| Epoch   9, time= 30.7s | Train: skip eval | Valid: time=  4.7s loss=2.394, TAw acc= 27.8% |
+| Epoch  10, time= 31.3s | Train: skip eval | Valid: time=  4.5s loss=2.392, TAw acc= 29.5% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.612 | TAw acc= 25.3%, forg=  7.4%| TAg acc=  4.8%, forg= 27.9% <<<
+>>> Test on task  1 : loss=2.345 | TAw acc= 30.3%, forg=  0.0%| TAg acc= 29.0%, forg=  0.0% <<<
+Save at ../results/cifar100_224_oewc_dummy_attentional_exp
+************************************************************************************************************
+Task  2
+************************************************************************************************************
+| Epoch   1, time= 30.0s | Train: skip eval | Valid: time=  4.5s loss=2.621, TAw acc= 22.2% | *
+| Epoch   2, time= 29.3s | Train: skip eval | Valid: time=  4.5s loss=2.571, TAw acc= 24.2% | *
+| Epoch   3, time= 28.2s | Train: skip eval | Valid: time=  4.3s loss=2.425, TAw acc= 28.8% | *
+| Epoch   4, time= 29.1s | Train: skip eval | Valid: time=  4.2s loss=2.445, TAw acc= 29.7% |
+| Epoch   5, time= 30.0s | Train: skip eval | Valid: time=  4.7s loss=2.471, TAw acc= 28.7% |
+| Epoch   6, time= 31.0s | Train: skip eval | Valid: time=  4.5s loss=2.494, TAw acc= 27.0% |
+| Epoch   7, time= 31.2s | Train: skip eval | Valid: time=  4.5s loss=2.437, TAw acc= 30.3% |
+| Epoch   8, time= 30.7s | Train: skip eval | Valid: time=  4.8s loss=2.426, TAw acc= 29.7% | lr=3.3e-03
+| Epoch   9, time= 31.1s | Train: skip eval | Valid: time=  4.8s loss=2.392, TAw acc= 31.3% | *
+| Epoch  10, time= 31.1s | Train: skip eval | Valid: time=  5.3s loss=2.389, TAw acc= 31.7% | *
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.913 | TAw acc= 15.3%, forg= 17.4%| TAg acc=  0.9%, forg= 31.8% <<<
+>>> Test on task  1 : loss=2.615 | TAw acc= 24.6%, forg=  5.7%| TAg acc=  4.1%, forg= 24.8% <<<
+>>> Test on task  2 : loss=2.305 | TAw acc= 32.3%, forg=  0.0%| TAg acc= 30.7%, forg=  0.0% <<<
+Save at ../results/cifar100_224_oewc_dummy_attentional_exp
+************************************************************************************************************
+Task  3
+************************************************************************************************************
+| Epoch   1, time= 22.1s | Train: skip eval | Valid: time=  3.9s loss=2.242, TAw acc= 33.6% | *
+| Epoch   2, time= 18.0s | Train: skip eval | Valid: time=  3.8s loss=2.177, TAw acc= 35.5% | *
+| Epoch   3, time= 18.0s | Train: skip eval | Valid: time=  3.9s loss=2.123, TAw acc= 34.2% | *
+| Epoch   4, time= 18.1s | Train: skip eval | Valid: time=  3.9s loss=2.136, TAw acc= 36.2% |
+| Epoch   5, time= 18.3s | Train: skip eval | Valid: time=  4.2s loss=2.200, TAw acc= 33.2% |
+| Epoch   6, time= 18.1s | Train: skip eval | Valid: time=  3.8s loss=2.099, TAw acc= 36.2% | *
+| Epoch   7, time= 18.0s | Train: skip eval | Valid: time=  3.8s loss=2.119, TAw acc= 36.0% |
+| Epoch   8, time= 18.3s | Train: skip eval | Valid: time=  4.2s loss=2.053, TAw acc= 38.2% | *
+| Epoch   9, time= 18.7s | Train: skip eval | Valid: time=  3.8s loss=2.099, TAw acc= 37.0% |
+| Epoch  10, time= 18.3s | Train: skip eval | Valid: time=  3.9s loss=2.107, TAw acc= 36.6% |
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=3.044 | TAw acc= 11.2%, forg= 21.5%| TAg acc=  0.2%, forg= 32.4% <<<
+>>> Test on task  1 : loss=2.882 | TAw acc= 16.9%, forg= 13.4%| TAg acc=  0.3%, forg= 28.6% <<<
+>>> Test on task  2 : loss=2.701 | TAw acc= 22.0%, forg= 10.2%| TAg acc=  1.3%, forg= 29.4% <<<
+>>> Test on task  3 : loss=2.035 | TAw acc= 38.0%, forg=  0.0%| TAg acc= 37.6%, forg=  0.0% <<<
+Save at ../results/cifar100_224_oewc_dummy_attentional_exp
+************************************************************************************************************
+TAw Acc
+	 32.7%   0.0%   0.0%   0.0% 	Avg.: 32.7% 
+	 25.3%  30.3%   0.0%   0.0% 	Avg.: 27.8% 
+	 15.3%  24.6%  32.3%   0.0% 	Avg.: 24.1% 
+	 11.2%  16.9%  22.0%  38.0% 	Avg.: 22.0% 
+************************************************************************************************************
+TAg Acc
+	 32.7%   0.0%   0.0%   0.0% 	Avg.: 32.7% 
+	  4.8%  29.0%   0.0%   0.0% 	Avg.: 16.9% 
+	  0.9%   4.1%  30.7%   0.0% 	Avg.: 11.9% 
+	  0.2%   0.3%   1.3%  37.6% 	Avg.:  9.9% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0%   0.0%   0.0% 
+	  7.4%   0.0%   0.0%   0.0% 	Avg.:  7.4% 
+	 17.4%   5.7%   0.0%   0.0% 	Avg.: 11.5% 
+	 21.5%  13.4%  10.2%   0.0% 	Avg.: 15.0% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0%   0.0%   0.0% 
+	 27.9%   0.0%   0.0%   0.0% 	Avg.: 27.9% 
+	 31.8%  24.8%   0.0%   0.0% 	Avg.: 28.3% 
+	 32.4%  28.6%  29.4%   0.0% 	Avg.: 30.2% 
+************************************************************************************************************
+[Elapsed time = 0.4 h]
+Done!
