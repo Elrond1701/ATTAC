@@ -1,6 +1,6 @@
 from os.path import join
 
-_BASE_DATA_PATH = "/kaggle/input/food101"
+_BASE_DATA_PATH = "/kaggle/input/"
 
 dataset_config = {
     'mnist': {
@@ -113,7 +113,7 @@ dataset_config = {
     },
 
     'food101': {
-        'path': join(_BASE_DATA_PATH, 'food101/food-101'),
+        'path': join(_BASE_DATA_PATH, 'food101'),
         'resize': (224, 224),
         'normalize': ((0.5071, 0.4866, 0.4409), (0.2009, 0.1984, 0.2023))
     },
