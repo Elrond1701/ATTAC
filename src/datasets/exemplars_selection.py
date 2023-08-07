@@ -2,7 +2,6 @@ import random
 import time
 from contextlib import contextmanager
 from typing import Iterable
-from sklearn.cluster import DBSCAN
 
 import numpy as np
 import torch
