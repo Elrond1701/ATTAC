@@ -36,6 +36,7 @@ class Appr(Inc_Learning_Appr):
         self.distance_metric=distance_metric
         self.alpha = alpha
         self.scale_factor = scale_factor
+        self.pool_along = "spatial"
 
     @staticmethod
     def exemplars_dataset_class():
