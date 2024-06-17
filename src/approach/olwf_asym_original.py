@@ -298,73 +298,163 @@ class Appr(Inc_Learning_Appr):
         return relu_out
 
  
-    def pod(self,
-        list_attentions_a,
-        list_attentions_b,
-        collapse_channels="spatial",
-        normalize=True
-    ):
-        """Pooled Output Distillation.
-        Reference:
-            * Douillard et al.
-            Small Task Incremental Learning.
-            arXiv 2020.
-        :param list_attentions_a: A list of attention maps, each of shape (b, n, w, h).
-        :param list_attentions_b: A list of attention maps, each of shape (b, n, w, h).
-        :param collapse_channels: How to pool the channels.
-        :param memory_flags: Integer flags denoting exemplars.
-        :param only_old: Only apply loss to exemplars.
-        :return: A float scalar loss.
-        """
+    # def pod(self,
+    #     list_attentions_a,
+    #     list_attentions_b,
+    #     collapse_channels="spatial",
+    #     normalize=True
+    # ):
+    #     """Pooled Output Distillation.
+    #     Reference:
+    #         * Douillard et al.
+    #         Small Task Incremental Learning.
+    #         arXiv 2020.
+    #     :param list_attentions_a: A list of attention maps, each of shape (b, n, w, h).
+    #     :param list_attentions_b: A list of attention maps, each of shape (b, n, w, h).
+    #     :param collapse_channels: How to pool the channels.
+    #     :param memory_flags: Integer flags denoting exemplars.
+    #     :param only_old: Only apply loss to exemplars.
+    #     :return: A float scalar loss.
+    #     """
 
-        loss = torch.tensor(0.).to(self.device)
-        for i, (a, b) in enumerate(zip(list_attentions_a, list_attentions_b)):
-            # shape of (b, n, w, h)
-            assert a.shape == b.shape, (a.shape, b.shape)
+    #     loss = torch.tensor(0.).to(self.device)
+    #     for i, (a, b) in enumerate(zip(list_attentions_a, list_attentions_b)):
+    #         # shape of (b, n, w, h)
+    #         assert a.shape == b.shape, (a.shape, b.shape)
 
-            a = torch.pow(a, 2)
-            b = torch.pow(b, 2)
+    #         a = torch.pow(a, 2)
+    #         b = torch.pow(b, 2)
 
-            if collapse_channels == "channels":
-                a = a.sum(dim=1).view(a.shape[0], -1)  # shape of (b, w * h)
-                b = b.sum(dim=1).view(b.shape[0], -1)
-            elif collapse_channels == "width":
-                a = a.sum(dim=2).view(a.shape[0], -1)  # shape of (b, c * h)
-                b = b.sum(dim=2).view(b.shape[0], -1)
-            elif collapse_channels == "height":
-                a = a.sum(dim=3).view(a.shape[0], -1)  # shape of (b, c * w)
-                b = b.sum(dim=3).view(b.shape[0], -1)
-            elif collapse_channels == "gap":
-                a = F.adaptive_avg_pool2d(a, (1, 1))[..., 0, 0]
-                b = F.adaptive_avg_pool2d(b, (1, 1))[..., 0, 0]
-            elif collapse_channels == "spatial":
-                a_h = a.sum(dim=3).view(a.shape[0], -1)
-                b_h = b.sum(dim=3).view(b.shape[0], -1)
-                a_w = a.sum(dim=2).view(a.shape[0], -1)
-                b_w = b.sum(dim=2).view(b.shape[0], -1)
-                a = torch.cat([a_h, a_w], dim=-1)
+    #         if collapse_channels == "channels":
+    #             a = a.sum(dim=1).view(a.shape[0], -1)  # shape of (b, w * h)
+    #             b = b.sum(dim=1).view(b.shape[0], -1)
+    #         elif collapse_channels == "width":
+    #             a = a.sum(dim=2).view(a.shape[0], -1)  # shape of (b, c * h)
+    #             b = b.sum(dim=2).view(b.shape[0], -1)
+    #         elif collapse_channels == "height":
+    #             a = a.sum(dim=3).view(a.shape[0], -1)  # shape of (b, c * w)
+    #             b = b.sum(dim=3).view(b.shape[0], -1)
+    #         elif collapse_channels == "gap":
+    #             a = F.adaptive_avg_pool2d(a, (1, 1))[..., 0, 0]
+    #             b = F.adaptive_avg_pool2d(b, (1, 1))[..., 0, 0]
+    #         elif collapse_channels == "spatial":
+    #             a_h = a.sum(dim=3).view(a.shape[0], -1)
+    #             b_h = b.sum(dim=3).view(b.shape[0], -1)
+    #             a_w = a.sum(dim=2).view(a.shape[0], -1)
+    #             b_w = b.sum(dim=2).view(b.shape[0], -1)
+    #             a = torch.cat([a_h, a_w], dim=-1)
+    #             b = torch.cat([b_h, b_w], dim=-1)
+    #         elif collapse_channels == 'pixel':
+    #             pass
+    #         else:
+    #             raise ValueError("Unknown method to collapse: {}".format(collapse_channels))
+
+    #         if not self.sym:
+    #             asym_choice = torch.nn.ReLU(inplace=True)
+    #             if normalize:
+    #                 a = F.normalize(a, dim=1, p=2)
+    #                 b = F.normalize(b, dim=1, p=2)
+    #             diff = a-b
+    #             relu_out = asym_choice(diff)  
+    #             layer_loss = torch.mean(torch.frobenius_norm(relu_out, dim=-1))
+    #         else:
+    #             if normalize:
+    #                 a = F.normalize(a, dim=1, p=2)
+    #                 b = F.normalize(b, dim=1, p=2)
+    #             layer_loss = torch.mean(torch.frobenius_norm(a - b, dim=-1))
+    #         loss += layer_loss 
+
+    #     return loss / len(list_attentions_a)
+
+
+    def asymmetric_headwise_loss(self, old_attention_list, attention_list, collapse_channels = "spatial"):
+        totloss = torch.tensor(0.).to(self.device)
+        
+        asym_loss = "relu"
+        layers_to_pool = range(len(old_attention_list)) if not self.int_layer else [each-1 for each in self.pool_layers]
+
+        # for i in layers_to_pool:
+            # p = rearrange(old_attention_list[i].to(self.device), 's h b w -> h s b w') # rearrange to make head as the first dimension
+            # q = rearrange(attention_list[i].to(self.device), 's h b w -> h s b w')
+
+        for idx, (a, b) in enumerate(zip(old_attention_list, attention_list)):
+            # each element is now of shape (96, 197, 197)
+            assert a.shape == b.shape, 'Shape error'
+            if self.sym:
+                a = torch.pow(a, 2)
+                b = torch.pow(b, 2)
+            if collapse_channels == "spatial":
+                a_h = a.sum(dim=2).view(a.shape[0], -1)  # [bs, w]
+                b_h = b.sum(dim=2).view(b.shape[0], -1)  # [bs, w]
+                a_w = a.sum(dim=3).view(a.shape[0], -1)  # [bs, h]
+                b_w = b.sum(dim=3).view(b.shape[0], -1)  # [bs, h]
+                a = torch.cat([a_h, a_w], dim=-1) # concatenates two [96, 197] to give [96, 394], dim = -1 does concatenation along the last axis
                 b = torch.cat([b_h, b_w], dim=-1)
+            elif collapse_channels == "gap":
+                # compute avg pool2d over each 32x32 image to reduce the dimension to 1x1
+                a = F.adaptive_avg_pool2d(a, (1, 1))[..., 0, 0] # [..., 0, 0] preserves only the [0][0]th element of last two dimensions, i.e., [96, 197, 197] into [96], since 197x197 reduced to 1x1 and pooled together
+                b = F.adaptive_avg_pool2d(b, (1, 1))[..., 0, 0]
+            elif collapse_channels == "width":
+                a = a.sum(dim=3).view(a.shape[0], -1)  # shape of (b, c * h)
+                b = b.sum(dim=3).view(b.shape[0], -1)
+            elif collapse_channels == "height":
+                a = a.sum(dim=2).view(a.shape[0], -1)  # shape of (b, c * w)
+                b = b.sum(dim=2).view(b.shape[0], -1)
             elif collapse_channels == 'pixel':
                 pass
-            else:
-                raise ValueError("Unknown method to collapse: {}".format(collapse_channels))
 
+            distance_loss_weight = self.pod_spatial_factor if self.use_pod_factor else self.plast_mu
             if not self.sym:
-                asym_choice = torch.nn.ReLU(inplace=True)
-                if normalize:
+                asym_choice = torch.nn.LeakyReLU(inplace=True) if asym_loss == "leaky_relu" else \
+                                    torch.nn.ELU(inplace=True) if asym_loss == "elu" else torch.nn.ReLU(inplace=True)
+                if self.after_norm:
                     a = F.normalize(a, dim=1, p=2)
                     b = F.normalize(b, dim=1, p=2)
-                diff = a-b
-                relu_out = asym_choice(diff)  
-                layer_loss = torch.mean(torch.frobenius_norm(relu_out, dim=-1))
-            else:
-                if normalize:
-                    a = F.normalize(a, dim=1, p=2)
-                    b = F.normalize(b, dim=1, p=2)
-                layer_loss = torch.mean(torch.frobenius_norm(a - b, dim=-1))
-            loss += layer_loss 
 
-        return loss / len(list_attentions_a)
+                    if self.reverse_relu:
+                        diff = b-a 
+                    else:
+                        diff = a-b
+                    if self.perm_relu:
+                        relu_out = self.permissive_relu(diff, asym_choice)
+                    else:
+                        relu_out = asym_choice(diff)                        
+                    layer_loss = torch.mean(torch.frobenius_norm(relu_out, dim=-1)) * distance_loss_weight
+                else:
+                    
+                    if self.reverse_relu:
+                        diff = b-a 
+                    else:
+                        diff = a-b
+                    if self.perm_relu:
+                        relu_out = self.permissive_relu(diff, asym_choice)
+                    else:
+                        relu_out = asym_choice(diff)
+                    # layer_loss = torch.mean(F.normalize(relu_out, dim=1, p=2)) # (a) good mu for this = 10
+                    layer_loss = torch.mean(torch.frobenius_norm(F.normalize(relu_out, dim=1, p=2))) / 100.0 # (d) works but only after /100
+                    layer_loss = layer_loss * distance_loss_weight
+                    
+            else:
+                a = F.normalize(a, dim=1, p=2)
+                b = F.normalize(b, dim=1, p=2)
+                layer_loss = torch.mean(torch.frobenius_norm(a - b, dim=-1)) * distance_loss_weight # right now the loss is symmetric, i.e., the new model is told to attend to the same region as the old model
+            totloss += layer_loss
+
+            if self.sparse:
+                attention_sparsity_term = torch.norm(torch.abs(b))/ 10. #self.sparse_factor
+                attention_sparsity_term = attention_sparsity_term * self.sparse_factor
+                # if attention_sparsity_term > 0.0:
+                #     sparse_loss_magnitude = math.floor(math.log10(attention_sparsity_term))
+                #     attention_sparsity_term = attention_sparsity_term / math.pow(10, sparse_loss_magnitude+1)
+                totloss += attention_sparsity_term
+
+            # totloss = totloss / len(p)
+        if self.sparse:
+            totloss = totloss / (2 * len(layers_to_pool))
+        else:
+            totloss = totloss / len(layers_to_pool)
+        return totloss
+
     
     def train_epoch(self, t, trn_loader):
         """Runs a single epoch"""
@@ -408,6 +498,7 @@ class Appr(Inc_Learning_Appr):
             #     # )
             #     # plastic_loss += self.pod(old_attention_list, attention_list) * self.plast_mu * pod_spatial_factor
             if t > 0:
+                plastic_loss += self.asymmetric_headwise_loss(old_attention_list, attention_list, collapse_channels=self.pool_along) 
                 if self.distance_metric == 'JS':
                     plastic_loss += self.plasticity_loss(old_attention_list, attention_list)*self.plast_mu
                 elif self.distance_metric == 'cosine':
